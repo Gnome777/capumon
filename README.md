@@ -1,6 +1,36 @@
-# Pokémon Red and Blue [![Build Status][ci-badge]][ci]
+# Capumon Generation One
 
-This is a disassembly of Pokémon Red and Blue.
+This is a romhack of Pokémon Red and Blue.
+
+### Description
+
+Capumon Generation One is not a difficulty hack or a catch-em-all, although it modifies the difficulty of boss trainers and allows for a wider selection of Pokémon. This is a reimagining of the first Generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
+
+Capumon has a variety of new features that make it stand out, including but not limited to:
+
+- A modified story, that tries to answer some questions that the original games left unanswered
+- Bugfixes that attempt to remedy the oddities of Generation 1 battling
+- Unique party menu sprites for all Pokémon
+- Running Shoes
+- Item Descriptions
+- Physical/Special Split
+- Move Deleter and Move Relearner
+- Hyper Training
+- In-battle EXP bar
+- Enemy Pokémon use PP
+- Gym Leaders and the Elite Four can be rematched (except Giovanni)
+
+Some other features:
+
+- Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon
+- A wider variety of Gift Pokémon have been added
+- Boss trainer battles and Rival battles have been modified. Regular trainers have been left unmodified.
+- Some but not all Pokémon have received a type change, based off their Pokédex entry and if I thought their typing made sense. The intent was to reduce duplicate type fatigue (Poison typing and Normal/Flying combinations)
+- Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
+- All wild encounters have been changed to allow for a greater variety of Pokémon to be captured.
+- All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50 (or 60 for legendaries). For example, Moltres originally learned 3 moves by level-up, but now learns 12
+
+### Install Instructions
 
 It builds the following ROMs:
 
@@ -11,21 +41,3 @@ It builds the following ROMs:
 - dmgapee0.e68.patch `sha1: ed4be94dc29c64271942c87f2157bca9ca1019c7`
 
 To set up the repository, see [**INSTALL.md**](INSTALL.md).
-
-
-## See also
-
-- [**Wiki**][wiki] (includes [tutorials][tutorials])
-- [**Symbols**][symbols]
-- [**Tools**][tools]
-
-You can find us on [Discord (pret, #pokered)](https://discord.gg/d5dubZ3).
-
-For other pret projects, see [pret.github.io](https://pret.github.io/).
-
-[wiki]: https://github.com/pret/pokered/wiki
-[tutorials]: https://github.com/pret/pokered/wiki/Tutorials
-[symbols]: https://github.com/pret/pokered/tree/symbols
-[tools]: https://github.com/pret/gb-asm-tools
-[ci]: https://github.com/pret/pokered/actions
-[ci-badge]: https://github.com/pret/pokered/actions/workflows/main.yml/badge.svg
