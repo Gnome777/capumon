@@ -29,6 +29,7 @@ Some other features:
 - Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
 - All wild encounters have been changed to allow for a greater variety of Pokémon to be captured.
 - All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50 (or 60 for legendaries). For example, Moltres originally learned 3 moves by level-up, but now learns 12
+- Pokemon TM Learnsets have been modified to be more fitting.
 
 ### Install Instructions
 
