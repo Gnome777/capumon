@@ -84,7 +84,6 @@ GainExperience:
 	ld a, 0
 	jr z, .next
 .tradedMon
-	call BoostExp ; traded mon exp boost
 	ld a, 1
 .next
 	ld [wGainBoostedExp], a
@@ -299,19 +298,7 @@ GainExperience:
 	pop bc
 	predef_jump FlagActionPredef ; set the fought current enemy flag for the mon that is currently out
 
-; multiplies exp by 1.5
 BoostExp:
-	ldh a, [hQuotient + 2]
-	ld b, a
-	ldh a, [hQuotient + 3]
-	ld c, a
-	srl b
-	rr c
-	add c
-	ldh [hQuotient + 3], a
-	ldh a, [hQuotient + 2]
-	adc b
-	ldh [hQuotient + 2], a
 	ret
 
 GainedText:
@@ -322,10 +309,6 @@ GainedText:
 	and a
 	ret nz
 	ld hl, ExpPointsText
-	ld a, [wGainBoostedExp]
-	and a
-	ret z
-	ld hl, BoostedText
 	ret
 
 WithExpAllText:
