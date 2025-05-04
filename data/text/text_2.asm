@@ -1211,8 +1211,8 @@ _GainedText::
 	text_end
 
 _WithExpAllText::
-	text "with EXP.ALL,"
-	cont "@"
+	text "Party gained"
+	next "@"
 	text_end
 
 _BoostedText::
@@ -1725,8 +1725,9 @@ _OakSpeechText2B::
 	prompt
 
 _IntroducePlayerText::
-	text "First, what is"
-	line "your name?"
+	text "First, what did"
+	line "you say your"
+	cont "name was?"
 	prompt
 
 _IntroduceRivalText::
@@ -1735,8 +1736,9 @@ _IntroduceRivalText::
 	cont "your rival since"
 	cont "you were a baby."
 
-	para "...Erm, what is"
-	line "his name again?"
+	para "...Erm, what do"
+	line "you call him"
+	cont "again?"
 	prompt
 
 _OakSpeechText3::
@@ -1767,8 +1769,8 @@ _YourNameIsText::
 
 _HisNameIsText::
 	text "That's right! I"
-	line "remember now! His"
-	cont "name is <RIVAL>!"
+	line "remember now! You"
+	cont "call him <RIVAL>!"
 	prompt
 
 _WillBeTradedText::
