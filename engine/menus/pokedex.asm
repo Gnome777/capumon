@@ -566,7 +566,7 @@ ShowPokedexDataInternal:
 	pop hl
 	inc hl ; hl = address of pokedex description text
 	bccoord 1, 11
-	ld a, %10
+	ld a, %11
 	ldh [hClearLetterPrintingDelayFlags], a
 	call TextCommandProcessor ; print pokedex description text
 	xor a
