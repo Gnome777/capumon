@@ -3,7 +3,7 @@
 	db  50,  50,  50,  50,  70
 	;   hp  atk  def  spd  spc
 
-	db GRASS, POISON ; type
+	db GRASS, GRASS ; type
 	db 45 ; catch rate
 	db 64 ; base exp
 

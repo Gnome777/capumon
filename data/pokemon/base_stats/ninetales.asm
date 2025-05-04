@@ -3,7 +3,7 @@
 	db  80,  80,  80, 100, 100
 	;   hp  atk  def  spd  spc
 
-	db FIRE, FIRE ; type
+	db FIRE, GHOST ; type
 	db 75 ; catch rate
 	db 178 ; base exp
 

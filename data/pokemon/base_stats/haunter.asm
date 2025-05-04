@@ -3,7 +3,7 @@
 	db  50,  50,  50,  100, 120
 	;   hp  atk  def  spd  spc
 
-	db GHOST, POISON ; type
+	db GHOST, GHOST ; type
 	db 90 ; catch rate
 	db 126 ; base exp
 

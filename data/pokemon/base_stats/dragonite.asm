@@ -3,7 +3,7 @@
 	db  100, 140,  100,  90, 100
 	;   hp  atk  def  spd  spc
 
-	db DRAGON, FLYING ; type
+	db DRAGON, WATER ; type
 	db 45 ; catch rate
 	db 218 ; base exp
 
