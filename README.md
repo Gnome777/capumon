@@ -12,7 +12,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 - Bugfixes that attempt to remedy the oddities of Generation 1 battling
 - Unique party menu sprites for all Pokémon
 - Running Shoes
-- Item Descriptions
+- Item Descriptions and Sorting
 - Physical/Special Split
 - Move Deleter and Move Relearner
 - Hyper Training
