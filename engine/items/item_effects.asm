@@ -64,7 +64,7 @@ ItemUsePtrTable:
 	dw UnusableItem      ; BIKE_VOUCHER
 	dw ItemUseXAccuracy  ; X_ACCURACY
 	dw ItemUseEvoStone   ; LEAF_STONE
-	dw ItemUseCardKey    ; CARD_KEY
+	dw UnusableItem      ; CARD_KEY
 	dw UnusableItem      ; NUGGET
 	dw UnusableItem      ; ITEM_32
 	dw ItemUsePokeDoll   ; POKE_DOLL
@@ -1342,7 +1342,47 @@ ItemUseMedicine:
 	ld bc, wPartyMon1Level - wPartyMon1
 	add hl, bc ; hl now points to level
 	ld a, [hl] ; a = level
-	cp MAX_LEVEL
+	ld b, MAX_LEVEL
+
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .next1 ; no level caps if not on hard mode
+
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .next1
+	farcall GetBadgesObtained
+	ld a, [wNumSetBits]
+	cp 8
+	ld b, 55 ; Venusaur/Charizard/Blastoise's level
+	jr nc, .next1
+	cp 7
+	ld b, 50 ; Marowak's level
+	jr nc, .next1
+	cp 6
+	ld b, 45 ; Rapidash's level
+	jr nc, .next1
+	cp 5
+	ld b, 40 ; Alakazam's level
+	jr nc, .next1
+    cp 4
+	ld b, 35 ; Weezing's level
+	jr nc, .next1
+	cp 3
+	ld b, 27 ; Vileplume's level
+	jr nc, .next1
+	cp 2
+    ld b, 25 ; Raichu's level
+	jr nc, .next1
+	cp 1
+	ld b, 20 ; Starmie's level
+	jr nc, .next1
+	ld b, 14 ; Onix's level
+.next1
+
+	pop hl
+	ld a, [hl] ; a = level
+	cp b ; MAX_LEVEL on normal mode, level cap on hard mode
 	jr z, .vitaminNoEffect ; can't raise level above 100
 	inc a
 	ld [hl], a ; store incremented level
@@ -1556,60 +1596,6 @@ ItemUseXAccuracy:
 	ld hl, wPlayerBattleStatus2
 	set USING_X_ACCURACY, [hl] ; X Accuracy bit
 	jp PrintItemUseTextAndRemoveItem
-
-; This function is bugged and never works. It always jumps to ItemUseNotTime.
-; The Card Key is handled in a different way.
-ItemUseCardKey:
-	xor a
-	ld [wUnusedCardKeyGateID], a
-	call GetTileAndCoordsInFrontOfPlayer
-	ld a, [GetTileAndCoordsInFrontOfPlayer]
-	cp $18
-	jr nz, .next0
-	ld hl, CardKeyTable1
-	jr .next1
-.next0
-	cp $24
-	jr nz, .next2
-	ld hl, CardKeyTable2
-	jr .next1
-.next2
-	cp $5e
-	jp nz, ItemUseNotTime
-	ld hl, CardKeyTable3
-.next1
-	ld a, [wCurMap]
-	ld b, a
-.loop
-	ld a, [hli]
-	cp -1
-	jp z, ItemUseNotTime
-	cp b
-	jr nz, .nextEntry1
-	ld a, [hli]
-	cp d
-	jr nz, .nextEntry2
-	ld a, [hli]
-	cp e
-	jr nz, .nextEntry3
-	ld a, [hl]
-	ld [wUnusedCardKeyGateID], a
-	jr .done
-.nextEntry1
-	inc hl
-.nextEntry2
-	inc hl
-.nextEntry3
-	inc hl
-	jr .loop
-.done
-	ld hl, ItemUseText00
-	call PrintText
-	ld hl, wStatusFlags1
-	set BIT_UNUSED_CARD_KEY, [hl] ; never checked
-	ret
-
-INCLUDE "data/events/card_key_coords.asm"
 
 ItemUsePokeDoll:
 	ld a, [wIsInBattle]

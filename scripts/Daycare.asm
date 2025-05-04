@@ -67,11 +67,52 @@ DaycareGentlemanText:
 	ld [wMonDataLocation], a
 	call LoadMonData
 	callfar CalcLevelFromExperience
+	push bc
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	ld b, MAX_LEVEL
+	jr z, .next1 ; no level caps if not on hard mode
+
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .next1
+	farcall GetBadgesObtained
+	ld a, [wNumSetBits]
+	cp 8
+	ld b, 65 ; Venusaur/Charizard/Blastoise's level
+	jr nc, .next1
+	cp 7
+	ld b, 50 ; Rhydon's level
+	jr nc, .next1
+	cp 6
+	ld b, 47 ; Arcanine's level
+	jr nc, .next1
+	cp 5
+	ld b, 43 ; Alakazam's level
+	jr nc, .next1
+    cp 4
+	ld b, 43 ; Weezing's level
+	jr nc, .next1
+	cp 3
+	ld b, 29 ; Vileplume's level
+	jr nc, .next1
+	cp 2
+    ld b, 24 ; Raichu's level
+	jr nc, .next1
+	cp 1
+	ld b, 21 ; Starmie's level
+	jr nc, .next1
+	ld b, 14 ; Onix's level
+.next1
+	ld a, b
+	ld [wMaxDaycareLevel], a
 	ld a, d
-	cp MAX_LEVEL
+	cp b
+	pop bc
 	jr c, .skipCalcExp
 
-	ld d, MAX_LEVEL
+	ld a, [wMaxDaycareLevel]
+	ld d, a
 	callfar CalcExperience
 	ld hl, wDayCareMonExp
 	ldh a, [hExperience]
@@ -80,7 +121,8 @@ DaycareGentlemanText:
 	ld [hli], a
 	ldh a, [hExperience + 2]
 	ld [hl], a
-	ld d, MAX_LEVEL
+	ld a, [wMaxDaycareLevel]
+	ld d, a
 
 .skipCalcExp
 	xor a

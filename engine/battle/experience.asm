@@ -121,6 +121,42 @@ GainExperience:
 	ld [wCurSpecies], a
 	call GetMonHeader
 	ld d, MAX_LEVEL
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .next1 ; no level caps if not on hard mode
+
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	ld d, 100
+	jr nz, .next1
+	call GetBadgesObtained
+	ld a, [wNumSetBits]
+	cp 8
+	ld d, 65 ; Venusaur/Charizard/Blastoise's level
+	jr nc, .next1
+	cp 7
+	ld d, 50 ; Rhydon's level
+	jr nc, .next1
+	cp 6
+	ld d, 47 ; Arcanine's level
+	jr nc, .next1
+	cp 5
+	ld d, 43 ; Alakazam's level
+	jr nc, .next1
+       cp 4
+	ld d, 43 ; Weezing's level
+	jr nc, .next1
+	cp 3
+	ld d, 29 ; Vileplume's level
+	jr nc, .next1
+	cp 2
+       ld d, 24 ; Raichu's level
+	jr nc, .next1
+	cp 1
+	ld d, 21 ; Starmie's level
+	jr nc, .next1
+	ld d, 14 ; Onix's level
+.next1
 	callfar CalcExperience ; get max exp
 ; compare max exp with current exp
 	ldh a, [hExperience]
@@ -328,3 +364,19 @@ GrewLevelText:
 	text_far _GrewLevelText
 	sound_level_up
 	text_end
+
+; function to count the set bits in wObtainedBadges
+; OUTPUT:
+; a = set bits in wObtainedBadges
+GetBadgesObtained::
+	push hl
+	push bc
+	push de
+	ld hl, wObtainedBadges
+	ld b, $1
+	call CountSetBits
+	pop de
+	pop bc
+	pop hl
+	ld a, [wNumSetBits]
+	ret

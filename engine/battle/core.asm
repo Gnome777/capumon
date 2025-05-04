@@ -1375,7 +1375,11 @@ EnemySendOutFirstMon:
 	jr z, .next4
 	ld a, [wLinkState]
 	cp LINK_STATE_BATTLING
-	jr z, .next4
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .DontForceSetMode
+	jr .next4 ; skip switch request if on hard mode
+.DontForceSetMode
 	ld a, [wOptions]
 	bit BIT_BATTLE_SHIFT, a
 	jr nz, .next4
@@ -2185,7 +2189,7 @@ DisplayBattleMenu::
 .throwSafariBallWasSelected
 	ld a, SAFARI_BALL
 	ld [wCurItem], a
-	jr UseBagItem
+	jp UseBagItem
 
 .upperLeftMenuItemWasNotSelected ; a menu item other than the upper left item was selected
 	cp $2
@@ -2222,8 +2226,23 @@ BagWasSelected:
 	call DrawHUDsAndHPBars
 .next
 	ld a, [wBattleType]
-	dec a ; is it the old man tutorial?
+	cp BATTLE_TYPE_OLD_MAN ; is it the old man battle?
+	jr z, .simulatedInputBattle
+	
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .NormalMode
+
+	ld a, [wIsInBattle] ; Check if this is a wild battle or trainer battle
+	dec a
+	jr z, .NormalMode ; Not a trainer battle
+
+	ld hl, ItemsCantBeUsedHereText ; items can't be used during trainer battles in hard mode
+	call PrintText
+	jp DisplayBattleMenu
+.NormalMode
 	jr nz, DisplayPlayerBag ; no, it is a normal battle
+.simulatedInputBattle
 	ld hl, OldManItemList
 	ld a, l
 	ld [wListPointer], a
@@ -2233,7 +2252,7 @@ BagWasSelected:
 
 OldManItemList:
 	db 1 ; # items
-	db POKE_BALL, 50
+	db POKE_BALL, 1
 	db -1 ; end
 
 DisplayPlayerBag:
@@ -3997,6 +4016,48 @@ CheckForDisobedience:
 	ld a, [wPlayerID]
 	cp [hl]
 	jr nz, .monIsTraded
+	ld a, [wDifficulty] ; Check if player is on hard mode
+	and a
+	jr z, .NormalMode2
+; what level might disobey?
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	ld a, 101
+	jr nz, .next
+	farcall GetBadgesObtained
+	ld a, [wNumSetBits]
+	cp 8
+	ld a, 55 ; Venusaur/Charizard/Blastoise's level
+	jr nc, .next
+	cp 7
+	ld a, 50 ; Marowak's level
+	jr nc, .next
+	cp 6
+	ld a, 45 ; Rapidash's level
+	jr nc, .next
+	cp 5
+	ld a, 40 ; Alakazam's level
+	jr nc, .next
+    cp 4
+	ld a, 35 ; Weezing's level
+	jr nc, .next
+	cp 3
+	ld a, 27 ; Vileplume's level
+	jr nc, .next
+	cp 2
+	ld a, 25 ; Raichu's level
+	jr nc, .next
+	cp 1
+	ld a, 20 ; Starmie's level
+	jr nc, .next
+	ld a, 14 ; Onix's level
+	jp .next
+.NormalMode2
+	inc hl
+	ld a, [wPlayerID + 1]
+	cp [hl]
+	jp z, .canUseMove ; on normal mode non traded pokemon will always obey
+	; it was traded
 	inc hl
 	ld a, [wPlayerID + 1]
 	cp [hl]
