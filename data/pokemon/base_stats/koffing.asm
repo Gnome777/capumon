@@ -1,6 +1,6 @@
 	db DEX_KOFFING ; pokedex id
 
-	db  40,  65,  95,  35,  60
+	db  40,  70,  100,  40,  60
 	;   hp  atk  def  spd  spc
 
 	db POISON, POISON ; type
@@ -14,9 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm TOXIC,        RAGE,         THUNDERBOLT,  THUNDER,      MIMIC,        \
-	     DOUBLE_TEAM,  BIDE,         SELFDESTRUCT, FIRE_BLAST,   REST,         \
-	     EXPLOSION,    SUBSTITUTE
+	tmhm
 	; end
 
 	db 0 ; padding

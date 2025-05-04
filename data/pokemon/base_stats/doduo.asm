@@ -1,6 +1,6 @@
 	db DEX_DODUO ; pokedex id
 
-	db  35,  85,  45,  75,  35
+	db  40,  90,  50,  80,  40
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, FLYING ; type
@@ -14,10 +14,7 @@
 	db GROWTH_MEDIUM_FAST ; growth rate
 
 	; tm/hm learnset
-	tmhm WHIRLWIND,    TOXIC,        BODY_SLAM,    TAKE_DOWN,    DOUBLE_EDGE,  \
-	     RAGE,         MIMIC,        DOUBLE_TEAM,  REFLECT,      BIDE,         \
-	     SKULL_BASH,   SKY_ATTACK,   REST,         TRI_ATTACK,   SUBSTITUTE,   \
-	     FLY
+	tmhm
 	; end
 
 	db 0 ; padding
