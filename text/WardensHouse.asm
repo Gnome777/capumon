@@ -84,3 +84,10 @@ _WardensHouseDisplayMerchandiseText::
 	text "Old #MON"
 	line "merchandise."
 	done
+
+_WardenFollowUpText::
+	text "Thanks again for"
+	line "the Gold Teeth!"
+	cont "I can finally"
+	cont "talk properly!"
+	done

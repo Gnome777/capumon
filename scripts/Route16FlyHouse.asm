@@ -9,21 +9,16 @@ Route16FlyHouse_TextPointers:
 Route16FlyHouseBrunetteGirlText:
 	text_asm
 	CheckEvent EVENT_GOT_HM02
-	ld hl, .HM02ExplanationText
-	jr nz, .got_item
-	ld hl, .Text
+	jr nz, .done
+	ld hl, Route16HouseNoHMText
 	call PrintText
-	lb bc, HM_FLY, 1
-	call GiveItem
-	jr nc, .bag_full
 	SetEvent EVENT_GOT_HM02
-	ld hl, .ReceivedHM02Text
-	jr .got_item
-.bag_full
-	ld hl, .HM02NoRoomText
-.got_item
-	call PrintText
+.done
 	jp TextScriptEnd
+
+Route16HouseNoHMText:
+	text_far _Route16HouseNoHMText
+	text_end
 
 .Text:
 	text_far _Route16FlyHouseBrunetteGirlText

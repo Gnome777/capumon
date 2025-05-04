@@ -62,3 +62,8 @@ _SSAnneCaptainsRoomSeasickBookText::
 	cont "The CAPTAIN's"
 	cont "reading this!"
 	done
+
+_SSAnneCaptainsRoomCaptainFeelingBetterText::
+	text "The Captain is"
+	line "resting peacefully."
+	done

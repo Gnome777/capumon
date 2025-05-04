@@ -12,7 +12,7 @@ WardensHouse_TextPointers:
 WardensHouseWardenText:
 	text_asm
 	CheckEvent EVENT_GOT_HM04
-	jr nz, .got_item
+	jr nz, .already_thanked
 	ld b, GOLD_TEETH
 	call IsItemInBag
 	jr nz, .have_gold_teeth
@@ -39,19 +39,10 @@ WardensHouseWardenText:
 .gave_gold_teeth
 	ld hl, .ThanksText
 	call PrintText
-	lb bc, HM_STRENGTH, 1
-	call GiveItem
-	jr nc, .bag_full
-	ld hl, .ReceivedHM04Text
-	call PrintText
-	SetEvent EVENT_GOT_HM04
+	SetEvent EVENT_GOT_HM04  ; Mark event as complete
 	jr .done
-.got_item
-	ld hl, .HM04ExplanationText
-	call PrintText
-	jr .done
-.bag_full
-	ld hl, .HM04NoRoomText
+.already_thanked
+	ld hl, .WardenFollowUpText
 	call PrintText
 .done
 	jp TextScriptEnd

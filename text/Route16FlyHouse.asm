@@ -30,3 +30,8 @@ _Route16FlyHouseBrunetteGirlHM02NoRoomText::
 _Route16FlyHouseFearowText::
 	text "FEAROW: Kyueen!"
 	done
+
+_Route16HouseNoHMText::
+	text "My fear of heights"
+	line "has only grown."
+	done

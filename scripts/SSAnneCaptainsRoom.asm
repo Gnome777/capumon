@@ -18,29 +18,18 @@ SSAnneCaptainsRoom_TextPointers:
 SSAnneCaptainsRoomCaptainText:
 	text_asm
 	CheckEvent EVENT_GOT_HM01
-	jr nz, .got_item
-	ld hl, SSAnneCaptainsRoomRubCaptainsBackText
-	call PrintText
-	ld hl, SSAnneCaptainsRoomCaptainIFeelMuchBetterText
-	call PrintText
-	lb bc, HM_CUT, 1
-	call GiveItem
-	jr nc, .bag_full
-	ld hl, SSAnneCaptainsRoomCaptainReceivedHM01Text
+	jr nz, .done
+	ld hl, SSAnneCaptainsRoomCaptainFeelingBetterText
 	call PrintText
 	SetEvent EVENT_GOT_HM01
-	jr .done
-.bag_full
-	ld hl, SSAnneCaptainsRoomCaptainHM01NoRoomText
-	call PrintText
-	ld hl, wStatusFlags3
-	set BIT_NO_NPC_FACE_PLAYER, [hl]
-	jr .done
-.got_item
-	ld hl, SSAnneCaptainsRoomCaptainNotSickAnymoreText
-	call PrintText
+	jp TextScriptEnd
 .done
 	jp TextScriptEnd
+
+
+SSAnneCaptainsRoomCaptainFeelingBetterText:
+	text_far _SSAnneCaptainsRoomCaptainFeelingBetterText
+	text_end
 
 SSAnneCaptainsRoomRubCaptainsBackText:
 	text_far _SSAnneCaptainsRoomRubCaptainsBackText

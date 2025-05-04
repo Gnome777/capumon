@@ -5,8 +5,14 @@ _Route2GateOaksAideFlashExplanationText::
 	done
 
 _Route2GateYoungsterText::
-	text "Once a #MON"
-	line "learns FLASH, you"
-	cont "can get through"
-	cont "ROCK TUNNEL."
+	text "ROCK TUNNEL"
+	line "is very dark."
+	cont "Be careful!"
+	done
+
+_Route2AideNoHMText::
+	text "It's very dark"
+	line "in those caves…"
+	cont "Be careful out"
+	cont "there, okay?"
 	done
