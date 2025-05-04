@@ -42,7 +42,7 @@ WardensHouseWardenText:
 	SetEvent EVENT_GOT_HM04  ; Mark event as complete
 	jr .done
 .already_thanked
-	ld hl, .WardenFollowUpText
+	ld hl, WardenFollowUpText
 	call PrintText
 .done
 	jp TextScriptEnd
@@ -101,4 +101,8 @@ WardensHouseDisplayText:
 
 .MerchandiseText:
 	text_far _WardensHouseDisplayMerchandiseText
+	text_end
+
+WardenFollowUpText:
+	text_far _WardenFollowUpText
 	text_end

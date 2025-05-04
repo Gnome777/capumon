@@ -23,3 +23,7 @@ Route2GateOaksAideText:
 Route2GateYoungsterText:
 	text_far _Route2GateYoungsterText
 	text_end
+
+Route2AideNoHMText:
+	text_far _Route2AideNoHMText
+	text_end
