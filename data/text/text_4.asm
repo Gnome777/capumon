@@ -229,3 +229,8 @@ ENDC
 	line "your friend and"
 	cont "come again!"
 	done
+
+_TemPokemonOuNao::
+	text "You don't have"
+	line "any #MON!"
+	done
