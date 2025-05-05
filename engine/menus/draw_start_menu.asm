@@ -3,7 +3,7 @@ DrawStartMenu::
 	CheckEvent EVENT_GOT_POKEDEX
 ; menu with pokedex
 	hlcoord 10, 0
-	ld b, $0e
+	ld b, $10 ; edited for portable PC
 	ld c, $08
 	jr nz, .drawTextBoxBorder
 ; shorter menu if the player doesn't have the pokedex
@@ -117,8 +117,9 @@ DrawMenuAccount::
 	CheckEvent EVENT_GOT_POKEDEX
 	ld a, [wCurrentMenuItem]
 	jr nz, .got_table
-; shift one index forwards to reflect the fact that
-; we haven't gotten a dex yet
+; shift two indexes forward to reflect the fact that
+; we haven't gotten a dex yet or portable PC
+	inc a
 	inc a
 
 .got_table

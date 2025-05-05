@@ -6,7 +6,7 @@ StartMenuDescriptionTable:
 	dw .Player
 	dw .Save
 	dw .Option
-    dw .PortablePC
+	dw .PortablePC
 	dw .Exit
 
 .LinkTable:
@@ -17,7 +17,7 @@ StartMenuDescriptionTable:
 	dw .Player
 	dw .Reset ; in place of "SAVE"
 	dw .Option
-    dw .PortablePC
+	dw .PortablePC
 	dw .Exit
 
 .Pokedex:
