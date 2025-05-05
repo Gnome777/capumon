@@ -1798,3 +1798,8 @@ _DifficultyText::
 _AreYouSureText::
 	text "Are you sure?"
 	done
+
+_CantUsePCHere:: ; new, for portablePC
+	text "You cannot use"
+	line "this here!"
+	prompt
