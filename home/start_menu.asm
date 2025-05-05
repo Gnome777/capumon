@@ -66,18 +66,17 @@ RedisplayStartMenu::
 	cp 0
 	jp z, StartMenu_Pokedex
 	cp 1
-	jp z, StartMenu_Pokemon
+	jp z, StartMenu_PortablePC
 	cp 2
-	jp z, StartMenu_Item
+	jp z, StartMenu_Pokemon
 	cp 3
-	jp z, StartMenu_TrainerInfo
+	jp z, StartMenu_Item
 	cp 4
-	jp z, StartMenu_SaveReset
+	jp z, StartMenu_TrainerInfo
 	cp 5
-	jp z, StartMenu_Option
-; new/edited
+	jp z, StartMenu_SaveReset
 	cp 6
-	jp z, .exitOrPortablePC
+	jp z, StartMenu_Option
 	jr CloseStartMenu
 
 .exitOrPortablePC

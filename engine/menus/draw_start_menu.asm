@@ -34,6 +34,10 @@ DrawStartMenu::
 	ld de, StartMenuPokedexText
 	call PrintStartMenuItem
 	ld a, $08 ; edited for portable PC
+	CheckEvent EVENT_GOT_POKEDEX ; new, for portablePC
+	jr z, .dontPrintPortablePC ; new, for portablePC
+	ld de, StartMenuPortablePCText ; new, for portablePC
+	call PrintStartMenuItem ; new, for portablePC
 .storeMenuItemCount
 	ld [wMaxMenuItem], a ; number of menu items
 	ld de, StartMenuPokemonText
@@ -53,10 +57,6 @@ DrawStartMenu::
 	call PrintStartMenuItem
 	ld de, StartMenuOptionText
 	call PrintStartMenuItem
-	CheckEvent EVENT_GOT_POKEDEX ; new, for portablePC
-	jr z, .dontPrintPortablePC ; new, for portablePC
-	ld de, StartMenuPortablePCText ; new, for portablePC
-	call PrintStartMenuItem ; new, for portablePC
 .dontPrintPortablePC ; new, for portablePC
 	ld de, StartMenuExitText
 	call PlaceString
@@ -66,6 +66,9 @@ DrawStartMenu::
 
 StartMenuPokedexText:
 	db "POKéDEX@"
+
+StartMenuPortablePCText: ; new
+	db "PORT.PC@"
 
 StartMenuPokemonText:
 	db "POKéMON@"
@@ -84,9 +87,6 @@ StartMenuExitText:
 
 StartMenuOptionText:
 	db "OPTION@"
-
-StartMenuPortablePCText: ; new
-	db "PORT.PC@"
 
 PrintStartMenuItem:
 	push hl

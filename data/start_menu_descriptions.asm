@@ -1,28 +1,32 @@
 StartMenuDescriptionTable:
 ; regular menu descriptions
 	dw .Pokedex
+	dw .PortablePC
 	dw .Pokemon
 	dw .Item
 	dw .Player
 	dw .Save
 	dw .Option
-	dw .PortablePC
 	dw .Exit
 
 .LinkTable:
 ; descriptions for link mode
 	dw .Pokedex
+	dw .PortablePC
 	dw .Pokemon
 	dw .Item
 	dw .Player
 	dw .Reset ; in place of "SAVE"
 	dw .Option
-	dw .PortablePC
 	dw .Exit
 
 .Pokedex:
 	db "#MON"
 	next "database@"
+
+.PortablePC:
+    db "Access"
+    next "your PC@"
 
 .Pokemon:
 	db "Party <PKMN>"
@@ -47,10 +51,6 @@ StartMenuDescriptionTable:
 .Option:
 	db "Change"
 	next "settings@"
-
-.PortablePC:
-    db "Access"
-    next "your PC@"
 
 .Exit:
 	db "Close this"
