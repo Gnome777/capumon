@@ -294,30 +294,30 @@ SilphCo7TrainerHeader3:
 	db -1 ; end
 
 SilphCo7FSilphWorkerM1Text:
-; lapras guy
+; porygon guy
 	text_asm
 	ld a, [wStatusFlags4]
-	bit BIT_GOT_LAPRAS, a
-	jr z, .give_lapras
+	bit BIT_GOT_PORYGON, a
+	jr z, .give_porygon
 	CheckEvent EVENT_BEAT_SILPH_CO_GIOVANNI
 	jr nz, .saved_silph
 	ld hl, .IsOurPresidentOkText
 	call PrintText
 	jr .done
-.give_lapras
+.give_porygon
 	ld hl, .HaveThisPokemonText
 	call PrintText
-	lb bc, LAPRAS, 15
+	lb bc, PORYGON, 15
 	call GivePokemon
 	jr nc, .done
 	ld a, [wAddedToParty]
 	and a
 	call z, WaitForTextScrollButtonPress
 	call EnableAutoTextBoxDrawing
-	ld hl, .LaprasDescriptionText
+	ld hl, .PorygonDescriptionText
 	call PrintText
 	ld hl, wStatusFlags4
-	set BIT_GOT_LAPRAS, [hl]
+	set BIT_GOT_PORYGON, [hl]
 	jr .done
 .saved_silph
 	ld hl, .SavedText
@@ -329,8 +329,8 @@ SilphCo7FSilphWorkerM1Text:
 	text_far _SilphCo7FSilphWorkerM1HaveThisPokemonText
 	text_end
 
-.LaprasDescriptionText
-	text_far _SilphCo7FSilphWorkerM1LaprasDescriptionText
+.PorygonDescriptionText
+	text_far _SilphCo7FSilphWorkerM1PorygonDescriptionText
 	text_end
 
 .IsOurPresidentOkText
