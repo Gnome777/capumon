@@ -107,11 +107,7 @@ CeladonGymErikaText:
 	text_asm
 	CheckEvent EVENT_BEAT_ERIKA
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM21
-	jr nz, .afterBeat
-	call z, CeladonGymReceiveTM21
-	call DisableWaitingAfterTextDisplay
-	jr .done
+	jr .afterBeat
 .afterBeat
 	ld hl, .PostBattleAdviceText
 	call PrintText

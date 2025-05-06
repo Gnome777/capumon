@@ -208,11 +208,7 @@ ViridianGymGiovanniText:
 	text_asm
 	CheckEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM27
-	jr nz, .afterBeat
-	call z, ViridianGymReceiveTM27
-	call DisableWaitingAfterTextDisplay
-	jr .text_script_end
+	jr .afterBeat
 .afterBeat
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a

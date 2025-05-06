@@ -108,11 +108,7 @@ SaffronGymSabrinaText:
 	text_asm
 	CheckEvent EVENT_BEAT_SABRINA
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM46
-	jr nz, .afterBeat
-	call z, SaffronGymSabrinaReceiveTM46Script
-	call DisableWaitingAfterTextDisplay
-	jr .done
+	jr .afterBeat
 .afterBeat
 	ld hl, .PostBattleAdviceText
 	call PrintText

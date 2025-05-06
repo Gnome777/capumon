@@ -118,12 +118,7 @@ SilphCo2FSilphWorkerFText:
 	jr nz, .already_have_tm
 	ld hl, .PleaseTakeThisText
 	call PrintText
-	lb bc, TM_SELFDESTRUCT, 1
-	call GiveItem
-	ld hl, .TM36NoRoomText
-	jr nc, .print_text
 	SetEvent EVENT_GOT_TM36
-	ld hl, .ReceivedTM36Text
 	jr .print_text
 .already_have_tm
 	ld hl, .TM36ExplanationText

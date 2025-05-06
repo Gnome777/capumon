@@ -107,11 +107,7 @@ FuchsiaGymKogaText:
 	text_asm
 	CheckEvent EVENT_BEAT_KOGA
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM06
-	jr nz, .afterBeat
-	call z, FuchsiaGymReceiveTM06
-	call DisableWaitingAfterTextDisplay
-	jr .done
+	jr .afterBeat
 .afterBeat
 	ld hl, .PostBattleAdviceText
 	call PrintText

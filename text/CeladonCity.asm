@@ -47,14 +47,14 @@ _CeladonCityGramps3ReceivedTM41Text::
 	text_end
 
 _CeladonCityGramps3TM41ExplanationText::
-	text "TM41 teaches"
+	text "I like eggs"
 	line "SOFTBOILED!"
 
-	para "Only one #MON"
-	line "can use it!"
+	; para "Only one #MON"
+	; line "can use it!"
 
-	para "That #MON is"
-	line "CHANSEY!"
+	; para "That #MON is"
+	; line "CHANSEY!"
 	done
 
 _CeladonCityGramps3TM41NoRoomText::

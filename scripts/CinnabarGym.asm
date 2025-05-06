@@ -213,11 +213,7 @@ CinnabarGymBlaineText:
 	text_asm
 	CheckEvent EVENT_BEAT_BLAINE
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM38
-	jr nz, .afterBeat
-	call z, CinnabarGymReceiveTM38
-	call DisableWaitingAfterTextDisplay
-	jp TextScriptEnd
+	jr .afterBeat
 .afterBeat
 	ld hl, .PostBattleAdviceText
 	call PrintText

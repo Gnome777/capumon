@@ -17,7 +17,7 @@ _SilphCo2FSilphWorkerFReceivedTM36Text::
 	text_end
 
 _SilphCo2FSilphWorkerFTM36ExplanationText::
-	text "TM36 is"
+	text "I hope you don't"
 	line "SELFDESTRUCT!"
 
 	para "It's powerful, but"

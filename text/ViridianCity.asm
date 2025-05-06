@@ -73,13 +73,13 @@ ViridianCityFisherYouCanHaveThisText::
 	para "I had this dream"
 	line "about a DROWZEE"
 	cont "eating my dream."
-	cont "What's this?"
-	cont "Where did this TM"
-	cont "come from?"
+	; cont "What's this?"
+	; cont "Where did this TM"
+	; cont "come from?"
 
-	para "This is spooky!"
-	line "Here, you can"
-	cont "have this TM."
+	; para "This is spooky!"
+	; line "Here, you can"
+	; cont "have this TM."
 	prompt
 
 _ViridianCityFisherReceivedTM42Text::
@@ -88,7 +88,7 @@ _ViridianCityFisherReceivedTM42Text::
 	text_end
 
 _ViridianCityFisherTM42ExplanationText::
-	text "TM42 contains"
+	text "I'm sleepy..."
 	line "DREAM EATER..."
 	cont "...Snore..."
 	done

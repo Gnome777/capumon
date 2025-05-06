@@ -303,14 +303,8 @@ CeruleanCityRocketText:
 	ld [wCeruleanCityCurScript], a
 	jp TextScriptEnd
 .beatRocketThief
-	ld hl, .IllReturnTheTMText
-	call PrintText
-	lb bc, TM_DIG, 1
-	call GiveItem
-	jr c, .Success
-	ld hl, .TM28NoRoomText
-	call PrintText
-	jr .Done
+	farcall CeruleanHideRocket
+    jr .Done
 .Success
 	ld a, $1
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a

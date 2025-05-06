@@ -47,15 +47,6 @@ CeladonCityGramps3Text:
 	jr nz, .gotTM41
 	ld hl, .Text
 	call PrintText
-	lb bc, TM_SOFTBOILED, 1
-	call GiveItem
-	jr c, .Success
-	ld hl, .TM41NoRoomText
-	call PrintText
-	jr .Done
-.Success
-	ld hl, .ReceivedTM41Text
-	call PrintText
 	SetEvent EVENT_GOT_TM41
 	jr .Done
 .gotTM41

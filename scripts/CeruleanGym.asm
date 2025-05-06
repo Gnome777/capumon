@@ -93,11 +93,7 @@ CeruleanGymMistyText:
 	text_asm
 	CheckEvent EVENT_BEAT_MISTY
 	jr z, .beforeBeat
-	CheckEventReuseA EVENT_GOT_TM11
-	jr nz, .afterBeat
-	call z, CeruleanGymReceiveTM11
-	call DisableWaitingAfterTextDisplay
-	jr .done
+	jr .afterBeat
 .afterBeat
 	ld hl, .TM11ExplanationText
 	call PrintText

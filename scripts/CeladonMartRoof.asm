@@ -91,11 +91,6 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, CeladonMartRoofLittleGirlYayLemonadeText
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_TRI_ATTACK, 1
-	call GiveItem
-	jr nc, .bagFull
-	ld hl, CeladonMartRoofLittleGirlReceivedTM49Text
-	call PrintText
 	SetEvent EVENT_GOT_TM49
 	ret
 .gaveSodaPop
@@ -104,11 +99,6 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, CeladonMartRoofLittleGirlYaySodaPopText
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ROCK_SLIDE, 1
-	call GiveItem
-	jr nc, .bagFull
-	ld hl, CeladonMartRoofLittleGirlReceivedTM48Text
-	call PrintText
 	SetEvent EVENT_GOT_TM48
 	ret
 .gaveFreshWater
@@ -117,11 +107,6 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	ld hl, CeladonMartRoofLittleGirlYayFreshWaterText
 	call PrintText
 	call RemoveItemByIDBank12
-	lb bc, TM_ICE_BEAM, 1
-	call GiveItem
-	jr nc, .bagFull
-	ld hl, CeladonMartRoofLittleGirlReceivedTM13Text
-	call PrintText
 	SetEvent EVENT_GOT_TM13
 	ret
 .bagFull

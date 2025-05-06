@@ -10,8 +10,8 @@ _CeladonMartRoofLittleGirlYayFreshWaterText::
 
 	para "Thank you!"
 
-	para "You can have this"
-	line "from me!@"
+	; para "You can have this"
+	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM13Text::
@@ -24,9 +24,7 @@ _CeladonMartRoofLittleGirlReceivedTM13Text::
 _CeladonMartRoofLittleGirlTM13ExplanationText::
 	text_start
 
-	para "@"
-	text_ram wStringBuffer
-	text " contains"
+	para "I love"
 	line "ICE BEAM!"
 
 	para "It can freeze the"
@@ -40,8 +38,8 @@ _CeladonMartRoofLittleGirlYaySodaPopText::
 
 	para "Thank you!"
 
-	para "You can have this"
-	line "from me!@"
+	; para "You can have this"
+	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM48Text::
@@ -54,9 +52,7 @@ _CeladonMartRoofLittleGirlReceivedTM48Text::
 _CeladonMartRoofLittleGirlTM48ExplanationText::
 	text_start
 
-	para "@"
-	text_ram wStringBuffer
-	text " contains"
+	para "I love"
 	line "ROCK SLIDE!"
 
 	para "It can spook the"
@@ -70,8 +66,8 @@ _CeladonMartRoofLittleGirlYayLemonadeText::
 
 	para "Thank you!"
 
-	para "You can have this"
-	line "from me!@"
+	; para "You can have this"
+	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM49Text::
@@ -82,7 +78,7 @@ _CeladonMartRoofLittleGirlReceivedTM49Text::
 _CeladonMartRoofLittleGirlTM49ExplanationText::
 	text_start
 
-	para "TM49 contains"
+	para "I love"
 	line "TRI ATTACK!@"
 	text_end
 

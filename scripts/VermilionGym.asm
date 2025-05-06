@@ -114,12 +114,8 @@ VermilionGymTrainerHeader2:
 VermilionGymLTSurgeText:
 	text_asm
 	CheckEvent EVENT_BEAT_LT_SURGE
-	jr z, .before_beat
-	CheckEventReuseA EVENT_GOT_TM24
-	jr nz, .got_tm24_already
-	call z, VermilionGymLTSurgeReceiveTM24Script
-	call DisableWaitingAfterTextDisplay
-	jr .text_script_end
+	jr z, .beforeBeat
+	jr .afterBeat
 .got_tm24_already
 	ld hl, .PostBattleAdviceText
 	call PrintText
