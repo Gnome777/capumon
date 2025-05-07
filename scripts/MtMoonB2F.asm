@@ -139,15 +139,6 @@ MtMoonB2FSuperNerdTakesOtherFossilScript:
 	ld a, TEXT_MTMOONB2F_SUPER_NERD_THEN_THIS_IS_MINE
 	ldh [hTextID], a
 	call DisplayTextID
-	CheckEvent EVENT_GOT_DOME_FOSSIL
-	jr z, .got_dome_fossil
-	ld a, HS_MT_MOON_B2F_FOSSIL_2
-	jr .continue
-.got_dome_fossil
-	ld a, HS_MT_MOON_B2F_FOSSIL_1
-.continue
-	ld [wMissableObjectIndex], a
-	predef HideObject
 	xor a
 	ld [wJoyIgnore], a
 	ld a, SCRIPT_MTMOONB2F_DEFAULT
@@ -254,9 +245,6 @@ MtMoonB2FDomeFossilText:
 	ld [wMissableObjectIndex], a
 	predef HideObject
 	SetEvent EVENT_GOT_DOME_FOSSIL
-	ld a, SCRIPT_MTMOONB2F_MOVE_SUPER_NERD
-	ld [wMtMoonB2FCurScript], a
-	ld [wCurMapScript], a
 .done
 	jp TextScriptEnd
 
@@ -282,9 +270,6 @@ MtMoonB2FHelixFossilText:
 	ld [wMissableObjectIndex], a
 	predef HideObject
 	SetEvent EVENT_GOT_HELIX_FOSSIL
-	ld a, SCRIPT_MTMOONB2F_MOVE_SUPER_NERD
-	ld [wMtMoonB2FCurScript], a
-	ld [wCurMapScript], a
 .done
 	jp TextScriptEnd
 

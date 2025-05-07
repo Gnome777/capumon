@@ -30,13 +30,12 @@ _MtMoonB2FSuperNerdTheyreBothMineText::
 
 _MtMoonB2FSuperNerdOkIllShareText::
 	text "OK!"
-	line "I'll share!"
+	line "You win!"
 	prompt
 
 _MtMoonB2fSuperNerdEachTakeOneText::
-	text "We'll each take"
-	line "one!"
-	cont "No being greedy!"
+	text "You can have"
+	line "both!"
 	done
 
 _MtMoonB2FSuperNerdTheresAPokemonLabText::
@@ -51,8 +50,8 @@ _MtMoonB2FSuperNerdTheresAPokemonLabText::
 	done
 
 _MtMoonB2FSuperNerdThenThisIsMineText::
-	text "All right. Then"
-	line "this is mine!@"
+	text "All right. Now"
+	line "leave me alone!@"
 	text_end
 
 _MtMoonB2FRocket1BattleText::

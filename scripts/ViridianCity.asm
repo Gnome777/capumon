@@ -236,7 +236,7 @@ ViridianCityFisherText:
 	SetEvent EVENT_GOT_TM42
 	ld hl, .YouCanHaveThisText
 	call PrintText
-	ld hl, .NoTMText
+	ld hl, .TM42ExplanationText
 	call PrintText
 .done
 	jp TextScriptEnd
