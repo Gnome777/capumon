@@ -18,7 +18,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 - Hyper Training
 - In-battle EXP bar
 - Enemy Pokémon use PP
-- Gym Leaders and the Elite Four can be rematched (except Giovanni)
+- Gym Leaders can be rematched (except Giovanni)
 
 Some other features:
 
