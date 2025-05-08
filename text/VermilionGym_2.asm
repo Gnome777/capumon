@@ -121,7 +121,7 @@ _VermilionGymGymGuideChampInMakingText::
 	line "nickname. People"
 	cont "refer to him as"
 	cont "the Lightning"
-	cont "American!"
+	cont "Unovan!"
 
 	para "He's an expert on"
 	line "electric #MON!"
@@ -142,4 +142,67 @@ _VermilionGymGymGuideChampInMakingText::
 _VermilionGymGymGuideBeatLTSurgeText::
 	text "Whew! That match"
 	line "was electric!"
+	done
+
+_VermilionGymRematchPreBattle1Text::
+	text "You again!"
+	line "Congrats!"
+	
+	para "I challenge"
+	line "you to a"
+	cont "battle!"
+
+	para "Prove to me"
+	line "last time"
+	cont "wasn't a fluke!"
+
+	para "My eletric"
+	line "#MON have"
+	cont "gotten strong!"
+	done
+
+_VermilionGymPreRematchBattle2Text::
+	text "Alright!"
+	line "Prepare yourself!"
+	done
+
+_VermilionGymRematchRefusedText::
+	text "Hmph..."
+	line "Disappointing."
+	done
+
+_VermilionGymRematchDefeatedText::
+	text "Wow!"
+	line "That gave"
+	cont "me a shock!"
+	prompt
+
+_VermilionGymRematchVictoryText::
+	text "Electric"
+	line "#MON"
+	cont "are the best"
+	cont "#MON!"
+
+	para "Come back"
+	line "when you're"
+	cont "able to win!"
+	prompt
+
+_VermilionGymRematchPostBattleText::
+	text "Excellent!"
+
+	para "You could"
+	line "train under"
+	cont "me..."
+
+	para "Haha! Just"
+	line "kidding."
+
+	para "But let's keep"
+	line "in touch!"
+	cont "That fight was"
+	cont "the best yet!"
+
+	para "Dismissed!"
+	line "Stay safe."
 	done
