@@ -22,8 +22,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 
 Some other features:
 
-- Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon
-- A wider variety of Gift Pokémon have been added
+- Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon. They can still be obtained through normal gameplay.
 - Boss trainer battles and Rival battles have been modified. Regular trainers have been left unmodified.
 - Some but not all Pokémon have received a type change, based off their Pokédex entry and if I thought their typing made sense. The intent was to reduce duplicate type fatigue (Poison typing and Normal/Flying combinations)
 - Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
