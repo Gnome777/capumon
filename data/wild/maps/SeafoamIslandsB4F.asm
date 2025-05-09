@@ -1,15 +1,15 @@
 SeafoamIslandsB4FWildMons:
 	def_grass_wildmons 10 ; encounter rate
-	db 31, HORSEA
-	db 31, SHELLDER
-	db 33, HORSEA
-	db 33, SHELLDER
-	db 29, SLOWPOKE
-	db 31, SEEL
+	db 30, SEEL
+	db 30, SHELLDER
 	db 31, SLOWPOKE
-	db 29, SEEL
-	db 39, SLOWBRO
-	db 32, GOLBAT
+	db 33, VAPOREON
+	db 33, OMANYTE
+	db 33, KABUTO
+	db 32, JYNX
+	db 32, MR_MIME
+	db 33, AERODACTYL
+	db 35, LAPRAS
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

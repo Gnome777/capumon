@@ -1,15 +1,15 @@
 Route13WildMons:
 	def_grass_wildmons 20 ; encounter rate
-	db 24, ODDISH
-	db 25, PIDGEY
-	db 27, PIDGEY
-	db 24, VENONAT
-	db 22, ODDISH
-	db 26, VENONAT
-	db 26, ODDISH
-	db 25, DITTO
-	db 28, GLOOM
-	db 30, GLOOM
+	db 25, PIDGEOTTO
+	db 25, RATICATE
+	db 26, DODUO
+	db 28, FEAROW
+	db 28, PRIMEAPE
+	db 28, PERSIAN
+	db 27, GRIMER
+	db 27, KOFFING
+	db 29, TAUROS
+	db 30, SNORLAX
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

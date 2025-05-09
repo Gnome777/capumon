@@ -1,15 +1,15 @@
 CeruleanCave1FWildMons:
 	def_grass_wildmons 10 ; encounter rate
-	db 46, GOLBAT
-	db 46, HYPNO
-	db 46, MAGNETON
-	db 49, DODRIO
-	db 49, VENOMOTH
-	db 52, ARBOK
-	db 49, KADABRA
-	db 52, PARASECT
-	db 53, RAICHU
-	db 53, DITTO
+	db 70, GOLBAT
+	db 70, GOLEM
+	db 70, ONIX
+	db 70, MACHAMP
+	db 70, ALAKAZAM
+	db 70, GENGAR
+	db 70, HITMONCHAN
+	db 70, HITMONLEE
+	db 70, RHYDON
+	db 70, DRAGONITE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

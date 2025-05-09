@@ -1,15 +1,15 @@
 Route23WildMons:
 	def_grass_wildmons 10 ; encounter rate
-	db 26, EKANS
-	db 33, DITTO
-	db 26, SPEAROW
-	db 38, FEAROW
-	db 38, DITTO
-	db 38, FEAROW
-	db 41, ARBOK
-	db 43, DITTO
-	db 41, FEAROW
-	db 43, FEAROW
+	db 50, PIDGEOT
+	db 50, RATICATE
+	db 26, FARFETCHD
+	db 50, FEAROW
+	db 50, PRIMEAPE
+	db 50, PERSIAN
+	db 50, VILEPLUME
+	db 50, VICTREEBEL
+	db 50, EEVEE
+	db 50, RAICHU
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

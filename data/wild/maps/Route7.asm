@@ -1,15 +1,15 @@
 Route7WildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 19, PIDGEY
-	db 19, ODDISH
-	db 17, MANKEY
-	db 22, ODDISH
-	db 22, PIDGEY
-	db 18, MANKEY
-	db 18, GROWLITHE
-	db 20, GROWLITHE
-	db 19, MANKEY
-	db 20, MANKEY
+	db 20, PIDGEOTTO
+	db 20, RATICATE
+	db 20, GASTLY
+	db 21, POLIWAG
+	db 21, GLOOM
+	db 21, WEEPINBELL
+	db 20, VOLTORB
+	db 20, MAGNEMITE
+	db 20, DROWZEE
+	db 10, ABRA
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

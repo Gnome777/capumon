@@ -1,15 +1,15 @@
 CeruleanCaveB1FWildMons:
 	def_grass_wildmons 25 ; encounter rate
-	db 55, RHYDON
-	db 55, MAROWAK
-	db 55, ELECTRODE
-	db 64, CHANSEY
-	db 64, PARASECT
-	db 64, RAICHU
-	db 57, ARBOK
-	db 65, DITTO
-	db 63, DITTO
-	db 67, DITTO
+	db 70, GOLBAT
+	db 70, GOLEM
+	db 70, ONIX
+	db 70, MACHAMP
+	db 70, ALAKAZAM
+	db 70, GENGAR
+	db 70, HITMONCHAN
+	db 70, HITMONLEE
+	db 70, RHYDON
+	db 70, DRAGONITE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate

@@ -1,15 +1,15 @@
 Route6WildMons:
 	def_grass_wildmons 15 ; encounter rate
-	db 13, ODDISH
-	db 13, PIDGEY
-	db 15, PIDGEY
-	db 10, MANKEY
-	db 12, MANKEY
-	db 15, ODDISH
-	db 16, ODDISH
-	db 16, PIDGEY
-	db 14, MANKEY
-	db 16, MANKEY
+	db 20, PIDGEOTTO
+	db 20, RATICATE
+	db 20, GASTLY
+	db 21, POLIWAG
+	db 21, GLOOM
+	db 21, WEEPINBELL
+	db 20, VOLTORB
+	db 20, MAGNEMITE
+	db 20, DROWZEE
+	db 10, ABRA
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
