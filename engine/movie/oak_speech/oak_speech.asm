@@ -98,7 +98,7 @@ OakSpeech:
 	call PrintText
 	call GBFadeOutToWhite
 	call ClearScreen
-	ld a, NIDORINO
+	ld a, PIKACHU
 	ld [wCurSpecies], a
 	ld [wCurPartySpecies], a
 	call GetMonHeader
