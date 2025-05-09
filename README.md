@@ -4,7 +4,9 @@ This is a romhack of Pokémon Red and Blue.
 
 ### Description
 
-Capumon Generation One is not a difficulty hack or a catch-em-all, although it modifies the difficulty of boss trainers and allows for a wider selection of Pokémon. This is a reimagining of the first Generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
+Capumon Generation One is not a difficulty hack or a catch-em-all, although it modifies the difficulty of boss trainers and allows for a wider selection of Pokémon. This is a reimagining of the first generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
+
+For detailed info on all changes, view the [wiki](https://github.com/Gnome777/capumonone/wiki)
 
 Capumon has a variety of new features that make it stand out, including but not limited to:
 
@@ -19,19 +21,16 @@ Capumon has a variety of new features that make it stand out, including but not 
 - In-battle EXP bar
 - Enemy Pokémon use PP
 - Gym Leaders can be rematched (except Giovanni)
-
-Some other features:
-
 - Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon. They can still be obtained through normal gameplay.
 - Boss trainer battles and Rival battles have been modified. Regular trainers have been left unmodified.
-- Some but not all Pokémon have received a type change, based off their Pokédex entry and if I thought their typing made sense. The intent was to reduce duplicate type fatigue (Poison typing and Normal/Flying combinations)
+- Some but not all Pokémon have received a type change, based off their Pokédex entry and if I thought their typing made sense. The intent was to reduce duplicate type fatigue (Normal/Flying is a good example)
 - Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
 - All wild encounters have been changed to allow for a greater variety of Pokémon to be captured.
-- All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50 (or 60 for legendaries). For example, Moltres originally learned 3 moves by level-up, but now learns 12
-- TMs and HMs have been removed from Pokémon learnsets.
-- All trees requiring Cut have been removed.
-- All Flying-type Pokémon learn Fly.
-- The Surfboard replaces HM03 in the Safari Zone. Surf can be learned by certain Pokémon still.
+- All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50. For example, Moltres originally learned 3 moves by level-up, but now learns 10
+- TMs and HMs have been removed from Pokémon learnsets. Field moves remain but no longer require badges.
+- All trees requiring Cut have been removed. The areas locked behind Cut are not delevelled, so be careful.
+- All Flying-type Pokémon learn Fly except Doduo, since it does not have wings.
+- The Surfboard replaces HM03 in the Safari Zone. Surf can be learned by certain Pokémon still and retains its purpose as a field move for those wanting to not get the Surfboard.
 - All boulders requiring Strength have been removed. Strength puzzles have been automatically solved.
 - HM05 has been removed.
 
