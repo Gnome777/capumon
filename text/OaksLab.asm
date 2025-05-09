@@ -103,7 +103,7 @@ _OaksLabOak1DeliverParcelText::
 _OaksLabOak1ParcelThanksText::
 	text_start
 	para "Ah! This is the"
-	line "custom # BALL"
+	line "custom #BALL"
 	cont "I ordered!"
 	cont "Thank you!"
 	done
@@ -314,7 +314,9 @@ _OaksLabOakGotPokedexText::
 	cont "these with you!"
 
 	para "<PLAYER> got"
-	line "#DEX from OAK!@"
+	line "#DEX and"
+	line "PORTABLE PC"
+	line "from OAK!@"
 	text_end
 
 _OaksLabOakThatWasMyDreamText::
