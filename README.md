@@ -1,6 +1,6 @@
 # Capumon Generation One
 
-This is a romhack of Pokémon Red and Blue.
+This is a ROMhack of Pokémon Red and Blue.
 
 ### Description
 
@@ -34,6 +34,18 @@ Capumon has a variety of new features that make it stand out, including but not 
 - The Surfboard replaces HM03 in the Safari Zone. Surf can be learned by certain Pokémon still and retains its purpose as a field move for those wanting to not get the Surfboard.
 - All boulders requiring Strength have been removed. Strength puzzles have been automatically solved.
 - HM05 has been removed.
+
+### The Future
+
+Capumon Generation One is complete as per my original goal. However, I do have ambitious ideas (as does every ROMhack creator starting out), including but not limited to:
+
+- A fully open-world Kanto, where field moves are completely erased
+- The ability to start in any town
+- Gym leader teams scaling by badges, meaning you can challenge in any order
+- Optionally disable the Team Rocket storyline
+- More Pokémon, moves, etc. basically updating the game to compete with future generations
+
+These may or may not happen in the future (most likely not) depending on a variety of factors, the most significant of which being whether I want to or not.
 
 ### Install Instructions
 
