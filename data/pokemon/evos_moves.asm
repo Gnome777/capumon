@@ -534,6 +534,7 @@ MewEvosMoves:
 	db 30, BLIZZARD
 	db 35, THUNDER
 	db 40, FIRE_BLAST
+	db 45, CONFUSION
 	db 50, PSYBEAM
 	db 55, PSYWAVE
 	db 60, PSYCHIC_M
@@ -1995,6 +1996,7 @@ MewtwoEvosMoves:
 	db 30, BLIZZARD
 	db 35, THUNDER
 	db 40, FIRE_BLAST
+	db 45, CONFUSION
 	db 50, PSYBEAM
 	db 55, PSYWAVE
 	db 60, PSYCHIC_M

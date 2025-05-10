@@ -127,12 +127,16 @@ DebugSetPokedexEntries:
 
 DebugNewGameItemsList:
 	db BICYCLE, 1
+	db MAX_REVIVE, 99
 	db FULL_RESTORE, 99
 	db FULL_HEAL, 99
+	db MAX_ELIXER, 99
+	db MAX_ETHER, 99
 	db ESCAPE_ROPE, 99
 	db RARE_CANDY, 99
 	db MASTER_BALL, 99
 	db TOWN_MAP, 1
+	db SURFBOARD, 1
 	db SECRET_KEY, 1
 	db CARD_KEY, 1
 	db S_S_TICKET, 1

@@ -117,6 +117,7 @@ SeafoamIslandsB4FMoveObjectScript:
 	db -1 ; end
 
 SeafoamIslandsB4FObjectMoving2Script:
+	ret
 	ld a, [wSimulatedJoypadStatesIndex]
 	ld b, a
 	cp $1
