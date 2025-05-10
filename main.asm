@@ -354,8 +354,5 @@ INCLUDE "engine/movie/evolution.asm"
 INCLUDE "engine/overworld/elevator.asm"
 INCLUDE "engine/items/tm_prices.asm"
 
-SECTION "Engine Spillover", ROMX
-
-INCLUDE "engine/menus/item_descriptions.asm"
 INCLUDE "text/VermilionTradeHouse.asm"
 INCLUDE "engine/pokemon/evos_moves.asm"
