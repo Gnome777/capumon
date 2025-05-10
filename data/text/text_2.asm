@@ -1791,14 +1791,6 @@ _ContCharText::
 	text "<_CONT>@"
 	text_end
 
-_DifficultyText::
-   text "Select Difficulty"
-   done
-
-_AreYouSureText::
-	text "Are you sure?"
-	done
-
 _CantUsePCHere:: ; new, for portablePC
 	text "You cannot use"
 	line "this here!"
