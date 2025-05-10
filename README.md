@@ -20,6 +20,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 - Hyper Training
 - In-battle EXP bar
 - Enemy Pokémon use PP
+- Portable P.C.
 - Gym Leaders can be rematched (except Giovanni)
 - Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon. They can still be obtained through normal gameplay.
 - Boss trainer battles and Rival battles have been modified. Regular trainers have been left unmodified.
