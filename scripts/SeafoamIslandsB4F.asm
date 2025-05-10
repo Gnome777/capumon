@@ -29,6 +29,7 @@ SeafoamIslandsB4FObjectMoving3Script:
 	ret
 
 SeafoamIslandsB4FDefaultScript:
+	ret ; new
 	CheckBothEventsSet EVENT_SEAFOAM3_BOULDER1_DOWN_HOLE, EVENT_SEAFOAM3_BOULDER2_DOWN_HOLE
 	ret z
 	ld hl, .Coords
@@ -72,6 +73,7 @@ SeafoamIslandsB4FObjectMoving1Script:
 	ret
 
 SeafoamIslandsB4FMoveObjectScript:
+	ret ; new
 	CheckBothEventsSet EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE, EVENT_SEAFOAM4_BOULDER2_DOWN_HOLE
 	ld a, SCRIPT_SEAFOAMISLANDSB4F_DEFAULT
 	jr z, .playerNotInStrongCurrent

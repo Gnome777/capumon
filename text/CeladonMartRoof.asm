@@ -5,17 +5,15 @@ _CeladonMartRoofLittleGirlGiveHerWhichDrinkText::
 
 _CeladonMartRoofLittleGirlYayFreshWaterText::
 	text "Yay!"
-
 	para "FRESH WATER!"
-
 	para "Thank you!"
-
 	; para "You can have this"
 	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM13Text::
-	text "<PLAYER> received"
+	text "<PLAYER>"
+	text "received"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
@@ -33,17 +31,15 @@ _CeladonMartRoofLittleGirlTM13ExplanationText::
 
 _CeladonMartRoofLittleGirlYaySodaPopText::
 	text "Yay!"
-
 	para "SODA POP!"
-
 	para "Thank you!"
-
 	; para "You can have this"
 	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM48Text::
-	text "<PLAYER> received"
+	text "<PLAYER>"
+	text "received"
 	line "@"
 	text_ram wStringBuffer
 	text "!@"
@@ -51,27 +47,23 @@ _CeladonMartRoofLittleGirlReceivedTM48Text::
 
 _CeladonMartRoofLittleGirlTM48ExplanationText::
 	text_start
-
 	para "I love"
 	line "ROCK SLIDE!"
-
 	para "It can spook the"
 	line "target sometimes!@"
 	text_end
 
 _CeladonMartRoofLittleGirlYayLemonadeText::
 	text "Yay!"
-
 	para "LEMONADE!"
-
 	para "Thank you!"
-
 	; para "You can have this"
 	; line "from me!@"
 	text_end
 
 _CeladonMartRoofLittleGirlReceivedTM49Text::
-	text "<PLAYER> received"
+	text "<PLAYER>"
+	text "received"
 	line "TM49!@"
 	text_end
 

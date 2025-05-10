@@ -47,17 +47,17 @@ CeladonGymErikaPostBattleScript:
 	jr nz, ErikaRematchPostBattle
 
 CeladonGymReceiveTM21:
-	ld a, TEXT_CELADONGYM_RAINBOWBADGE_INFO
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_CELADONGYM_RAINBOWBADGE_INFO
+	; ldh [hTextID], a
+	; call DisplayTextID
 	SetEvent EVENT_BEAT_ERIKA
-	lb bc, TM_MEGA_DRAIN, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, TEXT_CELADONGYM_RECEIVED_TM21
-	ldh [hTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM21
+	; lb bc, TM_MEGA_DRAIN, 1
+	; call GiveItem
+	; jr nc, .BagFull
+	; ld a, TEXT_CELADONGYM_RECEIVED_TM21
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; SetEvent EVENT_GOT_TM21
 	jr .gymVictory
 .BagFull
 	ld a, TEXT_CELADONGYM_TM21_NO_ROOM

@@ -47,17 +47,17 @@ SaffronGymSabrinaPostBattle:
 	jr nz, SabrinaRematchPostBattle
 
 SaffronGymSabrinaReceiveTM46Script:
-	ld a, TEXT_SAFFRONGYM_SABRINA_MARSH_BADGE_INFO
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_SAFFRONGYM_SABRINA_MARSH_BADGE_INFO
+	; ldh [hTextID], a
+	; call DisplayTextID
 	SetEvent EVENT_BEAT_SABRINA
-	lb bc, TM_PSYWAVE, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, TEXT_SAFFRONGYM_SABRINA_RECEIVED_TM46
-	ldh [hTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM46
+	; lb bc, TM_PSYWAVE, 1
+	; call GiveItem
+	; jr nc, .BagFull
+	; ld a, TEXT_SAFFRONGYM_SABRINA_RECEIVED_TM46
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; SetEvent EVENT_GOT_TM46
 	jr .gymVictory
 .BagFull
 	ld a, TEXT_SAFFRONGYM_SABRINA_TM46_NO_ROOM

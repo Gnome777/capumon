@@ -1,22 +1,23 @@
 SeafoamIslandsB3F_Script:
 	call EnableAutoTextBoxDrawing
-	ld hl, wMiscFlags
-	bit BIT_PUSHED_BOULDER, [hl]
-	res BIT_PUSHED_BOULDER, [hl]
-	jr z, .noBoulderWasPushed
-	ld hl, Seafoam4HolesCoords
-	call CheckBoulderCoords
-	ret nc
-	EventFlagAddress hl, EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
-	ld a, [wCoordIndex]
-	cp $1
-	jr nz, .boulder2FellDownHole
-	SetEventReuseHL EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
-	ld a, HS_SEAFOAM_ISLANDS_B3F_BOULDER_1
-	ld [wObjectToHide], a
-	ld a, HS_SEAFOAM_ISLANDS_B4F_BOULDER_1
-	ld [wObjectToShow], a
-	jr .hideAndShowBoulderObjects
+	jr .noBoulderWasPushed ; new
+	; ld hl, wMiscFlags
+	; bit BIT_PUSHED_BOULDER, [hl]
+	; res BIT_PUSHED_BOULDER, [hl]
+	; jr z, .noBoulderWasPushed
+	; ld hl, Seafoam4HolesCoords
+	; call CheckBoulderCoords
+	; ret nc
+	; EventFlagAddress hl, EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
+	; ld a, [wCoordIndex]
+	; cp $1
+	; jr nz, .boulder2FellDownHole
+	; SetEventReuseHL EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
+	; ld a, HS_SEAFOAM_ISLANDS_B3F_BOULDER_1
+	; ld [wObjectToHide], a
+	; ld a, HS_SEAFOAM_ISLANDS_B4F_BOULDER_1
+	; ld [wObjectToShow], a
+	; jr .hideAndShowBoulderObjects
 .boulder2FellDownHole
 	SetEventAfterBranchReuseHL EVENT_SEAFOAM4_BOULDER2_DOWN_HOLE, EVENT_SEAFOAM4_BOULDER1_DOWN_HOLE
 	ld a, HS_SEAFOAM_ISLANDS_B3F_BOULDER_2
@@ -58,6 +59,7 @@ SeafoamIslandsB3F_ScriptPointers:
 	EXPORT SCRIPT_SEAFOAMISLANDSB3F_MOVE_OBJECT ; used by engine/overworld/player_state.asm
 
 SeafoamIslandsB3FDefaultScript:
+	ret ; new
 	CheckBothEventsSet EVENT_SEAFOAM3_BOULDER1_DOWN_HOLE, EVENT_SEAFOAM3_BOULDER2_DOWN_HOLE
 	ret z
 	ld a, [wYCoord]
@@ -93,6 +95,7 @@ SeafoamIslandsB3FObjectMoving1Script:
 	ret
 
 SeafoamIslandsB3FMoveObjectScript:
+	ret ; new
 	CheckBothEventsSet EVENT_SEAFOAM3_BOULDER1_DOWN_HOLE, EVENT_SEAFOAM3_BOULDER2_DOWN_HOLE
 	ret z
 	ld a, [wXCoord]

@@ -136,17 +136,17 @@ ViridianGymGiovanniPostBattle:
 	ld [wJoyIgnore], a
 ; fallthrough
 ViridianGymReceiveTM27:
-	ld a, TEXT_VIRIDIANGYM_GIOVANNI_EARTH_BADGE_INFO
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_VIRIDIANGYM_GIOVANNI_EARTH_BADGE_INFO
+	; ldh [hTextID], a
+	; call DisplayTextID
 	SetEvent EVENT_BEAT_VIRIDIAN_GYM_GIOVANNI
-	lb bc, TM_FISSURE, 1
-	call GiveItem
-	jr nc, .bag_full
-	ld a, TEXT_VIRIDIANGYM_GIOVANNI_RECEIVED_TM27
-	ldh [hTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM27
+	; lb bc, TM_FISSURE, 1
+	; call GiveItem
+	; jr nc, .bag_full
+	; ld a, TEXT_VIRIDIANGYM_GIOVANNI_RECEIVED_TM27
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; SetEvent EVENT_GOT_TM27
 	jr .gym_victory
 .bag_full
 	ld a, TEXT_VIRIDIANGYM_GIOVANNI_TM27_NO_ROOM

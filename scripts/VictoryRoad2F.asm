@@ -44,7 +44,7 @@ VictoryRoad2F_ScriptPointers:
 
 VictoryRoad2FDefaultScript:
 	ld hl, .SwitchCoords
-	call CheckBoulderCoords
+	; call CheckBoulderCoords
 	jp nc, CheckFightingMapTrainers
 	EventFlagAddress hl, EVENT_VICTORY_ROAD_2_BOULDER_ON_SWITCH1
 	ld a, [wCoordIndex]

@@ -632,8 +632,9 @@ BlastoiseEvosMoves:
 	db 6, BUBBLE
 	db 10, WITHDRAW
 	db 15, WATER_GUN
-	db 20, ICE_PUNCH
-	db 30, AURORA_BEAM
+	db 20, AURORA_BEAM
+	db 25, BUBBLEBEAM
+	db 30, ICE_PUNCH
 	db 35, ICE_BEAM
 	db 40, WATERFALL
 	db 45, SURF
@@ -2566,8 +2567,9 @@ SquirtleEvosMoves:
 	db 6, BUBBLE
 	db 10, WITHDRAW
 	db 15, WATER_GUN
-	db 20, ICE_PUNCH
-	db 30, AURORA_BEAM
+	db 20, AURORA_BEAM
+	db 25, BUBBLEBEAM
+	db 30, ICE_PUNCH
 	db 35, ICE_BEAM
 	db 40, WATERFALL
 	db 45, SURF
@@ -2599,8 +2601,9 @@ WartortleEvosMoves:
 	db 6, BUBBLE
 	db 10, WITHDRAW
 	db 15, WATER_GUN
-	db 20, ICE_PUNCH
-	db 30, AURORA_BEAM
+	db 20, AURORA_BEAM
+	db 25, BUBBLEBEAM
+	db 30, ICE_PUNCH
 	db 35, ICE_BEAM
 	db 40, WATERFALL
 	db 45, SURF

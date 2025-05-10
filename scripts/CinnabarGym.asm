@@ -147,17 +147,17 @@ CinnabarGymBlainePostBattleScript:
 	jr nz, BlaineRematchPostBattle
 ; fallthrough
 CinnabarGymReceiveTM38:
-	ld a, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
+	; ldh [hTextID], a
+	; call DisplayTextID
 	SetEvent EVENT_BEAT_BLAINE
-	lb bc, TM_FIRE_BLAST, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, TEXT_CINNABARGYM_BLAINE_RECEIVED_TM38
-	ldh [hTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM38
+	; lb bc, TM_FIRE_BLAST, 1
+	; call GiveItem
+	; jr nc, .BagFull
+	; ld a, TEXT_CINNABARGYM_BLAINE_RECEIVED_TM38
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; SetEvent EVENT_GOT_TM38
 	jr .gymVictory
 .BagFull
 	ld a, TEXT_CINNABARGYM_BLAINE_TM38_NO_ROOM

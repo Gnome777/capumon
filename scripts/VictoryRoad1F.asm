@@ -28,7 +28,7 @@ VictoryRoad1FDefaultScript:
 	CheckEvent EVENT_VICTORY_ROAD_1_BOULDER_ON_SWITCH
 	jp nz, CheckFightingMapTrainers
 	ld hl, .SwitchCoords
-	call CheckBoulderCoords
+	; call CheckBoulderCoords
 	jp nc, CheckFightingMapTrainers
 	ld hl, wCurrentMapScriptFlags
 	set BIT_CUR_MAP_LOADED_1, [hl]

@@ -3,11 +3,10 @@ VermilionTradeHouse_Script:
 
 VermilionTradeHouse_ScriptPointers:
 	def_script_pointers
-	dw_const HyperText, TEXT_VERMILIONTRADEHOUSE_LITTLE_GIRL
 
 VermilionTradeHouse_TextPointers:
 	def_text_pointers
-	dw_const HyperNoCap, TEXT_HYPER_NO_CAP
+	dw_const HyperNoNugget, TEXT_HYPER_NO_NUGGET
 	dw_const HyperSeesNugget, TEXT_HYPER_SEES_NUGGET
 	dw_const HyperYes, TEXT_HYPER_YES
 	dw_const HyperNo, TEXT_HYPER_NO
@@ -82,7 +81,7 @@ HyperText:
 	farcall RemoveItemByID
 	jr .done
 .NoNugget
-	ld hl, HyperNoCap
+	ld hl, HyperNoNugget
 	call PrintText
 	jr .done
 .refused
@@ -98,7 +97,7 @@ NuggetList:
 	db 0 ; end
 
 ; These are text pointers for the script to load.
-HyperNoCap:
+HyperNoNugget:
 	text_far _HyperText
 	text_end
 

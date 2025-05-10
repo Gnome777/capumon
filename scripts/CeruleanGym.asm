@@ -47,17 +47,17 @@ CeruleanGymMistyPostBattleScript:
 	jr nz, MistyRematchPostBattle
 
 CeruleanGymReceiveTM11:
-	ld a, TEXT_CERULEANGYM_MISTY_CASCADE_BADGE_INFO
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_CERULEANGYM_MISTY_CASCADE_BADGE_INFO
+	; ldh [hTextID], a
+	; call DisplayTextID
 	SetEvent EVENT_BEAT_MISTY
-	lb bc, TM_BUBBLEBEAM, 1
-	call GiveItem
-	jr nc, .BagFull
-	ld a, TEXT_CERULEANGYM_MISTY_RECEIVED_TM11
-	ldh [hTextID], a
-	call DisplayTextID
-	SetEvent EVENT_GOT_TM11
+	; lb bc, TM_BUBBLEBEAM, 1
+	; call GiveItem
+	; jr nc, .BagFull
+	; ld a, TEXT_CERULEANGYM_MISTY_RECEIVED_TM11
+	; ldh [hTextID], a
+	; call DisplayTextID
+	; SetEvent EVENT_GOT_TM11
 	jr .gymVictory
 .BagFull
 	ld a, TEXT_CERULEANGYM_MISTY_TM11_NO_ROOM

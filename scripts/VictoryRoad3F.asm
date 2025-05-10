@@ -32,7 +32,7 @@ VictoryRoad3FDefaultScript:
 	res BIT_PUSHED_BOULDER, [hl]
 	jp z, .check_switch_hole
 	ld hl, .SwitchOrHoleCoords
-	call CheckBoulderCoords
+	; call CheckBoulderCoords
 	jp nc, .check_switch_hole
 	ld a, [wCoordIndex]
 	cp $1

@@ -27,9 +27,9 @@ CeruleanCityRocketDefeatedScript:
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
 	SetEvent EVENT_BEAT_CERULEAN_ROCKET_THIEF
-	ld a, TEXT_CERULEANCITY_ROCKET
-	ldh [hTextID], a
-	call DisplayTextID
+	; ld a, TEXT_CERULEANCITY_ROCKET
+	; ldh [hTextID], a
+	; call DisplayTextID
 	xor a ; SCRIPT_CERULEANCITY_DEFAULT
 	ld [wJoyIgnore], a
 	ld [wCeruleanCityCurScript], a
@@ -292,8 +292,8 @@ CeruleanCityRocketText:
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
-	ld hl, .IGiveUpText
-	ld de, .IGiveUpText
+	; ld hl, .IGiveUpText
+	; ld de, .IGiveUpText
 	call SaveEndBattleTextPointers
 	ldh a, [hTextID]
 	ld [wSpriteIndex], a
