@@ -250,11 +250,6 @@ wMenuCursorLocation:: dw
 
 	ds 2
 
-; index in party of currently battling mon
-wMaxDaycareLevel:: db
-
-	ds 1
-
 ; how many times should HandleMenuInput poll the joypad state before it returns?
 wMenuJoypadPollCount:: db
 
@@ -2040,11 +2035,7 @@ wSeafoamIslandsB3FCurScript:: db
 wRoute23CurScript:: db
 wSeafoamIslandsB4FCurScript:: db
 wRoute18Gate1FCurScript:: db
-	; ds 78
-wDifficulty::
-	; $00 = normal
-	; $01 = hard
-		ds 1
+	ds 78
 wGameProgressFlagsEnd::
 
 	ds 56
@@ -2143,7 +2134,7 @@ wFirstLockTrashCanIndex:: db
 wSecondLockTrashCanIndex:: db
 
 	ds 1
-
+	
 wGameStage:: db
 	; $00 = before champion fight
 	; $01 = post game

@@ -1790,11 +1790,3 @@ _TextIDErrorText::
 _ContCharText::
 	text "<_CONT>@"
 	text_end
-
-_DifficultyText::
-   text "Select Difficulty"
-   done
-
-_AreYouSureText::
-	text "Are you sure?"
-	done
