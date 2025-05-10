@@ -1,6 +1,7 @@
 StartMenuDescriptionTable:
 ; regular menu descriptions
 	dw .Pokedex
+	dw .PortablePC
 	dw .Pokemon
 	dw .Item
 	dw .Player
@@ -11,6 +12,7 @@ StartMenuDescriptionTable:
 .LinkTable:
 ; descriptions for link mode
 	dw .Pokedex
+	dw .PortablePC
 	dw .Pokemon
 	dw .Item
 	dw .Player
@@ -21,6 +23,10 @@ StartMenuDescriptionTable:
 .Pokedex:
 	db "#MON"
 	next "database@"
+
+.PortablePC:
+    db "Access"
+    next "your PC@"
 
 .Pokemon:
 	db "Party <PKMN>"

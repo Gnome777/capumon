@@ -3,7 +3,7 @@ DrawStartMenu::
 	CheckEvent EVENT_GOT_POKEDEX
 ; menu with pokedex
 	hlcoord 10, 0
-	ld b, $0e
+	ld b, $10 ; edited for portable PC
 	ld c, $08
 	jr nz, .drawTextBoxBorder
 ; shorter menu if the player doesn't have the pokedex
@@ -33,7 +33,11 @@ DrawStartMenu::
 ; case for having pokedex
 	ld de, StartMenuPokedexText
 	call PrintStartMenuItem
-	ld a, $07
+	ld a, $08 ; edited for portable PC
+	CheckEvent EVENT_GOT_POKEDEX ; new, for portablePC
+	jr z, .dontPrintPortablePC ; new, for portablePC
+	ld de, StartMenuPortablePCText ; new, for portablePC
+	call PrintStartMenuItem ; new, for portablePC
 .storeMenuItemCount
 	ld [wMaxMenuItem], a ; number of menu items
 	ld de, StartMenuPokemonText
@@ -53,6 +57,8 @@ DrawStartMenu::
 	call PrintStartMenuItem
 	ld de, StartMenuOptionText
 	call PrintStartMenuItem
+.dontPrintPortablePC ; new, for portablePC
+	ld de, StartMenuExitText
 	call PlaceString
 	ld hl, wStatusFlags5
 	res BIT_NO_TEXT_DELAY, [hl]
@@ -60,6 +66,9 @@ DrawStartMenu::
 
 StartMenuPokedexText:
 	db "POKéDEX@"
+
+StartMenuPortablePCText: ; new
+	db "PORT.PC@"
 
 StartMenuPokemonText:
 	db "POKéMON@"
@@ -108,8 +117,9 @@ DrawMenuAccount::
 	CheckEvent EVENT_GOT_POKEDEX
 	ld a, [wCurrentMenuItem]
 	jr nz, .got_table
-; shift one index forward to reflect the fact that
-; we haven't gotten a dex yet
+; shift two indexes forward to reflect the fact that
+; we haven't gotten a dex yet or portable PC
+	inc a
 	inc a
 
 .got_table

@@ -314,7 +314,9 @@ _OaksLabOakGotPokedexText::
 	cont "these with you!"
 
 	para "<PLAYER> got"
-	line "#DEX from OAK!@"
+	line "#DEX and"
+	line "PORTABLE PC"
+	line "from OAK!@"
 	text_end
 
 _OaksLabOakThatWasMyDreamText::
