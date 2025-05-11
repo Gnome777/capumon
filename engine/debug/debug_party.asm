@@ -48,11 +48,11 @@ IF DEF(_DEBUG)
 	ld a, STRENGTH
 	ld [hl], a
 	ld hl, wPartyMon1PP
-	ld a, 15
+	ld a, 99
 	ld [hli], a
-	ld a, 30
+	ld a, 99
 	ld [hli], a
-	ld a, 15
+	ld a, 99
 	ld [hli], a
 	ld [hl], a
 
@@ -61,7 +61,7 @@ IF DEF(_DEBUG)
 	ld a, THUNDERBOLT
 	ld [hl], a
 	ld hl, wPartyMon3PP + 3
-	ld a, 15
+	ld a, 99
 	ld [hl], a
 
 	; Articuno gets Fly.
@@ -69,7 +69,7 @@ IF DEF(_DEBUG)
 	ld a, FLY
 	ld [hl], a
 	ld hl, wPartyMon5PP
-	ld a, 15
+	ld a, 99
 	ld [hl], a
 
 	; Pikachu gets Surf.
@@ -77,7 +77,7 @@ IF DEF(_DEBUG)
 	ld a, SURF
 	ld [hl], a
 	ld hl, wPartyMon6PP + 2
-	ld a, 15
+	ld a, 99
 	ld [hl], a
 
 	; Get some debug items.
@@ -135,9 +135,11 @@ DebugNewGameItemsList:
 	db ESCAPE_ROPE, 99
 	db RARE_CANDY, 99
 	db MASTER_BALL, 99
+	db NUGGET, 99
 	db TOWN_MAP, 1
 	db SURFBOARD, 1
 	db SECRET_KEY, 1
+	db SILPH_SCOPE, 1
 	db CARD_KEY, 1
 	db S_S_TICKET, 1
 	db LIFT_KEY, 1
