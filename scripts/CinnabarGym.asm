@@ -142,9 +142,6 @@ CinnabarGymBlainePostBattleScript:
 	jp z, CinnabarGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
-	jr nz, BlaineRematchPostBattle
 ; fallthrough
 CinnabarGymReceiveTM38:
 	; ld a, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
@@ -177,12 +174,6 @@ CinnabarGymReceiveTM38:
 
 	jp CinnabarGymResetScripts
 
-BlaineRematchPostBattle:
-	ld a, TEXT_CINNABARGYM_REMATCH_POST_BATTLE
-	ldh [hSpriteIndex], a
-	call DisplayTextID
-	jp CinnabarGymResetScripts
-
 CinnabarGym_TextPointers:
 	def_text_pointers
 	dw_const CinnabarGymBlaineText,                 TEXT_CINNABARGYM_BLAINE
@@ -197,7 +188,6 @@ CinnabarGym_TextPointers:
 	dw_const CinnabarGymBlaineVolcanoBadgeInfoText, TEXT_CINNABARGYM_BLAINE_VOLCANO_BADGE_INFO
 	dw_const CinnabarGymBlaineReceivedTM38Text,     TEXT_CINNABARGYM_BLAINE_RECEIVED_TM38
 	dw_const CinnabarGymBlaineTM38NoRoomText,       TEXT_CINNABARGYM_BLAINE_TM38_NO_ROOM
-	dw_const CinnabarGymRematchPostBattleText,      TEXT_CINNABARGYM_REMATCH_POST_BATTLE
 
 CinnabarGymStartBattleScript:
 	ldh a, [hSpriteIndex]
@@ -225,9 +215,6 @@ CinnabarGymBlaineText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
-	jr nz, .BlaineRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jp TextScriptEnd
@@ -240,34 +227,6 @@ CinnabarGymBlaineText:
 	ld a, $7
 	ld [wGymLeaderNo], a
 	jp CinnabarGymStartBattleScript
-.BlaineRematch
-	ld hl, CinnabarPreBattleRematch1Text
-	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .refused
-	ld hl, CinnabarPreBattleRematch2Text
-	call PrintText
-	call Delay3
-	ld hl, wStatusFlags3
-	set BIT_TALKED_TO_TRAINER, [hl]
-	set BIT_PRINT_END_BATTLE_TEXT, [hl]
-	ld hl, CinnabarGymRematchDefeatedText
-	ld de, CinnabarGymRematchVictoryText
-	call SaveEndBattleTextPointers
-	ld a, OPP_BLAINE
-	ld [wCurOpponent], a
-	ld a, 2
-	ld [wTrainerNo], a
-	ld a, $4 ; new script
-	ld [wCinnabarGymCurScript], a
-	ld [wCurMapScript], a
-	jp TextScriptEnd
-.refused
-	ld hl, CinnabarGymRematchRefusedText
-	call PrintText
-	jp TextScriptEnd
 
 .PreBattleText:
 	text_far _CinnabarGymBlainePreBattleText
@@ -511,28 +470,4 @@ CinnabarGymGymGuideText:
 
 .BeatBlaineText:
 	text_far _CinnabarGymGymGuideBeatBlaineText
-	text_end
-
-CinnabarGymRematchRefusedText:
-	text_far _CinnabarGymRematchRefusedText
-	text_end
-
-CinnabarGymRematchVictoryText:
-	text_far _CinnabarGymRematchVictoryText
-	text_end
-
-CinnabarGymRematchDefeatedText:
-	text_far _CinnabarGymRematchDefeatedText
-	text_end
-
-CinnabarPreBattleRematch1Text:
-	text_far _CinnabarGymRematchPreBattle1Text
-	text_end
-
-CinnabarPreBattleRematch2Text:
-	text_far _CinnabarGymPreRematchBattle2Text
-	text_end
-
-CinnabarGymRematchPostBattleText:
-	text_far _CinnabarGymRematchPostBattleText
 	text_end

@@ -44,9 +44,6 @@ FuchsiaGymKogaPostBattleScript:
 	jp z, FuchsiaGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
-	jr nz, KogaRematchPostBattle
 ; fallthrough
 FuchsiaGymReceiveTM06:
 	; ld a, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
@@ -76,12 +73,6 @@ FuchsiaGymReceiveTM06:
 
 	jp FuchsiaGymResetScripts
 
-KogaRematchPostBattle:
-	ld a, TEXT_FUCHSIAGYM_REMATCH_POST_BATTLE
-	ldh [hSpriteIndex], a
-	call DisplayTextID
-	jp FuchsiaGymResetScripts
-
 FuchsiaGym_TextPointers:
 	def_text_pointers
 	dw_const FuchsiaGymKogaText,              TEXT_FUCHSIAGYM_KOGA
@@ -95,7 +86,6 @@ FuchsiaGym_TextPointers:
 	dw_const FuchsiaGymKogaSoulBadgeInfoText, TEXT_FUCHSIAGYM_KOGA_SOUL_BADGE_INFO
 	dw_const FuchsiaGymKogaReceivedTM06Text,  TEXT_FUCHSIAGYM_KOGA_RECEIVED_TM06
 	dw_const FuchsiaGymKogaTM06NoRoomText,    TEXT_FUCHSIAGYM_KOGA_TM06_NO_ROOM
-	dw_const FuchsiaGymRematchPostBattleText, TEXT_FUCHSIAGYM_REMATCH_POST_BATTLE
 
 FuchsiaGymTrainerHeaders:
 	def_trainers 2
@@ -119,9 +109,6 @@ FuchsiaGymKogaText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
-	jr nz, .KogaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jr .done
@@ -142,36 +129,6 @@ FuchsiaGymKogaText:
 	ld [wGymLeaderNo], a
 	xor a
 	ldh [hJoyHeld], a
-	jr .endBattle
-.KogaRematch
-	ld hl, FuchsiaPreBattleRematch1Text
-	call PrintText
-	call YesNoChoice
-	ld a, [wCurrentMenuItem]
-	and a
-	jr nz, .refused
-	ld hl, FuchsiaPreBattleRematch2Text
-	call PrintText
-	call Delay3
-	ld hl, wStatusFlags3
-	set BIT_TALKED_TO_TRAINER, [hl]
-	set BIT_PRINT_END_BATTLE_TEXT, [hl]
-	ld hl, FuchsiaGymRematchDefeatedText
-	ld de, FuchsiaGymRematchVictoryText
-	call SaveEndBattleTextPointers
-	ld a, OPP_KOGA
-	ld [wCurOpponent], a
-	ld a, 2
-	ld [wTrainerNo], a
-	ld a, $4 ; new script
-	ld [wFuchsiaGymCurScript], a
-	ld [wCurMapScript], a
-	jr .endBattle
-.refused
-	ld hl, FuchsiaGymRematchRefusedText
-	call PrintText
-	jr .done
-.endBattle
 	ld a, SCRIPT_FUCHSIAGYM_KOGA_POST_BATTLE
 	ld [wFuchsiaGymCurScript], a
 .done
@@ -327,28 +284,4 @@ FuchsiaGymGymGuideText:
 
 .BeatKogaText:
 	text_far _FuchsiaGymGymGuideBeatKogaText
-	text_end
-
-FuchsiaGymRematchRefusedText:
-	text_far _FuchsiaGymRematchRefusedText
-	text_end
-
-FuchsiaGymRematchVictoryText:
-	text_far _FuchsiaGymRematchVictoryText
-	text_end
-
-FuchsiaGymRematchDefeatedText:
-	text_far _FuchsiaGymRematchDefeatedText
-	text_end
-
-FuchsiaPreBattleRematch1Text:
-	text_far _FuchsiaGymRematchPreBattle1Text
-	text_end
-
-FuchsiaPreBattleRematch2Text:
-	text_far _FuchsiaGymPreRematchBattle2Text
-	text_end
-
-FuchsiaGymRematchPostBattleText:
-	text_far _FuchsiaGymRematchPostBattleText
 	text_end
