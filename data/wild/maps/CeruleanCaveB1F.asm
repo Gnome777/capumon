@@ -1,15 +1,15 @@
 CeruleanCaveB1FWildMons:
 	def_grass_wildmons 25 ; encounter rate
-	db 70, GOLBAT
-	db 70, GOLEM
-	db 70, ONIX
-	db 70, MACHAMP
-	db 70, ALAKAZAM
-	db 70, GENGAR
-	db 70, HITMONCHAN
-	db 70, HITMONLEE
-	db 70, RHYDON
-	db 70, DRAGONITE
+	db 60, GOLBAT
+	db 60, GOLEM
+	db 60, ONIX
+	db 60, MACHAMP
+	db 60, ALAKAZAM
+	db 60, GENGAR
+	db 60, HITMONCHAN
+	db 60, HITMONLEE
+	db 60, RHYDON
+	db 60, DRAGONITE
 	end_grass_wildmons
 
 	def_water_wildmons 0 ; encounter rate
