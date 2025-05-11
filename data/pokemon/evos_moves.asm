@@ -544,7 +544,12 @@ GyaradosEvosMoves:
 ; Evolutions
 	db 0
 ; Learnset
-	
+	db 25, BUBBLE
+	db 30, WATER_GUN
+	db 35, BUBBLEBEAM
+	db 40, SURF
+	db 45, HYDRO_PUMP
+	db 50, HYPER_BEAM
 	db 0
 
 ShellderEvosMoves:
