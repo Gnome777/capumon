@@ -29,7 +29,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 - All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50. For example, Moltres originally learned 3 moves by level-up, but now learns 10
 - TMs and HMs have been removed from Pokémon learnsets. Field moves remain but no longer require badges.
 - All trees requiring Cut have been removed. The areas locked behind Cut are not delevelled, so be careful.
-- All Flying-type Pokémon learn Fly except Doduo, since it does not have wings.
+- Fly is still learned by a variety of Flying-type Pokémon.
 - The Surfboard replaces HM03 in the Safari Zone. Surf can be learned by certain Pokémon still and retains its purpose as a field move for those wanting to not get the Surfboard.
 - All boulders requiring Strength have been removed. Strength puzzles have been automatically solved.
 - HM05 has been removed.
