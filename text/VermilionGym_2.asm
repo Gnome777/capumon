@@ -12,8 +12,9 @@ _VermilionGymLTSurgePostBattleAdviceText::
 
 _VermilionGymLTSurgeThunderBadgeInfoText::
 	text "The THUNDERBADGE"
-	line "cranks up your"
-	cont "#MON's SPEED!"
+	line "is the third"
+	cont "#MON LEAGUE"
+	cont "BADGE!"
 	done
 
 _VermilionGymLTSurgeReceivedTM24Text::
@@ -26,11 +27,12 @@ _VermilionGymLTSurgeReceivedTM24Text::
 _TM24ExplanationText::
 	text_start
 
-	para "TM24 contains"
-	line "THUNDERBOLT!"
+	para "THUNDERBOLT"
+	line "is a strong"
+	cont "move!"
 
-	para "Teach it to an"
-	line "electric #MON!"
+	para "Electric #MON"
+	line "can learn it!"
 	done
 
 _VermilionGymLTSurgeTM24NoRoomText::

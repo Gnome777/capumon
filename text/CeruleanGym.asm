@@ -18,31 +18,18 @@ _CeruleanGymMistyPreBattleText::
 	done
 
 _CeruleanGymMistyTM11ExplanationText::
-	text "TM11 teaches"
-	line "BUBBLEBEAM!"
+	text "BUBBLEBEAM"
+	line "is strong!"
 
-	para "Use it on an"
+	para "Teach it to"
 	line "aquatic #MON!"
 	done
 
 _CeruleanGymMistyCascadeBadgeInfoText::
 	text "The CASCADEBADGE"
-	line "makes all #MON"
-	cont "up to L30 obey!"
-
-	para "That includes"
-	line "even outsiders!"
-
-	para "There's more, you"
-	line "can now use CUT"
-	cont "any time!"
-
-	para "You can CUT down"
-	line "small bushes to"
-	cont "open new paths!"
-
-	para "You can also have"
-	line "my favorite TM!"
+	line "is an official"
+	cont "#MON LEAGUE"
+	cont "BADGE!"
 	done
 
 _CeruleanGymMistyReceivedTM11Text::

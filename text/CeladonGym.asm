@@ -49,16 +49,9 @@ _CeladonGymErikaPostBattleAdviceText::
 
 _CeladonGymRainbowBadgeInfoText::
 	text "The RAINBOWBADGE"
-	line "will make #MON"
-	cont "up to L50 obey."
-
-	para "It also allows"
-	line "#MON to use"
-	cont "STRENGTH in and"
-	cont "out of battle."
-
-	para "Please also take"
-	line "this with you."
+	line "is the fourth"
+	cont "#MON LEAGUE"
+	cont "BADGE."
 	done
 
 _CeladonGymReceivedTM21Text::
@@ -71,13 +64,13 @@ _CeladonGymReceivedTM21Text::
 _TM21ExplanationText::
 	text_start
 
-	para "TM21 contains"
-	line "MEGA DRAIN."
+	para "I love MEGA"
+	line "DRAIN."
 
 	para "Half the damage"
 	line "it inflicts is"
 	cont "drained to heal"
-	cont "your #MON!"
+	cont "your #MON."
 	done
 
 _CeladonGymTM21NoRoomText::

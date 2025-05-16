@@ -44,9 +44,7 @@ _ViridianGymGiovanniPostBattleAdviceText::
 	text_end
 
 _ViridianGymGiovanniEarthBadgeInfoText::
-	text "The EARTHBADGE"
-	line "makes #MON of"
-	cont "any level obey!"
+	text "The EARTHBADGE!"
 
 	para "It is evidence of"
 	line "your mastery as a"
@@ -69,7 +67,7 @@ _ViridianGymGiovanniReceivedTM27Text::
 _ViridianGymGiovanniTM27ExplanationText::
 	text_start
 
-	para "TM27 is FISSURE!"
+	para "Beware of FISSURE!"
 	line "It will take out"
 	cont "#MON with just"
 	cont "one hit!"

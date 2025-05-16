@@ -12,9 +12,9 @@ _FuchsiaGymKogaPostBattleAdviceText::
 _FuchsiaGymKogaSoulBadgeInfoText::
 	text "Now that you have"
 	line "the SOULBADGE,"
-	cont "the DEFENSE of"
-	cont "your #MON"
-	cont "increases!"
+	cont "you're one step"
+	cont "closer to the"
+	cont "CHAMPION!"
 	done
 
 _FuchsiaGymKogaReceivedTM06Text::
@@ -26,7 +26,7 @@ _FuchsiaGymKogaReceivedTM06Text::
 
 _FuchsiaGymKogaTM06ExplanationText::
 	text_start
-	para "TM06 contains"
+	para "Ninjas use"
 	line "TOXIC!"
 
 	para "It is a secret"
