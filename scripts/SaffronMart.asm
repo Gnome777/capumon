@@ -14,3 +14,6 @@ SaffronMartSuperNerdText:
 SaffronMartCooltrainerFText:
 	text_far _SaffronMartCooltrainerFText
 	text_end
+
+SaffronMartClerkText::
+	script_mart POKE_BALL, GREAT_BALL, ULTRA_BALL, POTION, SUPER_POTION, HYPER_POTION, MAX_POTION, AWAKENING, FULL_HEAL

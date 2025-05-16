@@ -35,3 +35,7 @@ IndigoPlateauLobbyCooltrainerFText:
 
 IndigoPlateauLobbyLinkReceptionistText:
 	script_cable_club_receptionist
+
+
+IndigoPlateauLobbyClerkText::
+	script_mart ULTRA_BALL, FULL_RESTORE, FULL_HEAL, MAX_REVIVE, MAX_REPEL

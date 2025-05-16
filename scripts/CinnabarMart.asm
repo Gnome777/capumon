@@ -14,3 +14,6 @@ CinnabarMartSilphWorkerFText:
 CinnabarMartScientistText:
 	text_far _CinnabarMartScientistText
 	text_end
+
+CinnabarMartClerkText::
+	script_mart POKE_BALL, BURN_HEAL, FULL_HEAL

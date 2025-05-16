@@ -257,3 +257,6 @@ VermilionCityGymSignText:
 VermilionCityHarborSignText:
 	text_far _VermilionCityHarborSignText
 	text_end
+
+VermilionMartClerkText::
+	script_mart POKE_BALL, GREAT_BALL, POTION, SUPER_POTION, REPEL, ESCAPE_ROPE, ANTIDOTE, AWAKENING, PARLYZ_HEAL
