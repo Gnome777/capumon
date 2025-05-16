@@ -25,20 +25,8 @@ _PewterGymReceivedTM34Text::
 _TM34ExplanationText::
 	text_start
 
-	para "A TM contains a"
-	line "technique that"
-	cont "can be taught to"
-	cont "#MON!"
-
-	para "A TM is good only"
-	line "once! So when you"
-	cont "use one to teach"
-	cont "a new technique,"
-	cont "pick the #MON"
-	cont "carefully!"
-
-	para "TM34 contains"
-	line "BIDE!"
+	para "BIDE is a"
+	line "strong move!"
 
 	para "Your #MON will"
 	line "absorb damage in"

@@ -96,7 +96,7 @@ _CeruleanCityRocketIGiveUpText::
 
 _CeruleanCityRocketIllReturnTheTMText::
 	text "OK! I'll return"
-	line "the TM I stole!"
+	line "what I took!"
 	prompt
 
 _CeruleanCityCooltrainerMText::
