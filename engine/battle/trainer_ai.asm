@@ -358,13 +358,10 @@ CooltrainerMAI:
 	jp AIUseXAttack
 
 CooltrainerFAI:
-	; The intended 25% chance to consider switching will not apply.
-	; Uncomment the line below to fix this.
 	cp 25 percent + 1
-	; ret nc
+	ret nc
 	ld a, 10
 	call AICheckIfHPBelowFraction
-	jp c, AIUseHyperPotion
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
@@ -375,17 +372,14 @@ BrockAI:
 	ld a, [wEnemyMonStatus]
 	and a
 	ret z
-	jp AIUseFullHeal
 
 MistyAI:
 	cp 25 percent + 1
 	ret nc
-	jp AIUseXDefend
 
 LtSurgeAI:
 	cp 25 percent + 1
 	ret nc
-	jp AIUseXSpeed
 
 ErikaAI:
 	cp 50 percent + 1
@@ -393,17 +387,14 @@ ErikaAI:
 	ld a, 10
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseSuperPotion
 
 KogaAI:
 	cp 25 percent + 1
 	ret nc
-	jp AIUseXAttack
 
 BlaineAI:
 	cp 25 percent + 1
 	ret nc
-	jp AIUseSuperPotion
 
 SabrinaAI:
 	cp 25 percent + 1
@@ -411,7 +402,6 @@ SabrinaAI:
 	ld a, 10
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseHyperPotion
 
 Rival2AI:
 	cp 13 percent - 1
@@ -419,7 +409,6 @@ Rival2AI:
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUsePotion
 
 Rival3AI:
 	cp 13 percent - 1
@@ -427,7 +416,6 @@ Rival3AI:
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseFullRestore
 
 LoreleiAI:
 	cp 50 percent + 1
@@ -435,12 +423,10 @@ LoreleiAI:
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseSuperPotion
 
 BrunoAI:
 	cp 25 percent + 1
 	ret nc
-	jp AIUseXDefend
 
 AgathaAI:
 	cp 8 percent
@@ -450,7 +436,6 @@ AgathaAI:
 	ld a, 4
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseSuperPotion
 
 LanceAI:
 	cp 50 percent + 1
@@ -458,7 +443,6 @@ LanceAI:
 	ld a, 5
 	call AICheckIfHPBelowFraction
 	ret nc
-	jp AIUseHyperPotion
 
 GenericAI:
 	and a ; clear carry
@@ -565,6 +549,9 @@ AIPrintItemUseAndUpdateHPBar:
 	xor a
 	ld [wHPBarType], a
 	predef UpdateHPBar2
+	push af
+	farcall DrawEnemyHUDAndHPBar
+	pop af
 	jp DecrementAICount
 
 AISwitchIfEnoughMons:
@@ -649,6 +636,9 @@ AICureStatus:
 	ld [wEnemyMonStatus], a ; clear status of active enemy
 	ld hl, wEnemyBattleStatus3
 	res BADLY_POISONED, [hl]
+	push af
+	farcall DrawEnemyHUDAndHPBar
+	pop af
 	ret
 
 AIUseXAccuracy: ; unreferenced

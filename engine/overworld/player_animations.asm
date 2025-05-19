@@ -108,6 +108,7 @@ _LeaveMapAnim::
 	ld [hli], a ; wPlayerSpinWhileMovingUpOrDownAnimMaxY
 	call GetPlayerTeleportAnimFrameDelay
 	ld [hl], a ; wPlayerSpinWhileMovingUpOrDownAnimFrameDelay
+	ld hl, wFacingDirectionList
 	call PlayerSpinWhileMovingUpOrDown
 	call IsPlayerStandingOnWarpPadOrHole
 	ld a, b
@@ -202,6 +203,9 @@ FlyAnimationScreenCoords2:
 	db $F0, $00
 
 LeaveMapThroughHoleAnim:
+	ld a, [wLastMusicSoundID]
+	cp MUSIC_BIKE_RIDING
+	call z, PlayDefaultMusic
 	ld a, $ff
 	ld [wUpdateSpritesEnabled], a ; disable UpdateSprites
 	; shift upper half of player's sprite down 8 pixels and hide lower half
