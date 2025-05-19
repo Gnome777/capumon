@@ -1,6 +1,6 @@
 _Route8SuperNerd1BattleText::
 	text "You look good at"
-	line "#MON, but"
+	line "CAPUMON, but"
 	cont "how's your"
 
 	para "chemistry grade?"
@@ -57,7 +57,7 @@ _Route8CooltrainerF1EndBattleText::
 	prompt
 
 _Route8CooltrainerF1AfterBattleText::
-	text "When #MON grow"
+	text "When CAPUMON grow"
 	line "up they get ugly!"
 	cont "They shouldn't"
 	cont "evolve!"
@@ -65,7 +65,7 @@ _Route8CooltrainerF1AfterBattleText::
 
 _Route8SuperNerd3BattleText::
 	text "School is fun, but"
-	line "so are #MON."
+	line "so are CAPUMON."
 	done
 
 _Route8SuperNerd3EndBattleText::
@@ -124,7 +124,7 @@ _Route8Gambler2EndBattleText::
 
 _Route8Gambler2AfterBattleText::
 	text "Gambling and"
-	line "#MON are like"
+	line "CAPUMON are like"
 	cont "eating peanuts!"
 	cont "Just can't stop!"
 	done
@@ -132,7 +132,7 @@ _Route8Gambler2AfterBattleText::
 _Route8CooltrainerF4BattleText::
 	text "What's a cute,"
 	line "round and fluffy"
-	cont "#MON?"
+	cont "CAPUMON?"
 	done
 
 _Route8CooltrainerF4EndBattleText::

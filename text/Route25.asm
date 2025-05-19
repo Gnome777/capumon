@@ -10,7 +10,7 @@ _Route25Youngster1EndBattleText::
 	prompt
 
 _Route25Youngster1AfterBattleText::
-	text "All #MON have"
+	text "All CAPUMON have"
 	line "weaknesses. It's"
 	cont "best to raise"
 	cont "different kinds."
@@ -76,7 +76,7 @@ _Route25Youngster3EndBattleText::
 	prompt
 
 _Route25Youngster3AfterBattleText::
-	text "If your #MON"
+	text "If your CAPUMON"
 	line "gets confused or"
 	cont "falls asleep,"
 	cont "switch it!"
@@ -84,7 +84,7 @@ _Route25Youngster3AfterBattleText::
 
 _Route25CooltrainerF2BattleText::
 	text "My friend has a"
-	line "cute #MON."
+	line "cute CAPUMON."
 	cont "I'm so jealous!"
 	done
 
@@ -118,7 +118,7 @@ _Route25Hiker1AfterBattleText::
 
 _Route25Hiker2BattleText::
 	text "I'm off to see a"
-	line "#MON collector"
+	line "CAPUMON collector"
 	cont "at the cape!"
 	done
 
@@ -130,7 +130,7 @@ _Route25Hiker2EndBattleText::
 _Route25Hiker2AfterBattleText::
 	text "The collector has"
 	line "many rare kinds"
-	cont "of #MON."
+	cont "of CAPUMON."
 	done
 
 _Route25Hiker3BattleText::

@@ -4,18 +4,18 @@ _MasterBallDescription::
 	prompt
 
 _UltraBallDescription::
-	text "A BALL with a high"
-	next "rate of success."
+	text "A CAPSULE with a"
+	next "high success rate."
 	prompt
 
 _GreatBallDescription::
-	text "A BALL with a de-"
-	next "cent success rate."
+	text "A CAPSULE with a"
+	next "good success rate."
 	prompt
 
 _PokeBallDescription::
-	text "An item for catch-"
-	next "ing #MON."
+	text "An item for"
+	next "catching CAPUMON."
 	prompt
 
 _TownMapDescription::
@@ -34,32 +34,32 @@ _ThunderStoneDescription::
 _WaterStoneDescription::
 _LeafStoneDescription::
 	text "Evolves certain"
-	next "kinds of #MON."
+	next "kinds of CAPUMON."
 	prompt
 
 _AntidoteDescription::
 	text "Cures poisoned"
-	next "#MON."
+	next "CAPUMON."
 	prompt
 
 _BurnHealDescription::
 	text "Heals burned"
-	next "#MON."
+	next "CAPUMON."
 	prompt
 
 _IceHealDescription::
 	text "Defrosts frozen"
-	next "#MON."
+	next "CAPUMON."
 	prompt
 
 _AwakeningDescription::
 	text "Awakens sleeping"
-	next "#MON."
+	next "CAPUMON."
 	prompt
 
 _ParlyzHealDescription::
 	text "Heals paralyzed"
-	next "#MON."
+	next "CAPUMON."
 	prompt
 
 _FullRestoreDescription::
@@ -69,21 +69,21 @@ _FullRestoreDescription::
 
 _MaxPotionDescription::
 	text "Fully restores"
-	next "#MON HP."
+	next "CAPUMON HP."
 	prompt
 
 _HyperPotionDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 200."
 	prompt
 
 _SuperPotionDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 50."
 	prompt
 
 _PotionDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 20."
 	prompt
 
@@ -93,7 +93,7 @@ _EscapeRopeDescription::
 	prompt
 
 _RepelDescription::
-	text "Repels weak #-"
+	text "Repels weak CAPU"
 	next "MON for 100 steps."
 	prompt
 
@@ -104,38 +104,38 @@ _OldAmberDescription::
 
 _HPUpDescription::
 	text "Raises the HP of"
-	next "one #MON."
+	next "one CAPUMON."
 	prompt
 
 _ProteinDescription::
 	text "Raises ATTACK of"
-	next "one #MON."
+	next "one CAPUMON."
 	prompt
 
 _IronDescription::
 	text "Raises DEFENSE of"
-	next "one #MON."
+	next "one CAPUMON."
 	prompt
 
 _CarbosDescription::
 	text "Raises SPEED of"
-	next "one #MON."
+	next "one CAPUMON."
 	prompt
 
 _CalciumDescription::
 	text "Raises SPECIAL"
-	next "of one #MON."
+	next "of one CAPUMON."
 	prompt
 
 _RareCandyDescription::
 	text "Raises level of a"
-	next "#MON by one."
+	next "CAPUMON by one."
 	prompt
 
 _DomeFossilDescription::
 _HelixFossilDescription::
 	text "A fossilized"
-	next "#MON shell."
+	next "CAPUMON shell."
 	prompt
 
 _SecretKeyDescription::
@@ -164,7 +164,7 @@ _NuggetDescription::
 
 _PokeDollDescription::
 	text "Use to escape from"
-	next "a wild #MON."
+	next "a wild CAPUMON."
 	prompt
 
 _FullHealDescription::
@@ -174,12 +174,12 @@ _FullHealDescription::
 
 _ReviveDescription::
 	text "Restores a fainted"
-	next "#MON to 1/2 HP."
+	next "CAPUMON to 1/2 HP."
 	prompt
 
 _MaxReviveDescription::
 	text "Fully restores a"
-	next "fainted #MON."
+	next "fainted CAPUMON."
 	prompt
 
 _GuardSpecDescription::
@@ -188,12 +188,12 @@ _GuardSpecDescription::
 	prompt
 
 _SuperRepelDescription::
-	text "Repels weak #-"
+	text "Repels weak CAPU"
 	next "MON for 200 steps."
 	prompt
 
 _MaxRepelDescription::
-	text "Repels weak #-"
+	text "Repels weak CAPU"
 	next "MON for 250 steps."
 	prompt
 
@@ -203,17 +203,17 @@ _DireHitDescription::
 	prompt
 
 _FreshWaterDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 50."
 	prompt
 
 _SodaPopDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 60."
 	prompt
 
 _LemonadeDescription::
-	text "Restores #MON"
+	text "Restores CAPUMON"
 	next "HP by 80."
 	prompt
 
@@ -264,12 +264,12 @@ _ItemfinderDescription::
 
 _SilphScopeDescription::
 	text "A scope to see in-"
-	next "visible #MON."
+	next "visible CAPUMON."
 	prompt
 
 _PokeFluteDescription::
 	text "Instantly awakens"
-	next "any #MON."
+	next "any CAPUMON."
 	prompt
 
 _LiftKeyDescription::
@@ -284,17 +284,17 @@ _ExpAllDescription::
 
 _OldRodDescription::
 	text "Use by water to"
-	next "fish for #MON."
+	next "fish for CAPUMON."
 	prompt
 
 _GoodRodDescription::
 	text "A good ROD for"
-	next "catching #MON."
+	next "catching CAPUMON."
 	prompt
 
 _SuperRodDescription::
 	text "The best ROD for"
-	next "catching #MON."
+	next "catching CAPUMON."
 	prompt
 
 _PPUpDescription::
@@ -319,7 +319,7 @@ _ElixerDescription::
 
 _MaxElixerDescription::
 	text "Fully restores the"
-	next "PP of one #MON."
+	next "PP of one CAPUMON."
 	prompt
 
 _HM01Description::
@@ -519,7 +519,7 @@ _TM34Description::
 
 _TM35Description::
 	text "Randomly uses any"
-	next "#MON move."
+	next "CAPUMON move."
 	prompt
 
 _TM36Description::

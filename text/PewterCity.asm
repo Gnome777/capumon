@@ -10,7 +10,7 @@ _PewterCityCooltrainerFText::
 
 _PewterCityCooltrainerMText::
 	text "There aren't many"
-	line "serious #MON"
+	line "serious CAPUMON"
 	cont "trainers here!"
 
 	para "They're all like"
@@ -58,7 +58,7 @@ _PewterCitySuperNerd2ThatsRightText::
 
 _PewterCitySuperNerd2ImSprayingRepelText::
 	text "I'm spraying REPEL"
-	line "to keep #MON"
+	line "to keep CAPUMON"
 	cont "out of my garden!"
 	done
 
@@ -79,7 +79,7 @@ _PewterCityYoungsterGoTakeOnBrockText::
 _PewterCityTrainerTipsText::
 	text "TRAINER TIPS"
 
-	para "Any #MON that"
+	para "Any CAPUMON that"
 	line "takes part in"
 	cont "battle, however"
 	cont "short, earns EXP!"
@@ -89,7 +89,7 @@ _PewterCityPoliceNoticeSignText::
 	text "NOTICE!"
 
 	para "Thieves have been"
-	line "stealing #MON"
+	line "stealing CAPUMON"
 	cont "fossils at MT."
 	cont "MOON! Please call"
 	cont "PEWTER POLICE"
@@ -103,11 +103,11 @@ _PewterCityMuseumSignText::
 
 _PewterCityGymSignText::
 	text "PEWTER CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	cont "LEADER: BROCK"
 
 	para "The Rock Solid"
-	line "#MON Trainer!"
+	line "CAPUMON Trainer!"
 	done
 
 _PewterCitySignText::

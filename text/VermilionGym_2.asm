@@ -7,13 +7,13 @@ _VermilionGymLTSurgePostBattleAdviceText::
 
 	para "But, it's useless"
 	line "against ground-"
-	cont "type #MON!"
+	cont "type CAPUMON!"
 	done
 
 _VermilionGymLTSurgeThunderBadgeInfoText::
 	text "The THUNDERBADGE"
 	line "is the third"
-	cont "#MON LEAGUE"
+	cont "CAPUMON LEAGUE"
 	cont "BADGE!"
 	done
 
@@ -31,7 +31,7 @@ _TM24ExplanationText::
 	line "is a strong"
 	cont "move!"
 
-	para "Electric #MON"
+	para "Electric CAPUMON"
 	line "can learn it!"
 	done
 
@@ -119,10 +119,10 @@ _VermilionGymGymGuideChampInMakingText::
 	cont "American!"
 
 	para "He's an expert on"
-	line "electric #MON!"
+	line "electric CAPUMON!"
 
 	para "Birds and water"
-	line "#MON are at"
+	line "CAPUMON are at"
 	cont "risk! Beware of"
 	cont "paralysis too!"
 

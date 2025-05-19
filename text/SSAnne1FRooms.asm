@@ -7,7 +7,7 @@ _SSAnne1FRoomsGentleman1BattleText::
 	text "I travel alone"
 	line "on my journeys!"
 
-	para "My #MON are my"
+	para "My CAPUMON are my"
 	line "only friends!"
 	done
 
@@ -37,7 +37,7 @@ _SSAnne1FRoomsGentleman2AfterBattleText::
 	done
 
 _SSAnne1FRoomsYoungsterBattleText::
-	text "I love #MON!"
+	text "I love CAPUMON!"
 	line "Do you?"
 	done
 
@@ -51,12 +51,12 @@ _SSAnne1FRoomsYoungsterAfterBattleText::
 	line "friend, OK?"
 
 	para "Then we can trade"
-	line "#MON!"
+	line "CAPUMON!"
 	done
 
 _SSAnne1FRoomsCooltrainerFBattleText::
 	text "I collected these"
-	line "#MON from all"
+	line "CAPUMON from all"
 	cont "around the world!"
 	done
 
@@ -68,11 +68,11 @@ _SSAnne1FRoomsCooltrainerFEndBattleText::
 
 _SSAnne1FRoomsCooltrainerFAfterBattleText::
 	text "You hurt my poor"
-	line "worldly #MON!"
+	line "worldly CAPUMON!"
 
 	para "I demand that you"
 	line "heal them at a"
-	cont "#MON CENTER!"
+	cont "CAPUMON CENTER!"
 	done
 
 _SSAnne1FRoomsGirl1Text::

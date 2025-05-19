@@ -1,16 +1,16 @@
 _ViridianCityYoungster1Text::
-	text "Those # BALLs"
+	text "Those CAPSULES"
 	line "at your waist!"
-	cont "You have #MON!"
+	cont "You have CAPUMON!"
 
 	para "It's great that"
 	line "you can carry and"
-	cont "use #MON any"
+	cont "use CAPUMON any"
 	cont "time, anywhere!"
 	done
 
 _ViridianCityGambler1GymAlwaysClosedText::
-	text "This #MON GYM"
+	text "This CAPUMON GYM"
 	line "is always closed."
 
 	para "I wonder who the"
@@ -26,7 +26,7 @@ _ViridianCityYoungster2YouWantToKnowAboutText::
 	text "You want to know"
 	line "about the 2 kinds"
 	cont "of caterpillar"
-	cont "#MON?"
+	cont "CAPUMON?"
 	done
 
 ViridianCityYoungster2OkThenText::
@@ -105,16 +105,16 @@ _ViridianCityOldManHadMyCoffeeNowText::
 
 _ViridianCityOldManKnowHowToCatchPokemonText::
 	text "I see you're using"
-	line "a #DEX."
+	line "a MONDEX."
 
 	para "When you catch a"
-	line "#MON, #DEX"
+	line "CAPUMON, MONDEX"
 	cont "is automatically"
 	cont "updated."
 
 	para "What? Don't you"
 	line "know how to catch"
-	cont "#MON?"
+	cont "CAPUMON?"
 
 	para "I'll show you"
 	line "how to then."
@@ -128,7 +128,7 @@ _ViridianCityOldManTimeIsMoneyText::
 _ViridianCityOldManYouNeedToWeakenTheTargetText::
 	text "First, you need"
 	line "to weaken the"
-	cont "target #MON."
+	cont "target CAPUMON."
 	done
 
 _ViridianCitySignText::
@@ -140,7 +140,7 @@ _ViridianCitySignText::
 _ViridianCityTrainerTips1Text::
 	text "TRAINER TIPS"
 
-	para "Catch #MON"
+	para "Catch CAPUMON"
 	line "and expand your"
 	cont "collection!"
 
@@ -153,19 +153,19 @@ _ViridianCityTrainerTips2Text::
 	text "TRAINER TIPS"
 
 	para "The battle moves"
-	line "of #MON are"
+	line "of CAPUMON are"
 	cont "limited by their"
 	cont "POWER POINTs, PP."
 
 	para "To replenish PP,"
 	line "rest your tired"
-	cont "#MON at a"
-	cont "#MON CENTER!"
+	cont "CAPUMON at a"
+	cont "CAPUMON CENTER!"
 	done
 
 _ViridianCityGymSignText::
 	text "VIRIDIAN CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	done
 
 _ViridianCityGymLockedText::

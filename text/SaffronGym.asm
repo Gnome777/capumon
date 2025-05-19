@@ -40,7 +40,7 @@ _SaffronGymSabrinaPostBattleAdviceText::
 _SaffronGymSabrinaMarshBadgeInfoText::
 	text "The MARSHBADGE"
 	line "is the sixth"
-	cont "#MON LEAGUE"
+	cont "CAPUMON LEAGUE"
 	cont "BADGE."
 	done
 
@@ -52,7 +52,7 @@ _SaffronGymSabrinaReceivedTM46Text::
 _TM46ExplanationText::
 	text_start
 
-	para "#MON can"
+	para "CAPUMON can"
 	line "use PSYCHIC,"
 	line "like us!"
 	done
@@ -66,13 +66,13 @@ _SaffronGymGuideChampInMakingText::
 	text "Yo! Champ in"
 	line "making!"
 
-	para "SABRINA's #MON"
+	para "SABRINA's CAPUMON"
 	line "use psychic power"
 	cont "instead of force!"
 
-	para "Fighting #MON"
+	para "Fighting CAPUMON"
 	line "are weak against"
-	cont "psychic #MON!"
+	cont "psychic CAPUMON!"
 
 	para "They get creamed"
 	line "before they can"
@@ -121,17 +121,17 @@ _SaffronGymYoungster1EndBattleText::
 	prompt
 
 _SaffronGymYoungster1AfterBattleText::
-	text "Psychic #MON"
+	text "Psychic CAPUMON"
 	line "fear only ghosts"
 	cont "and bugs!"
 	done
 
 _SaffronGymChanneler2BattleText::
-	text "#MON take on"
+	text "CAPUMON take on"
 	line "the appearance of"
 	cont "their trainers."
 
-	para "Your #MON must"
+	para "Your CAPUMON must"
 	line "be tough, then!"
 	done
 
@@ -143,7 +143,7 @@ _SaffronGymChanneler2EndBattleText::
 _SaffronGymChanneler2AfterBattleText::
 	text "I must teach"
 	line "better techniques"
-	cont "to my #MON!"
+	cont "to my CAPUMON!"
 	done
 
 _SaffronGymYoungster2BattleText::
@@ -165,7 +165,7 @@ _SaffronGymYoungster2AfterBattleText::
 
 _SaffronGymChanneler3BattleText::
 	text "You and I, our"
-	line "#MON shall"
+	line "CAPUMON shall"
 	cont "fight!"
 	done
 
@@ -196,7 +196,7 @@ _SaffronGymYoungster3EndBattleText::
 
 _SaffronGymYoungster3AfterBattleText::
 	text "There used to be"
-	line "2 #MON GYMs in"
+	line "2 CAPUMON GYMs in"
 	cont "SAFFRON."
 
 	para "The FIGHTING DOJO"
@@ -207,7 +207,7 @@ _SaffronGymYoungster3AfterBattleText::
 	done
 
 _SaffronGymYoungster4BattleText::
-	text "SAFFRON #MON"
+	text "SAFFRON CAPUMON"
 	line "GYM is famous for"
 	cont "its psychics!"
 

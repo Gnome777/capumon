@@ -36,7 +36,7 @@ _ViridianGymGiovanniPostBattleAdviceText::
 
 	para "I will dedicate my"
 	line "life to the study"
-	cont "of #MON!"
+	cont "of CAPUMON!"
 
 	para "Let us meet again"
 	line "some day!"
@@ -48,14 +48,14 @@ _ViridianGymGiovanniEarthBadgeInfoText::
 
 	para "It is evidence of"
 	line "your mastery as a"
-	cont "#MON trainer!"
+	cont "CAPUMON trainer!"
 
 	para "With it, you can"
-	line "enter the #MON"
+	line "enter the CAPUMON"
 	cont "LEAGUE!"
 
 	para "It is my gift for"
-	line "your #MON"
+	line "your CAPUMON"
 	cont "LEAGUE challenge!"
 	done
 
@@ -69,7 +69,7 @@ _ViridianGymGiovanniTM27ExplanationText::
 
 	para "Beware of FISSURE!"
 	line "It will take out"
-	cont "#MON with just"
+	cont "CAPUMON with just"
 	cont "one hit!"
 
 	para "I made it when I"
@@ -115,7 +115,7 @@ _ViridianGymHiker1AfterBattleText::
 	done
 
 _ViridianGymRocker1BattleText::
-	text "#MON and I, we"
+	text "CAPUMON and I, we"
 	line "make wonderful"
 	cont "music together!"
 	done
@@ -142,7 +142,7 @@ _ViridianGymHiker2EndBattleText::
 	prompt
 
 _ViridianGymHiker2AfterBattleText::
-	text "If my #MON"
+	text "If my CAPUMON"
 	line "were as good at"
 	cont "Karate as I..."
 	done
@@ -173,13 +173,13 @@ _ViridianGymHiker3EndBattleText::
 	prompt
 
 _ViridianGymHiker3AfterBattleText::
-	text "#MON LEAGUE?"
+	text "CAPUMON LEAGUE?"
 	line "You? Don't get"
 	cont "cocky!"
 	done
 
 _ViridianGymRocker2BattleText::
-	text "Your #MON will"
+	text "Your CAPUMON will"
 	line "cower at the"
 	cont "crack of my whip!"
 	done
@@ -208,7 +208,7 @@ _ViridianGymCooltrainerM3EndBattleText::
 
 _ViridianGymCooltrainerM3AfterBattleText::
 	text "You can go onto"
-	line "#MON LEAGUE"
+	line "CAPUMON LEAGUE"
 	cont "only by defeating"
 	cont "our GYM LEADER!"
 	done
@@ -228,7 +228,7 @@ _ViridianGymGuidePreBattleText::
 	para "I heard that the"
 	line "trainers here"
 	cont "like ground-type"
-	cont "#MON!"
+	cont "CAPUMON!"
 	done
 
 _ViridianGymGuidePostBattleText::

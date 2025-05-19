@@ -6,7 +6,7 @@ _SafariZoneGateSafariZoneWorker1Text::
 _SafariZoneGateSafariZoneWorker1WouldYouLikeToJoinText::
 	text "For just ¥500,"
 	line "you can catch all"
-	cont "the #MON you"
+	cont "the CAPUMON you"
 	cont "want in the park!"
 
 	para "Would you like to"
@@ -75,7 +75,7 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 
 	para "Each zone has"
 	line "different kinds"
-	cont "of #MON. Use"
+	cont "of CAPUMON. Use"
 	cont "SAFARI BALLs to"
 	cont "catch them!"
 
@@ -86,9 +86,9 @@ _SafariZoneGateSafariZoneWorker2SafariZoneExplanationText::
 
 	para "Before you go,"
 	line "open an unused"
-	cont "#MON BOX so"
+	cont "CAPUMON BOX so"
 	cont "there's room for"
-	cont "new #MON!"
+	cont "new CAPUMON!"
 	done
 
 _SafariZoneGateSafariZoneWorker2YoureARegularHereText::

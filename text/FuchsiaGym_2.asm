@@ -1,6 +1,6 @@
 _FuchsiaGymKogaPostBattleAdviceText::
 	text "When afflicted by"
-	line "TOXIC, #MON"
+	line "TOXIC, CAPUMON"
 	cont "suffer more and"
 	cont "more as battle"
 	cont "progresses!"
@@ -42,7 +42,7 @@ _FuchsiaGymKogaTM06NoRoomText::
 _FuchsiaGymRocker1BattleText::
 	text "Strength isn't"
 	line "the key for"
-	cont "#MON!"
+	cont "CAPUMON!"
 
 	para "It's strategy!"
 

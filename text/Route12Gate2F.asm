@@ -1,7 +1,7 @@
 _Route12Gate2FBrunetteGirlYouCanHaveThisText::
-	text "My #MON's"
+	text "My CAPUMON's"
 	line "ashes are stored"
-	cont "in #MON TOWER."
+	cont "in CAPUMON TOWER."
 
 	para "You can have this"
 	line "TM. I don't need"
@@ -39,5 +39,5 @@ _Route12Gate2FRightBinocularsText::
 	text "Looked into the"
 	line "binoculars."
 
-	para "It's #MON TOWER!"
+	para "It's CAPUMON TOWER!"
 	done

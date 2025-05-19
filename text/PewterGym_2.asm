@@ -5,7 +5,7 @@ _PewterGymBrockPostBattleAdviceText::
 
 	para "You appear to be"
 	line "very gifted as a"
-	cont "#MON trainer!"
+	cont "CAPUMON trainer!"
 
 	para "Go to the GYM in"
 	line "CERULEAN and test"
@@ -28,7 +28,7 @@ _TM34ExplanationText::
 	para "BIDE is a"
 	line "strong move!"
 
-	para "Your #MON will"
+	para "Your CAPUMON will"
 	line "absorb damage in"
 	cont "battle then pay"
 	cont "it back double!"
@@ -55,11 +55,11 @@ _PewterGymBrockBoulderBadgeInfoText::
 	text_start
 
 	para "That's an official"
-	line "#MON LEAGUE"
+	line "CAPUMON LEAGUE"
 	cont "BADGE!"
 
 	para "Its bearer's"
-	line "#MON become"
+	line "CAPUMON become"
 	cont "more powerful!"
 
 	para "The technique"
@@ -94,7 +94,7 @@ _PewterGymGuidePreAdviceText::
 	text "Hiya! I can tell"
 	line "you have what it"
 	cont "takes to become a"
-	cont "#MON champ!"
+	cont "CAPUMON champ!"
 
 	para "I'm no trainer,"
 	line "but I can tell"
@@ -110,13 +110,13 @@ _PewterGymGuideBeginAdviceText::
 	prompt
 
 _PewterGymGuideAdviceText::
-	text "The 1st #MON"
+	text "The 1st CAPUMON"
 	line "out in a match is"
 	cont "at the top of the"
-	cont "#MON LIST!"
+	cont "CAPUMON LIST!"
 
 	para "By changing the"
-	line "order of #MON,"
+	line "order of CAPUMON,"
 	cont "matches could be"
 	cont "made easier!"
 	done
@@ -129,6 +129,6 @@ _PewterGymGuideFreeServiceText::
 
 _PewterGymGuidePostBattleText::
 	text "Just as I thought!"
-	line "You're #MON"
+	line "You're CAPUMON"
 	cont "champ material!"
 	done

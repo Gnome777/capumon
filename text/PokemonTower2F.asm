@@ -2,7 +2,7 @@ _PokemonTower2FRivalWhatBringsYouHereText::
 	text "<RIVAL>: Hey,"
 	line "<PLAYER>! What"
 	cont "brings you here?"
-	cont "Your #MON"
+	cont "Your CAPUMON"
 	cont "don't look dead!"
 
 	para "I can at least"
@@ -21,14 +21,14 @@ _PokemonTower2FRivalDefeatedText::
 _PokemonTower2FRivalVictoryText::
 	text "<RIVAL>: Well,"
 	line "look at all your"
-	cont "wimpy #MON!"
+	cont "wimpy CAPUMON!"
 
 	para "Toughen them up a"
 	line "bit more!"
 	prompt
 
 _PokemonTower2FRivalHowsYourDexText::
-	text "How's your #DEX"
+	text "How's your MONDEX"
 	line "coming, pal?"
 	cont "I just caught a"
 	cont "CUBONE!"

@@ -18,11 +18,11 @@ _SilphCo2FSilphWorkerFReceivedTM36Text::
 
 _SilphCo2FSilphWorkerFTM36ExplanationText::
 	text "I hope your"
-	line "#MON don't"
+	line "CAPUMON don't"
 	cont "SELFDESTRUCT!"
 
 	para "It's powerful, but"
-	line "the #MON that"
+	line "the CAPUMON that"
 	cont "uses it faints!"
 	cont "Be careful."
 	done

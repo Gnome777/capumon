@@ -62,7 +62,7 @@ _VermilionCityGambler2Text::
 	line "building on this"
 	cont "plot of land."
 
-	para "My #MON is"
+	para "My CAPUMON is"
 	line "tamping the land."
 	done
 
@@ -98,7 +98,7 @@ _VermilionCityNoticeSignText::
 
 	para "ROUTE 12 may be"
 	line "blocked off by a"
-	cont "sleeping #MON."
+	cont "sleeping CAPUMON."
 
 	para "Detour through"
 	line "ROCK TUNNEL to"
@@ -108,14 +108,14 @@ _VermilionCityNoticeSignText::
 	done
 
 _VermilionCityPokemonFanClubSignText::
-	text "#MON FAN CLUB"
-	line "All #MON fans"
+	text "CAPUMON FAN CLUB"
+	line "All CAPUMON fans"
 	cont "welcome!"
 	done
 
 _VermilionCityGymSignText::
 	text "VERMILION CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	cont "LEADER: LT.SURGE"
 
 	para "The Lightning "

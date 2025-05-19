@@ -9,7 +9,7 @@ _CeruleanCityRivalPreBattleText::
 	para "I'm doing great!"
 	line "I caught a bunch"
 	cont "of strong and"
-	cont "smart #MON!"
+	cont "smart CAPUMON!"
 
 	para "Here, let me see"
 	line "what you caught,"
@@ -35,18 +35,18 @@ _CeruleanCityRivalIWentToBillsText::
 	para "I went to BILL's"
 	line "and got him to"
 	cont "show me his rare"
-	cont "#MON!"
+	cont "CAPUMON!"
 
 	para "That added a lot"
 	line "of pages to my"
-	cont "#DEX!"
+	cont "MONDEX!"
 
 	para "After all, BILL's"
 	line "world famous as a"
 	cont "#MANIAC!"
 
 	para "He invented the"
-	line "#MON Storage"
+	line "CAPUMON Storage"
 	cont "System on PC!"
 
 	para "Since you're using"
@@ -118,7 +118,7 @@ _CeruleanCitySuperNerd1Text::
 _CeruleanCitySuperNerd2Text::
 	text "You're making an"
 	line "encyclopedia on"
-	cont "#MON? That"
+	cont "CAPUMON? That"
 	cont "sounds amusing."
 	done
 
@@ -154,9 +154,9 @@ _CeruleanCityCooltrainerF1SlowbroWithdrawText::
 	line "No! That's wrong!"
 
 	para "It's so hard to"
-	line "control #MON!"
+	line "control CAPUMON!"
 
-	para "Your #MON's"
+	para "Your CAPUMON's"
 	line "obedience depends"
 	cont "on your abilities"
 	cont "as a trainer!"
@@ -194,10 +194,10 @@ _CeruleanCityCooltrainerF2Text::
 _CeruleanCitySuperNerd3Text::
 	text "This is CERULEAN"
 	line "CAVE! Horribly"
-	cont "strong #MON"
+	cont "strong CAPUMON"
 	cont "live in there!"
 
-	para "The #MON LEAGUE"
+	para "The CAPUMON LEAGUE"
 	line "champion is the"
 	cont "only person who"
 	cont "is allowed in!"
@@ -227,7 +227,7 @@ _CeruleanCityBikeShopSign::
 
 _CeruleanCityGymSign::
 	text "CERULEAN CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	cont "LEADER: MISTY"
 
 	para "The Tomboyish"

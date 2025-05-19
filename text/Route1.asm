@@ -1,6 +1,6 @@
 _Route1Youngster1MartSampleText::
 	text "Hi! I work at a"
-	line "#MON MART."
+	line "CAPUMON MART."
 
 	para "It's a convenient"
 	line "shop, so please"
@@ -21,8 +21,8 @@ _Route1Youngster1GotPotionText::
 
 _Route1Youngster1AlsoGotPokeballsText::
 	text "We also carry"
-	line "# BALLs for"
-	cont "catching #MON!"
+	line "CAPSULEs for"
+	cont "catching CAPUMON!"
 	done
 
 _Route1Youngster1NoRoomText::

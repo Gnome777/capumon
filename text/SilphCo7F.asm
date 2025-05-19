@@ -5,7 +5,7 @@ _SilphCo7FSilphWorkerM1HaveThisPokemonText::
 	cont "Why, thank you!"
 
 	para "I want you to"
-	line "have this #MON"
+	line "have this CAPUMON"
 	cont "for saving us."
 	prompt
 
@@ -43,7 +43,7 @@ _SilphCo7FSilphWorkerM2AfterTheMasterBallText::
 	text "TEAM ROCKET was"
 	line "after the MASTER"
 	cont "BALL which will"
-	cont "catch any #MON!"
+	cont "catch any CAPUMON!"
 	done
 
 _SilphCo7FSilphWorkerM2CancelledMasterBallText::
@@ -57,7 +57,7 @@ _SilphCo7FSilphWorkerM3ItWouldBeBadText::
 	text "It would be bad"
 	line "if TEAM ROCKET"
 	cont "took over SILPH"
-	cont "or our #MON!"
+	cont "or our CAPUMON!"
 	done
 
 _SilphCo7FSilphWorkerM3YouChasedOffTeamRocketText::
@@ -188,13 +188,13 @@ _SilphCo7FRivalGoodLuckToYouText::
 	line "and ahead!"
 
 	para "By checking my"
-	line "#DEX, I'm"
+	line "MONDEX, I'm"
 	cont "starting to see"
 	cont "what's strong and"
 	cont "how they evolve!"
 
 	para "I'm going to the"
-	line "#MON LEAGUE"
+	line "CAPUMON LEAGUE"
 	cont "to boot out the"
 	cont "ELITE FOUR!"
 

@@ -53,7 +53,7 @@ _Route6CooltrainerM2EndBattleText::
 
 _Route6CooltrainerM2AfterBattleText::
 	text "I should carry"
-	line "more #MON with"
+	line "more CAPUMON with"
 	cont "me for safety."
 	done
 
@@ -85,7 +85,7 @@ _Route6Youngster2EndBattleText::
 	prompt
 
 _Route6Youngster2AfterBattleText::
-	text "Are my #MON"
+	text "Are my CAPUMON"
 	line "weak? Or, am I"
 	cont "just bad?"
 	done

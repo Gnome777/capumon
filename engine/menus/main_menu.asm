@@ -453,7 +453,7 @@ PrintPlayTime:
 SaveScreenInfoText:
 	db   "PLAYER"
 	next "BADGES    "
-	next "#DEX    "
+	next "MONDEX    "
 	next "TIME@"
 
 DisplayOptionMenu:

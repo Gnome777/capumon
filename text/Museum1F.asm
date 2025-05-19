@@ -33,7 +33,7 @@ _Museum1FScientist1TheresALabSomewhereText::
 	text "There's a lab"
 	line "somewhere trying"
 	cont "to resurrect"
-	cont "ancient #MON"
+	cont "ancient CAPUMON"
 	cont "from AMBER."
 	done
 
@@ -62,10 +62,10 @@ _Museum1FScientist2TakeThisToAPokemonLabText::
 	text "Ssh! I think that"
 	line "this chunk of"
 	cont "AMBER contains"
-	cont "#MON DNA!"
+	cont "CAPUMON DNA!"
 
 	para "It would be great"
-	line "if #MON could"
+	line "if CAPUMON could"
 	cont "be resurrected"
 	cont "from it!"
 
@@ -76,7 +76,7 @@ _Museum1FScientist2TakeThisToAPokemonLabText::
 	line "to ask!"
 
 	para "Take this to a"
-	line "#MON LAB and"
+	line "CAPUMON LAB and"
 	cont "get it examined!"
 	prompt
 
@@ -99,7 +99,7 @@ _Museum1FScientist3Text::
 	text "We are proud of 2"
 	line "fossils of very"
 	cont "rare, prehistoric"
-	cont "#MON!"
+	cont "CAPUMON!"
 	done
 
 _Museum1FOldAmberText::

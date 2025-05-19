@@ -1,7 +1,7 @@
 _MoveRelearnerGreetingText::
 	text "I tutor children,"
 	line "but I also tutor"
-	cont "#MON."
+	cont "CAPUMON."
 	
 	para "I teach them to"
 	line "remember moves"
@@ -12,7 +12,7 @@ _MoveRelearnerGreetingText::
 	done
 
 _MoveRelearnerSaidYesText::
-	text "Which #MON"
+	text "Which CAPUMON"
 	line "should I tutor?"
 	prompt
 
@@ -30,13 +30,13 @@ _MoveRelearnerWhichMoveText::
 
 _MoveRelearnerByeText::
 	text "If any of your"
-	line "#MON need to"
+	line "CAPUMON need to"
 	cont "remember a move,"
 	cont "come visit me!"
 	done
 
 _MoveRelearnerNoMovesText::
-	text "This #MON"
+	text "This CAPUMON"
 	line "hasn't forgotten"
 	cont "any moves."
 	done

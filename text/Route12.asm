@@ -1,5 +1,5 @@
 _Route12SnorlaxText::
-	text "A sleeping #MON"
+	text "A sleeping CAPUMON"
 	line "blocks the way!"
 	done
 
@@ -46,7 +46,7 @@ _Route12Fisher2EndBattleText::
 _Route12Fisher2AfterBattleText::
 	text "With a better ROD,"
 	line "I could catch"
-	cont "better #MON!"
+	cont "better CAPUMON!"
 	done
 
 _Route12CooltrainerMBattleText::
@@ -60,7 +60,7 @@ _Route12CooltrainerMEndBattleText::
 
 _Route12CooltrainerMAfterBattleText::
 	text "I could have made"
-	line "my #MON evolve"
+	line "my CAPUMON evolve"
 	cont "with MOON STONE!"
 	done
 
@@ -77,12 +77,12 @@ _Route12SuperNerdAfterBattleText::
 	text "Water conducts"
 	line "electricity, so"
 	cont "you should zap"
-	cont "sea #MON!"
+	cont "sea CAPUMON!"
 	done
 
 _Route12Fisher3BattleText::
 	text "The FISHING FOOL"
-	line "vs. #MON KID!"
+	line "vs. CAPUMON KID!"
 	done
 
 _Route12Fisher3EndBattleText::
@@ -92,7 +92,7 @@ _Route12Fisher3EndBattleText::
 
 _Route12Fisher3AfterBattleText::
 	text "You beat me at"
-	line "#MON, but I'm"
+	line "CAPUMON, but I'm"
 	cont "good at fishing!"
 	done
 

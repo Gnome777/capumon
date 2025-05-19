@@ -7,7 +7,7 @@ _ViridianPokecenterGentlemanText::
 	done
 
 _ViridianPokecenterCooltrainerMText::
-	text "There's a #MON"
+	text "There's a CAPUMON"
 	line "CENTER in every"
 	cont "town ahead."
 

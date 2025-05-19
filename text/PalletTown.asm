@@ -5,11 +5,11 @@ _PalletTownOakHeyWaitDontGoOutText::
 
 _PalletTownOakItsUnsafeText::
 	text "OAK: It's unsafe!"
-	line "Wild #MON live"
+	line "Wild CAPUMON live"
 	cont "in tall grass!"
 
 	para "You need your own"
-	line "#MON for your"
+	line "CAPUMON for your"
 	cont "protection."
 	cont "I know!"
 
@@ -19,7 +19,7 @@ _PalletTownOakItsUnsafeText::
 
 _PalletTownGirlText::
 	text "I'm raising"
-	line "#MON too!"
+	line "CAPUMON too!"
 
 	para "When they get"
 	line "strong, they can"
@@ -32,12 +32,12 @@ _PalletTownFisherText::
 
 	para "You can now store"
 	line "and recall items"
-	cont "and #MON as"
+	cont "and CAPUMON as"
 	cont "data via PC!"
 	done
 
 _PalletTownOaksLabSignText::
-	text "OAK #MON"
+	text "OAK CAPUMON"
 	line "RESEARCH LAB"
 	done
 

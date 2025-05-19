@@ -70,7 +70,7 @@ _Route16Biker5EndBattleText::
 	prompt
 
 _Route16Biker5AfterBattleText::
-	text "I like my #MON"
+	text "I like my CAPUMON"
 	line "ferocious! They"
 	cont "tear up enemies!"
 	done
@@ -87,11 +87,11 @@ _Route16Biker6EndBattleText::
 _Route16Biker6AfterBattleText::
 	text "I like harassing"
 	line "people with my"
-	cont "vicious #MON!"
+	cont "vicious CAPUMON!"
 	done
 
 _Route16Text7::
-	text "A sleeping #MON"
+	text "A sleeping CAPUMON"
 	line "blocks the way!"
 	done
 

@@ -1,5 +1,5 @@
 _CeruleanBadgeHouseMiddleAgedManText::
-	text "#MON BADGEs"
+	text "CAPUMON BADGEs"
 	line "are owned only by"
 	cont "skilled trainers."
 
@@ -25,7 +25,7 @@ _CeruleanBadgeHouseMiddleAgedManVisitAnyTimeText::
 
 _CeruleanBadgeHouseBoulderBadgeText::
 	text "The ATTACK of all"
-	line "#MON increases"
+	line "CAPUMON increases"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -34,7 +34,7 @@ _CeruleanBadgeHouseBoulderBadgeText::
 	prompt
 
 _CeruleanBadgeHouseCascadeBadgeText::
-	text "#MON up to L30"
+	text "CAPUMON up to L30"
 	line "will obey you."
 
 	para "Any higher, they"
@@ -47,7 +47,7 @@ _CeruleanBadgeHouseCascadeBadgeText::
 
 _CeruleanBadgeHouseThunderBadgeText::
 	text "The SPEED of all"
-	line "#MON increases"
+	line "CAPUMON increases"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -56,7 +56,7 @@ _CeruleanBadgeHouseThunderBadgeText::
 	prompt
 
 _CeruleanBadgeHouseRainbowBadgeText::
-	text "#MON up to L50"
+	text "CAPUMON up to L50"
 	line "will obey you."
 
 	para "Any higher, they"
@@ -69,7 +69,7 @@ _CeruleanBadgeHouseRainbowBadgeText::
 
 _CeruleanBadgeHouseSoulBadgeText::
 	text "The DEFENSE of all"
-	line "#MON increases"
+	line "CAPUMON increases"
 	cont "a little bit."
 
 	para "It also lets you"
@@ -78,7 +78,7 @@ _CeruleanBadgeHouseSoulBadgeText::
 	prompt
 
 _CeruleanBadgeHouseMarshBadgeText::
-	text "#MON up to L70"
+	text "CAPUMON up to L70"
 	line "will obey you."
 
 	para "Any higher, they"
@@ -86,12 +86,12 @@ _CeruleanBadgeHouseMarshBadgeText::
 	prompt
 
 _CeruleanBadgeHouseVolcanoBadgeText::
-	text "Your #MON's"
+	text "Your CAPUMON's"
 	line "SPECIAL abilities"
 	cont "increase a bit."
 	prompt
 
 _CeruleanBadgeHouseEarthBadgeText::
-	text "All #MON will"
+	text "All CAPUMON will"
 	line "obey you!"
 	prompt

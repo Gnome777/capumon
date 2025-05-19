@@ -41,7 +41,7 @@ _VictoryRoad3FCooltrainerM2EndBattleText::
 _VictoryRoad3FCooltrainerM2AfterBattleText::
 	text "All trainers here"
 	line "are headed to the"
-	cont "#MON LEAGUE!"
+	cont "CAPUMON LEAGUE!"
 	cont "Be careful!"
 	done
 

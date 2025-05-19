@@ -18,12 +18,12 @@ _MrFujisHouseLittleGirlThisIsMrFujisHouseText::
 
 	para "He looks after"
 	line "abandoned and"
-	cont "orphaned #MON!"
+	cont "orphaned CAPUMON!"
 	done
 
 _MrFujisHouseLittleGirlPokemonAreNiceToHugText::
 	text "It's so warm!"
-	line "#MON are so"
+	line "CAPUMON are so"
 	cont "nice to hug!"
 	done
 
@@ -38,10 +38,10 @@ _MrFujisHouseNidorinoText::
 _MrFujisHouseMrFujiIThinkThisMayHelpYourQuestText::
 	text "MR.FUJI: <PLAYER>."
 
-	para "Your #DEX quest"
+	para "Your MONDEX quest"
 	line "may fail without"
 	cont "love for your"
-	cont "#MON."
+	cont "CAPUMON."
 
 	para "I think this may"
 	line "help your quest."
@@ -57,13 +57,13 @@ _MrFujisHouseMrFujiReceivedPokeFluteText::
 _MrFujisHouseMrFujiPokeFluteExplanationText::
 	text_start
 
-	para "Upon hearing #"
+	para "Upon hearing a"
 	line "FLUTE, sleeping"
-	cont "#MON will"
+	cont "CAPUMON will"
 	cont "spring awake."
 
 	para "It works on all"
-	line "sleeping #MON."
+	line "sleeping CAPUMON."
 	done
 
 _MrFujisHouseMrFujiPokeFluteNoRoomText::
@@ -77,7 +77,7 @@ _MrFujisHouseMrFujiHasMyFluteHelpedYouText::
 	done
 
 _MrFujisHouseMrFujiPokedexText::
-	text "#MON Monthly"
+	text "CAPUMON Monthly"
 	line "Grand Prize"
 	cont "Drawing!"
 

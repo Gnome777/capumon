@@ -27,29 +27,29 @@ _SilphCo5FRocket2AfterBattleText::
 	done
 
 _SilphCo5FPokemonReport1Text::
-	text "It's a #MON"
+	text "It's a CAPUMON"
 	line "REPORT!"
 
-	para "#MON LAB"
+	para "CAPUMON LAB"
 	line "created PORYGON,"
 	cont "the first virtual"
-	cont "reality #MON."
+	cont "reality CAPUMON."
 	done
 
 _SilphCo5FPokemonReport2Text::
-	text "It's a #MON"
+	text "It's a CAPUMON"
 	line "REPORT!"
 
-	para "Over 160 #MON"
+	para "Over 160 CAPUMON"
 	line "techniques have"
 	cont "been confirmed."
 	done
 
 _SilphCo5FPokemonReport3Text::
-	text "It's a #MON"
+	text "It's a CAPUMON"
 	line "REPORT!"
 
-	para "4 #MON evolve"
+	para "4 CAPUMON evolve"
 	line "only when traded"
 	cont "by link-cable."
 	done

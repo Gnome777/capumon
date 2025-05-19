@@ -1,7 +1,7 @@
 _FuchsiaCityYoungster1Text::
 	text "Did you try the"
 	line "SAFARI GAME? Some"
-	cont "#MON can only"
+	cont "CAPUMON can only"
 	cont "be caught there."
 	done
 
@@ -12,7 +12,7 @@ _FuchsiaCityGamblerText::
 
 	para "Out back is the"
 	line "SAFARI GAME for"
-	cont "catching #MON."
+	cont "catching CAPUMON."
 	done
 
 _FuchsiaCityErikText::
@@ -24,7 +24,7 @@ _FuchsiaCityErikText::
 _FuchsiaCityYoungster2Text::
 	text "That item ball in"
 	line "there is really a"
-	cont "#MON."
+	cont "CAPUMON."
 	done
 
 _FuchsiaCityPokemonText::
@@ -39,7 +39,7 @@ _FuchsiaCitySignText::
 
 _FuchsiaCitySafariGameSignText::
 	text "SAFARI GAME"
-	line "#MON-U-CATCH!"
+	line "CAPUMON-U-CATCH!"
 	done
 
 _FuchsiaCityWardensHomeSignText::
@@ -48,13 +48,13 @@ _FuchsiaCityWardensHomeSignText::
 	done
 
 _FuchsiaCitySafariZoneSignText::
-	text "#MON PARADISE"
+	text "CAPUMON PARADISE"
 	line "SAFARI ZONE"
 	done
 
 _FuchsiaCityGymSignText::
 	text "FUCHSIA CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	cont "LEADER: KOGA"
 
 	para "The Poisonous"
@@ -72,13 +72,13 @@ _FuchsiaCityVoltorbSignText::
 	text "Name: VOLTORB"
 
 	para "The very image of"
-	line "a # BALL."
+	line "a CAPSULE."
 	prompt
 
 _FuchsiaCityKangaskhanSignText::
 	text "Name: KANGASKHAN"
 
-	para "A maternal #MON"
+	para "A maternal CAPUMON"
 	line "that raises its"
 	cont "young in a pouch"
 	cont "on its belly."
@@ -101,7 +101,7 @@ _FuchsiaCityLaprasSignText::
 _FuchsiaCityFossilSignOmanyteText::
 	text "Name: OMANYTE"
 
-	para "A #MON that"
+	para "A CAPUMON that"
 	line "was resurrected"
 	cont "from a fossil."
 	prompt
@@ -109,7 +109,7 @@ _FuchsiaCityFossilSignOmanyteText::
 _FuchsiaCityFossilSignKabutoText::
 	text "Name: KABUTO"
 
-	para "A #MON that"
+	para "A CAPUMON that"
 	line "was resurrected"
 	cont "from a fossil."
 	prompt

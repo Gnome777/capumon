@@ -1,13 +1,13 @@
 _DexCompletionText::
-	text "#DEX comp-"
+	text "MONDEX comp-"
 	line "letion is:"
 
 	para "@"
 	text_decimal hDexRatingNumMonsSeen, 1, 3
-	text " #MON seen"
+	text " CAPUMON seen"
 	line "@"
 	text_decimal hDexRatingNumMonsOwned, 1, 3
-	text " #MON owned"
+	text " CAPUMON owned"
 
 	para "PROF.OAK's"
 	line "Rating:"
@@ -16,7 +16,7 @@ _DexCompletionText::
 _DexRatingText_Own0To9::
 	text "You still have"
 	line "lots to do."
-	cont "Look for #MON"
+	cont "Look for CAPUMON"
 	cont "in grassy areas!"
 	done
 
@@ -29,7 +29,7 @@ _DexRatingText_Own10To19::
 
 _DexRatingText_Own20To29::
 	text "You still need"
-	line "more #MON!"
+	line "more CAPUMON!"
 	cont "Try to catch"
 	cont "other species!"
 	done
@@ -63,7 +63,7 @@ _DexRatingText_Own60To69::
 _DexRatingText_Own70To79::
 	text "Very good!"
 	line "Go fish for some"
-	cont "marine #MON!"
+	cont "marine CAPUMON!"
 	done
 
 _DexRatingText_Own80To89::
@@ -88,7 +88,7 @@ _DexRatingText_Own100To109::
 _DexRatingText_Own110To119::
 	text "You even have the"
 	line "evolved forms of"
-	cont "#MON! Super!"
+	cont "CAPUMON! Super!"
 	done
 
 _DexRatingText_Own120To129::
@@ -111,7 +111,7 @@ _DexRatingText_Own140To149::
 	done
 
 _DexRatingText_Own150To151::
-	text "Your #DEX is"
+	text "Your MONDEX is"
 	line "entirely complete!"
 	cont "Congratulations!"
 	done

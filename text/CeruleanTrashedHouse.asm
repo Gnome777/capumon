@@ -7,7 +7,7 @@ _CeruleanTrashedHouseFishingGuruTheyStoleATMText::
 
 	para "They stole a TM"
 	line "for teaching"
-	cont "#MON how to"
+	cont "CAPUMON how to"
 	cont "DIG holes!"
 
 	para "That cost me a"

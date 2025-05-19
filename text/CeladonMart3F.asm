@@ -1,6 +1,6 @@
 _CeladonMart3FClerkTM18PreReceiveText::
 	text "Oh, hi! I finally"
-	line "finished #MON!"
+	line "finished CAPUMON!"
 
 	para "Not done yet?"
 	line "This might be"
@@ -27,7 +27,7 @@ _CeladonMart3FClerkTM18NoRoomText::
 	done
 
 _CeladonMart3FGameBoyKid1Text::
-	text "Captured #MON"
+	text "Captured CAPUMON"
 	line "are registered"
 	cont "with an ID No."
 	cont "and OT, the name"
@@ -55,12 +55,12 @@ _CeladonMart3FGameBoyKid3Text::
 
 	para "GRAVELER turned"
 	line "into a different"
-	cont "#MON!"
+	cont "CAPUMON!"
 	done
 
 _CeladonMart3FLittleBoyText::
 	text "You can identify"
-	line "#MON you got"
+	line "CAPUMON you got"
 	cont "in trades by"
 	cont "their ID Numbers!"
 	done
@@ -95,5 +95,5 @@ _CeladonMart3FCurrentFloorSignText::
 
 _CeladonMart3FPokemonPosterText::
 	text "Red and Blue!"
-	line "Both are #MON!"
+	line "Both are CAPUMON!"
 	done

@@ -14,7 +14,7 @@ _SaffronPidgeyHousePidgeyText::
 _SaffronPidgeyHouseYoungsterText::
 	text "The COPYCAT is"
 	line "cute! I'm getting"
-	cont "her a # DOLL!"
+	cont "her a MONDOLL!"
 	done
 
 _SaffronPidgeyHousePaperText::

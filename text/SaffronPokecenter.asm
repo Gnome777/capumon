@@ -1,5 +1,5 @@
 _SaffronPokecenterBeautyText::
-	text "#MON growth"
+	text "CAPUMON growth"
 	line "rates differ from"
 	cont "specie to specie."
 	done

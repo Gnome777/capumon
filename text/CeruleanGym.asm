@@ -5,16 +5,16 @@ _CeruleanGymMistyPreBattleText::
 	para "Trainers who want"
 	line "to turn pro have"
 	cont "to have a policy"
-	cont "about #MON!"
+	cont "about CAPUMON!"
 
 	para "What is your"
 	line "approach when you"
-	cont "catch #MON?"
+	cont "catch CAPUMON?"
 
 	para "My policy is an"
 	line "all-out offensive"
 	cont "with water-type"
-	cont "#MON!"
+	cont "CAPUMON!"
 	done
 
 _CeruleanGymMistyTM11ExplanationText::
@@ -22,13 +22,13 @@ _CeruleanGymMistyTM11ExplanationText::
 	line "is strong!"
 
 	para "Teach it to"
-	line "aquatic #MON!"
+	line "aquatic CAPUMON!"
 	done
 
 _CeruleanGymMistyCascadeBadgeInfoText::
 	text "The CASCADEBADGE"
 	line "is an official"
-	cont "#MON LEAGUE"
+	cont "CAPUMON LEAGUE"
 	cont "BADGE!"
 	done
 
@@ -100,11 +100,11 @@ _CeruleanGymGymGuideChampInMakingText::
 
 	para "The LEADER, MISTY,"
 	line "is a pro who uses"
-	cont "water #MON!"
+	cont "water CAPUMON!"
 
 	para "You can drain all"
 	line "their water with"
-	cont "plant #MON!"
+	cont "plant CAPUMON!"
 
 	para "Or, zap them with"
 	line "electricity!"

@@ -14,12 +14,12 @@ _HyperSeesNugget::
 	para "You give me that"
 	line "NUGGET, and"
 	cont "I'll make your"
-	cont "#MON a little"
+	cont "CAPUMON a little"
 	cont "stronger!"
 	done
 
 _HyperYes::
-	text "Which #MON is"
+	text "Which CAPUMON is"
 	line "is getting"
 	cont "stronger?"
 	done

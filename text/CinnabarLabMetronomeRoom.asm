@@ -19,7 +19,7 @@ _CinnabarLabMetronomeRoomScientist1TM35ExplanationText::
 	cont "of a METRONOME!"
 
 	para "It tweaks your"
-	line "#MON's brain"
+	line "CAPUMON's brain"
 	cont "into using moves"
 	cont "it doesn't know!"
 	done
@@ -32,7 +32,7 @@ _CinnabarLabMetronomeRoomScientist1TM35NoRoomText::
 _CinnabarLabMetronomeRoomScientist2Text::
 	text "EEVEE can evolve"
 	line "into 1 of 3 kinds"
-	cont "of #MON."
+	cont "of CAPUMON."
 	done
 
 _CinnabarLabMetronomeRoomPCText::
@@ -42,7 +42,7 @@ _CinnabarLabMetronomeRoomPCText::
 	para "..."
 
 	para "The 3 legendary"
-	line "bird #MON are"
+	line "bird CAPUMON are"
 	cont "ARTICUNO, ZAPDOS"
 	cont "and MOLTRES."
 
@@ -53,7 +53,7 @@ _CinnabarLabMetronomeRoomPCText::
 	line "the cavern close"
 	cont "to CERULEAN."
 
-	para "From: #MON"
+	para "From: CAPUMON"
 	line "RESEARCH TEAM"
 
 	para "..."

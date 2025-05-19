@@ -1,6 +1,6 @@
 _CopycatsHouse2FCopycatDoYouLikePokemonText::
 	text "<PLAYER>: Hi! Do"
-	line "you like #MON?"
+	line "you like CAPUMON?"
 
 	para "<PLAYER>: Uh no, I"
 	line "just asked you."
@@ -17,7 +17,7 @@ _CopycatsHouse2FCopycatDoYouLikePokemonText::
 
 _CopycatsHouse2FCopycatTM31PreReceiveText::
 	text "Oh wow!"
-	line "A # DOLL!"
+	line "A MONDOLL!"
 
 	para "For me?"
 	line "Thank you!"
@@ -40,7 +40,7 @@ _CopycatsHouse2FCopycatTM31Explanation1Text::
 	line "favorite, MIMIC!"
 
 	para "Use it on a good"
-	line "#MON!@"
+	line "CAPUMON!@"
 	text_end
 
 _CopycatsHouse2FCopycatTM31Explanation2Text::
@@ -73,7 +73,7 @@ _CopycatsHouse2FDoduoText::
 
 _CopycatsHouse2FRareDollText::
 	text "This is a rare"
-	line "#MON! Huh?"
+	line "CAPUMON! Huh?"
 	cont "It's only a doll!"
 	done
 
@@ -91,7 +91,7 @@ _CopycatsHouse2FPCMySecretsText::
 	para "Skill: Mimicry!"
 	line "Hobby: Collecting"
 	cont "dolls!"
-	cont "Favorite #MON:"
+	cont "Favorite CAPUMON:"
 	cont "CLEFAIRY!"
 	done
 

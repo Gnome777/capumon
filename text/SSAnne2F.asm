@@ -19,7 +19,7 @@ _SSAnne2FRivalText::
 	line "really invited?"
 
 	para "So how's your"
-	line "#DEX coming?"
+	line "MONDEX coming?"
 
 	para "I already caught"
 	line "40 kinds, pal!"
@@ -36,7 +36,7 @@ _SSAnne2FRivalDefeatedText::
 
 	para "At least you're"
 	line "raising your"
-	cont "#MON!"
+	cont "CAPUMON!"
 	prompt
 
 _SSAnne2FRivalVictoryText::

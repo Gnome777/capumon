@@ -3,12 +3,12 @@ _ViridianForestYoungster1Text::
 	line "some friends!"
 
 	para "They're out for"
-	line "#MON fights!"
+	line "CAPUMON fights!"
 	done
 
 _ViridianForestYoungster2BattleText::
 	text "Hey! You have"
-	line "#MON! Come on!"
+	line "CAPUMON! Come on!"
 	cont "Let's battle'em!"
 	done
 
@@ -26,13 +26,13 @@ _ViridianForestYoungster2AfterBattleText::
 _ViridianForestYoungster3BattleText::
 	text "Yo! You can't jam"
 	line "out if you're a"
-	cont "#MON trainer!"
+	cont "CAPUMON trainer!"
 	done
 
 _ViridianForestYoungster3EndBattleText::
 	text "Huh?"
 	line "I ran out of"
-	cont "#MON!"
+	cont "CAPUMON!"
 	prompt
 
 _ViridianForestYoungster3AfterBattleText::
@@ -63,9 +63,10 @@ _ViridianForestYoungster4AfterBattleText::
 	done
 
 _ViridianForestYoungster5Text::
-	text "I ran out of #"
-	line "BALLs to catch"
-	cont "#MON with!"
+	text "I ran out of"
+	line "CAPSULEs to"
+	cont "catch CAPUMON"
+	cont "with!"
 
 	para "You should carry"
 	line "extras!"
@@ -83,7 +84,7 @@ _ViridianForestTrainerTips1Text::
 _ViridianForestUseAntidoteSignText::
 	text "For poison, use"
 	line "ANTIDOTE! Get it"
-	cont "at #MON MARTs!"
+	cont "at CAPUMON MARTs!"
 	done
 
 _ViridianForestTrainerTips2Text::
@@ -91,7 +92,7 @@ _ViridianForestTrainerTips2Text::
 
 	para "Contact PROF.OAK"
 	line "via PC to get"
-	cont "your #DEX"
+	cont "your MONDEX"
 	cont "evaluated!"
 	done
 
@@ -99,16 +100,16 @@ _ViridianForestTrainerTips3Text::
 	text "TRAINER TIPS"
 
 	para "No stealing of"
-	line "#MON from"
+	line "CAPUMON from"
 	cont "other trainers!"
 	cont "Catch only wild"
-	cont "#MON!"
+	cont "CAPUMON!"
 	done
 
 _ViridianForestTrainerTips4Text::
 	text "TRAINER TIPS"
 
-	para "Weaken #MON"
+	para "Weaken CAPUMON"
 	line "before attempting"
 	cont "capture!"
 

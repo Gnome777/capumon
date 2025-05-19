@@ -50,10 +50,10 @@ _CeladonCityGramps3TM41ExplanationText::
 	text "I like eggs"
 	line "SOFTBOILED!"
 
-	; para "Only one #MON"
+	; para "Only one CAPUMON"
 	; line "can use it!"
 
-	; para "That #MON is"
+	; para "That CAPUMON is"
 	; line "CHANSEY!"
 	done
 
@@ -110,7 +110,7 @@ _CeladonCitySignText::
 
 _CeladonCityGymSignText::
 	text "CELADON CITY"
-	line "#MON GYM"
+	line "CAPUMON GYM"
 	cont "LEADER: ERIKA"
 
 	para "The Nature Loving"
@@ -131,7 +131,7 @@ _CeladonCityTrainerTips2Text::
 	text "TRAINER TIPS"
 
 	para "GUARD SPEC."
-	line "protects #MON"
+	line "protects CAPUMON"
 	cont "against SPECIAL"
 	cont "attacks such as"
 	cont "fire and water!"

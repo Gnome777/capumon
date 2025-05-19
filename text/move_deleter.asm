@@ -4,12 +4,12 @@ _MoveDeleterGreetingText::
 	cont "it is contagious."
 
 	para "Want me to make a"
-	line "#MON forget a"
+	line "CAPUMON forget a"
 	cont "move?"
 	done
 
 _MoveDeleterSaidYesText::
-	text "Which #MON"
+	text "Which CAPUMON"
 	line "should forget a"
 	cont "move?"
 	prompt

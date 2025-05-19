@@ -54,12 +54,12 @@ _MtMoon1FSuperNerdBattleText::
 
 _MtMoon1FSuperNerdEndBattleText::
 	text "My"
-	line "#MON won't do!"
+	line "CAPUMON won't do!"
 	prompt
 
 _MtMoon1FSuperNerdAfterBattleText::
 	text "I have to find"
-	line "stronger #MON."
+	line "stronger CAPUMON."
 	done
 
 _MtMoon1FCooltrainerF2BattleText::

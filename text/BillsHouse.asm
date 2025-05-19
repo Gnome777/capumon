@@ -1,6 +1,6 @@
 _BillsHouseBillImNotAPokemonText::
 	text "Hiya! I'm a"
-	line "#MON..."
+	line "CAPUMON..."
 	cont "...No I'm not!"
 
 	para "Call me BILL!"
@@ -13,7 +13,7 @@ _BillsHouseBillImNotAPokemonText::
 	line "you, I screwed up"
 	cont "an experiment and"
 	cont "got combined with"
-	cont "a #MON!"
+	cont "a CAPUMON!"
 
 	para "So, how about it?"
 	line "Help me out here!"
@@ -43,7 +43,7 @@ _BillsHouseBillThankYouText::
 	cont "owe you one!"
 
 	para "So, did you come"
-	line "to see my #MON"
+	line "to see my CAPUMON"
 	cont "collection?"
 	cont "You didn't?"
 	cont "That's a bummer."
@@ -84,5 +84,5 @@ _BillsHouseBillCheckOutMyRarePokemonText::
 	text "BILL: Look, bud,"
 	line "just check out"
 	cont "some of my rare"
-	cont "#MON on my PC!"
+	cont "CAPUMON on my PC!"
 	done
