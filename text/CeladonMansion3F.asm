@@ -65,3 +65,13 @@ _CeladonMansion3FDevRoomSignText::
 	text "GAME FREAK"
 	line "Development Room"
 	done
+
+_CeladonMansion3FMewDescriptionText::
+	text "This is MEW, a"
+	line "mythical CAPUMON!"
+	done
+
+_CeladonMansion3FAlreadyGotMewText::
+	text "I already gave"
+	line "you a gift!"
+	done

@@ -25,20 +25,46 @@ CeladonMansion3FWriterText:
 	text_end
 
 CeladonMansion3FGameDesignerText:
-	text_asm
-	ld hl, wPokedexOwned
-	ld b, wPokedexOwnedEnd - wPokedexOwned
-	call CountSetBits
-	ld a, [wNumSetBits]
-	cp NUM_POKEMON - 1 ; discount Mew
-	jr nc, .completed_dex
-	ld hl, .Text
-	jr .done
-.completed_dex
-	ld hl, .CompletedDexText
+    ; Game Designer - gives Mew for completed Pokédex
+    text_asm
+    ld a, [wStatusFlags4]
+    bit BIT_GOT_MEW, a
+    jr z, .check_dex_completion
+    ld hl, .AlreadyGotMewText
+    call PrintText
+    jr .done
+
+.check_dex_completion
+    ld hl, wPokedexOwned
+    ld b, wPokedexOwnedEnd - wPokedexOwned
+    call CountSetBits
+    ld a, [wNumSetBits]
+    cp NUM_POKEMON - 1 ; discount Mew
+    jr nc, .give_mew
+    ld hl, .Text
+    call PrintText
+    jr .done
+
+.give_mew
+    ld hl, .CompletedDexText
+    call PrintText
+    ld bc, MEW << 8 | 50  ; Level 50 Mew
+    call GivePokemon
+    jr nc, .done
+
+    ld a, [wAddedToParty]
+    and a
+    call z, WaitForTextScrollButtonPress
+    call EnableAutoTextBoxDrawing
+
+    ld hl, .MewDescriptionText
+    call PrintText
+
+    ld hl, wStatusFlags4
+    set BIT_GOT_MEW, [hl]
+
 .done
-	call PrintText
-	jp TextScriptEnd
+    jp TextScriptEnd
 
 .Text:
 	text_far _CeladonMansion3FGameDesignerText
@@ -52,6 +78,14 @@ CeladonMansion3FGameDesignerText:
 	ld a, TRUE
 	ld [wDoNotWaitForButtonPressAfterDisplayingText], a
 	jp TextScriptEnd
+
+.MewDescriptionText:
+    text_far _CeladonMansion3FMewDescriptionText
+    text_end
+
+.AlreadyGotMewText:
+    text_far _CeladonMansion3FAlreadyGotMewText
+    text_end
 
 CeladonMansion3FGameProgramPCText:
 	text_far _CeladonMansion3FGameProgramPCText
