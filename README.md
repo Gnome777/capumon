@@ -4,7 +4,7 @@ This is a ROMhack of Pokémon Red and Blue.
 
 ### Description
 
-Capumon Generation One is not a difficulty hack or a catch-em-all, although it modifies the difficulty of boss trainers and allows for a wider selection of Pokémon. This is a reimagining of the first generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
+Capumon Generation One is a reimagining of the first generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
 
 For detailed info on all changes, view the [wiki](https://github.com/Gnome777/capumonone/wiki)
 
@@ -27,24 +27,11 @@ Capumon has a variety of new features that make it stand out, including but not 
 - Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
 - All wild encounters have been changed to allow for a greater variety of Pokémon to be captured.
 - All Pokémon level-up moves have been changed. Generally, a Pokémon will learn a new move every 5 levels up until 50. For example, Moltres originally learned 3 moves by level-up, but now learns 10
-- TMs and HMs have been removed from Pokémon learnsets. Field moves remain but no longer require badges.
+- TMs and HMs have been removed. Field moves remain but no longer require badges.
 - All trees requiring Cut have been removed. The areas locked behind Cut are not delevelled, so be careful.
 - Fly is still learned by a variety of Flying-type Pokémon.
 - The Surfboard replaces HM03 in the Safari Zone. Surf can be learned by certain Pokémon still and retains its purpose as a field move for those wanting to not get the Surfboard.
 - All boulders requiring Strength have been removed. Strength puzzles have been automatically solved.
-- HM05 has been removed.
-
-### The Future
-
-Capumon Generation One is complete as per my original goal. However, I do have ambitious ideas (as does every ROMhack creator starting out), including but not limited to:
-
-- A fully open-world Kanto, where field moves are completely erased
-- The ability to start in any town
-- Gym leader teams scaling by badges, meaning you can challenge in any order
-- Optionally disable the Team Rocket storyline
-- More Pokémon, moves, etc. basically updating the game to compete with future generations
-
-These may or may not happen in the future (most likely not) depending on a variety of factors, the most significant of which being whether I want to or not.
 
 ### Install Instructions
 
