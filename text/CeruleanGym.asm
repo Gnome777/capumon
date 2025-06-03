@@ -132,7 +132,7 @@ _CeruleanGymRematchPreBattle1Text::
 
 	para "the true power"
 	line "of the water"
-	cont "CAPUMON!"
+	cont "#MON!"
 	done
 
 _CeruleanGymPreRematchBattle2Text::
@@ -174,7 +174,7 @@ _CeruleanGymRematchPostBattleText::
 
 	para "Until then..."
 	line "keep training"
-	cont "your CAPUMON"
+	cont "your #MON"
 	cont "and yourself!"
 
 	para "Well then..."

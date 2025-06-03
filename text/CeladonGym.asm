@@ -216,7 +216,7 @@ _CeladonGymRematchPreBattle1Text::
 	text "Oh, hello."
 	line "It's you..."
 	
-	para "Your CAPUMON"
+	para "Your #MON"
 	line "look as strong"
 	cont "as ever..."
 
@@ -226,7 +226,7 @@ _CeladonGymRematchPreBattle1Text::
 
 	para "I can show"
 	line "my beautiful"
-	cont "CAPUMON!"
+	cont "#MON!"
 	done
 
 _CeladonGymPreRematchBattle2Text::
@@ -248,7 +248,7 @@ _CeladonGymRematchDefeatedText::
 _CeladonGymRematchVictoryText::
 	text "Who knew"
 	line "beautiful"
-	cont "CAPUMON"
+	cont "#MON"
 	cont "could win?"
 
 	para "Well... I"
@@ -257,7 +257,7 @@ _CeladonGymRematchVictoryText::
 	prompt
 
 _CeladonGymRematchPostBattleText::
-	text "Your CAPUMON..."
+	text "Your #MON..."
 
 	para "They radiate"
 	line "with beauty"

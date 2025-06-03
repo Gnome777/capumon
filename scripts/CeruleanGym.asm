@@ -42,7 +42,8 @@ CeruleanGymMistyPostBattleScript:
 	jp z, CeruleanGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
 	jr nz, MistyRematchPostBattle
 
 CeruleanGymReceiveTM11:
@@ -104,10 +105,11 @@ CeruleanGymMistyText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .MistyRematch
 	ld hl, .TM11ExplanationText
 	call PrintText
-	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
-	jr nz, .MistyRematch
 	jr .done
 .beforeBeat
 	ld hl, .PreBattleText

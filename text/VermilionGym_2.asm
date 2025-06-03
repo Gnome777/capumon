@@ -152,7 +152,7 @@ _VermilionGymRematchPreBattle1Text::
 	cont "wasn't a fluke!"
 
 	para "My eletric"
-	line "CAPUMON have"
+	line "#MON have"
 	cont "gotten strong!"
 	done
 
@@ -174,9 +174,9 @@ _VermilionGymRematchDefeatedText::
 
 _VermilionGymRematchVictoryText::
 	text "Electric"
-	line "CAPUMON"
+	line "#MON"
 	cont "are the best"
-	cont "CAPUMON!"
+	cont "#MON!"
 
 	para "Come back"
 	line "when you're"

@@ -245,7 +245,7 @@ _SaffronGymRematchPreBattle1Text::
 	done
 
 _SaffronGymPreRematchBattle2Text::
-	text "My CAPUMON"
+	text "My #MON"
 	line "have trained."
 	done
 
@@ -263,7 +263,7 @@ _SaffronGymRematchDefeatedText::
 
 _SaffronGymRematchVictoryText::
 	text "Psychic"
-	line "CAPUMON"
+	line "#MON"
 	cont "are very"
 	cont "strong."
 
