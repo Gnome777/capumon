@@ -42,6 +42,9 @@ PewterGymBrockPostBattle:
 	jp z, PewterGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, BrockRematchPostBattle
 ; fallthrough
 PewterGymScriptReceiveTM34:
 	; ld a, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
@@ -80,6 +83,12 @@ PewterGymScriptReceiveTM34:
 
 	jp PewterGymResetScripts
 
+BrockRematchPostBattle:
+	ld a, TEXT_PEWTERGYM_REMATCH_POST_BATTLE
+	ldh [hSpriteIndex], a
+	call DisplayTextID
+	jp PewterGymResetScripts
+
 PewterGym_TextPointers:
 	def_text_pointers
 	dw_const PewterGymBrockText,             TEXT_PEWTERGYM_BROCK
@@ -88,6 +97,7 @@ PewterGym_TextPointers:
 	dw_const PewterGymBrockWaitTakeThisText, TEXT_PEWTERGYM_BROCK_WAIT_TAKE_THIS
 	dw_const PewterGymReceivedTM34Text,      TEXT_PEWTERGYM_RECEIVED_TM34
 	dw_const PewterGymTM34NoRoomText,        TEXT_PEWTERGYM_TM34_NO_ROOM
+	dw_const PewterGymRematchPostBattleText, TEXT_PEWTERGYM_REMATCH_POST_BATTLE
 
 PewterGymTrainerHeaders:
 	def_trainers 2
@@ -101,6 +111,9 @@ PewterGymBrockText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .BrockRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jr .done
@@ -121,6 +134,36 @@ PewterGymBrockText:
 	ld [wGymLeaderNo], a
 	xor a
 	ldh [hJoyHeld], a
+	jr .endBattle
+.BrockRematch
+	ld hl, PewterPreBattleRematch1Text
+	call PrintText
+	call YesNoChoice
+	ld a, [wCurrentMenuItem]
+	and a
+	jr nz, .refused
+	ld hl, PewterPreBattleRematch2Text
+	call PrintText
+	call Delay3
+	ld hl, wStatusFlags3
+	set BIT_TALKED_TO_TRAINER, [hl]
+	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+	ld hl, PewterGymRematchDefeatedText
+	ld de, PewterGymRematchVictoryText
+	call SaveEndBattleTextPointers
+	ld a, OPP_BROCK
+	ld [wCurOpponent], a
+	ld a, 2
+	ld [wTrainerNo], a
+	ld a, $4 ; new script
+	ld [wPewterGymCurScript], a
+	ld [wCurMapScript], a
+	jr .endBattle
+.refused
+	ld hl, PewterGymRematchRefusedText
+	call PrintText
+	jr .done
+.endBattle
 	ld a, SCRIPT_PEWTERGYM_BROCK_POST_BATTLE
 	ld [wPewterGymCurScript], a
 	ld [wCurMapScript], a
@@ -218,4 +261,28 @@ PewterGymGuideFreeServiceText:
 
 PewterGymGuidePostBattleText:
 	text_far _PewterGymGuidePostBattleText
+	text_end
+
+PewterGymRematchRefusedText:
+	text_far _PewterGymRematchRefusedText
+	text_end
+
+PewterGymRematchVictoryText:
+	text_far _PewterGymRematchVictoryText
+	text_end
+
+PewterGymRematchDefeatedText:
+	text_far _PewterGymRematchDefeatedText
+	text_end
+
+PewterPreBattleRematch1Text:
+	text_far _PewterGymRematchPreBattle1Text
+	text_end
+
+PewterPreBattleRematch2Text:
+	text_far _PewterGymPreRematchBattle2Text
+	text_end
+
+PewterGymRematchPostBattleText:
+	text_far _PewterGymRematchPostBattleText
 	text_end

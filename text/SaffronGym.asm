@@ -225,3 +225,70 @@ _SaffronGymYoungster4AfterBattleText::
 	line "used telepathy to"
 	cont "read your mind!"
 	done
+
+_SaffronGymRematchPreBattle1Text::
+	text "You return."
+	line "I knew you"
+	cont "would."
+	
+	para "I don't"
+	line "have to read"
+	cont "your mind..."
+
+	para "You want"
+	line "to battle"
+	cont "me again."
+
+	para "Am I right?"
+	line "I accept"
+	cont "your challenge."
+	done
+
+_SaffronGymPreRematchBattle2Text::
+	text "My #MON"
+	line "have trained."
+	done
+
+_SaffronGymRematchRefusedText::
+	text "Funny..."
+	line "You are"
+	cont "joking, right?"
+	done
+
+_SaffronGymRematchDefeatedText::
+	text "I didn't"
+	line "foresee"
+	cont "my loss."
+	prompt
+
+_SaffronGymRematchVictoryText::
+	text "Psychic"
+	line "#MON"
+	cont "are very"
+	cont "strong."
+
+	para "You should"
+	line "have saw"
+	cont "this coming."
+	prompt
+
+_SaffronGymRematchPostBattleText::
+	text "..."
+
+	para "Clearly my"
+	line "powers are"
+	cont "no match."
+
+	para "Are you too"
+	line "a psychic?"
+	cont "I sense a"
+	cont "new power."
+
+	para "Nevertheless,"
+	line "I will keep"
+	cont "training until"
+	cont "we meet again."
+
+	para "And we will"
+	line "meet again."
+	done

@@ -211,3 +211,67 @@ _CeladonGymAfterBattleText8::
 	para "Wait 'til next"
 	line "time!"
 	done
+
+_CeladonGymRematchPreBattle1Text::
+	text "Oh, hello."
+	line "It's you..."
+	
+	para "Your #MON"
+	line "look as strong"
+	cont "as ever..."
+
+	para "Would you like"
+	line "a battle? I"
+	cont "have trained..."
+
+	para "I can show"
+	line "my beautiful"
+	cont "#MON!"
+	done
+
+_CeladonGymPreRematchBattle2Text::
+	text "Thank you!"
+	line "Let's battle."
+	done
+
+_CeladonGymRematchRefusedText::
+	text "If you"
+	line "insist..."
+	done
+
+_CeladonGymRematchDefeatedText::
+	text "Hmm..."
+	line "You won"
+	cont "again...."
+	prompt
+
+_CeladonGymRematchVictoryText::
+	text "Who knew"
+	line "beautiful"
+	cont "#MON"
+	cont "could win?"
+
+	para "Well... I"
+	line "did. Keep"
+	cont "training."
+	prompt
+
+_CeladonGymRematchPostBattleText::
+	text "Your #MON..."
+
+	para "They radiate"
+	line "with beauty"
+	cont "beyond mine."
+
+	para "It's clear you"
+	line "have grown as."
+	cont "as a trainer."
+
+	para "You should"
+	line "train with us."
+	cont "Only if you"
+	cont "were a girl..."
+
+	para "I'm tired now."
+	line "See you around."
+	done
