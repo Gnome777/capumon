@@ -96,18 +96,18 @@ TestBattle: ; unreferenced except in _DEBUG
 	dec a
 	ld [hl], a
 
-	; Give the player a level 20 Rhydon.
-	ld a, RHYDON
+	; Give the player a level 20 Mewtwo.
+	ld a, MEWTWO
 	ld [wCurPartySpecies], a
-	ld a, 20
+	ld a, 100
 	ld [wCurEnemyLevel], a
 	xor a
 	ld [wMonDataLocation], a
 	ld [wCurMap], a
 	call AddPartyMon
 
-	; Fight against a level 20 Rhydon.
-	ld a, RHYDON
+	; Fight against a level 20 Mewtwo.
+	ld a, MEWTWO
 	ld [wCurOpponent], a
 
 	predef InitOpponent
