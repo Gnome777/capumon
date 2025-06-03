@@ -4,6 +4,7 @@ RedsHouse1F_Script:
 RedsHouse1F_TextPointers:
 	def_text_pointers
 	dw_const RedsHouse1FMomText, TEXT_REDSHOUSE1F_MOM
+	dw_const RedsHouse1FDadText, TEXT_REDSHOUSE1F_DAD
 	dw_const RedsHouse1FTVText,  TEXT_REDSHOUSE1F_TV
 
 RedsHouse1FMomText:
@@ -48,6 +49,16 @@ RedsHouse1FMomYouShouldRestText:
 	text_end
 RedsHouse1FMomLookingGreatText:
 	text_far _RedsHouse1FMomLookingGreatText
+	text_end
+
+RedsHouse1FDadText:
+	text_asm
+	ld hl, .DadText
+	call PrintText
+	jp TextScriptEnd
+
+.DadText:
+	text_far _RedsHouse1FDadText
 	text_end
 
 RedsHouse1FTVText:
