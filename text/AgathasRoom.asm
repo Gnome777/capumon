@@ -42,3 +42,25 @@ _AgathasRoomAgathaDontRunAwayText::
 	text "Someone's voice:"
 	line "Don't run away!"
 	done
+
+_AgathaRematchBeforeBattleText::
+	text "You again?"
+	line "..."
+
+	para "Let me show you"
+	line "the true strength"
+	cont "of the GHOSTs!"
+
+	done
+
+_AgathaRematchEndBattleText::
+	text "Again..."
+	line "I lost to"
+	cont "you..."
+	prompt
+
+_AgathaRematchAfterBattleText::
+	text "Maybe it is time"
+	line "to retire..."
+	cont "Move on, child."
+	done

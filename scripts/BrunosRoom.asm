@@ -14,6 +14,9 @@ BrunoShowOrHideExitBlock:
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	res BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
 	CheckEvent EVENT_BEAT_BRUNOS_ROOM_TRAINER_0
 	jr z, .blockExitToNextRoom
 	ld a, $5
@@ -24,6 +27,11 @@ BrunoShowOrHideExitBlock:
 	ld [wNewTileBlockID], a
 	lb bc, 0, 2
 	predef_jump ReplaceTileBlock
+.Rematch
+	CheckEvent EVENT_BEAT_BRUNOS_ROOM_TRAINER_1
+	jr z, .blockExitToNextRoom
+	ld a, $5
+	jr .setExitBlock
 
 ResetBrunoScript:
 	xor a ; SCRIPT_BRUNOSROOM_DEFAULT
@@ -110,19 +118,29 @@ BrunosRoomBrunoEndBattleScript:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, ResetBrunoScript
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
+.continue
 	ld a, TEXT_BRUNOSROOM_BRUNO
 	ldh [hTextID], a
 	jp DisplayTextID
+.Rematch
+	ld a, TEXT_BRUNOSROOM_BRUNO_REMATCH
+	jr .continue
 
 BrunosRoom_TextPointers:
 	def_text_pointers
 	dw_const BrunosRoomBrunoText,            TEXT_BRUNOSROOM_BRUNO
+	dw_const BrunosRoomBrunoRematchText,     TEXT_BRUNOSROOM_BRUNO_REMATCH
 	dw_const BrunosRoomBrunoDontRunAwayText, TEXT_BRUNOSROOM_BRUNO_DONT_RUN_AWAY
 
 BrunosRoomTrainerHeaders:
 	def_trainers
 BrunosRoomTrainerHeader0:
 	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_0, 0, BrunoBeforeBattleText, BrunoEndBattleText, BrunoAfterBattleText
+BrunosRoomTrainerHeader1:
+	trainer EVENT_BEAT_BRUNOS_ROOM_TRAINER_1, 0, BrunoRematchBeforeBattleText, BrunoRematchEndBattleText, BrunoRematchAfterBattleText
 	db -1 ; end
 
 BrunosRoomBrunoText:
@@ -145,4 +163,22 @@ BrunoAfterBattleText:
 
 BrunosRoomBrunoDontRunAwayText:
 	text_far _BrunosRoomBrunoDontRunAwayText
+	text_end
+
+BrunosRoomBrunoRematchText:
+	text_asm
+	ld hl, BrunosRoomTrainerHeader1
+	call TalkToTrainer
+	jp TextScriptEnd
+
+BrunoRematchBeforeBattleText:
+	text_far _BrunoRematchBeforeBattleText
+	text_end
+
+BrunoRematchEndBattleText:
+	text_far _BrunoRematchEndBattleText
+	text_end
+
+BrunoRematchAfterBattleText:
+	text_far _BrunoRematchAfterBattleText
 	text_end

@@ -62,7 +62,11 @@ LancesRoomDefaultScript:
 	ld a, [wCoordIndex]
 	cp $3  ; Is player standing next to Lance's sprite?
 	jr nc, .notStandingNextToLance
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
 	ld a, TEXT_LANCESROOM_LANCE
+.continue
 	ldh [hTextID], a
 	jp DisplayTextID
 .notStandingNextToLance
@@ -75,6 +79,9 @@ LancesRoomDefaultScript:
 	ld a, SFX_GO_INSIDE
 	call PlaySound
 	jp LanceShowOrHideEntranceBlocks
+.Rematch
+	ld a, TEXT_LANCESROOM_LANCE_REMATCH
+	jr .continue
 
 LanceTriggerMovementCoords:
 	dbmapcoord  5,  1
@@ -89,9 +96,16 @@ LancesRoomLanceEndBattleScript:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, ResetLanceScript
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
 	ld a, TEXT_LANCESROOM_LANCE
+.continue
 	ldh [hTextID], a
 	jp DisplayTextID
+.Rematch
+	ld a, TEXT_LANCESROOM_LANCE_REMATCH
+	jr .continue
 
 WalkToLance:
 ; Moves the player down the hallway to Lance's room.
@@ -129,11 +143,14 @@ LancesRoomPlayerIsMovingScript:
 LancesRoom_TextPointers:
 	def_text_pointers
 	dw_const LancesRoomLanceText, TEXT_LANCESROOM_LANCE
+	dw_const LancesRoomLanceRematchText, TEXT_LANCESROOM_LANCE_REMATCH
 
 LancesRoomTrainerHeaders:
 	def_trainers
 LancesRoomTrainerHeader0:
 	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_0, 0, LancesRoomLanceBeforeBattleText, LancesRoomLanceEndBattleText, LancesRoomLanceAfterBattleText
+LancesRoomTrainerHeader1:
+	trainer EVENT_BEAT_LANCES_ROOM_TRAINER_1, 0, LancesRoomLanceRematchBeforeBattleText, LancesRoomLanceRematchEndBattleText, LancesRoomLanceRematchAfterBattleText
 	db -1 ; end
 
 LancesRoomLanceText:
@@ -152,6 +169,26 @@ LancesRoomLanceEndBattleText:
 
 LancesRoomLanceAfterBattleText:
 	text_far _LancesRoomLanceAfterBattleText
+	text_asm
+	SetEvent EVENT_BEAT_LANCE
+	jp TextScriptEnd
+
+LancesRoomLanceRematchText:
+	text_asm
+	ld hl, LancesRoomTrainerHeader1
+	call TalkToTrainer
+	jp TextScriptEnd
+
+LancesRoomLanceRematchBeforeBattleText:
+	text_far _LancesRoomLanceRematchBeforeBattleText
+	text_end
+
+LancesRoomLanceRematchEndBattleText:
+	text_far _LancesRoomLanceRematchEndBattleText
+	text_end
+
+LancesRoomLanceRematchAfterBattleText:
+	text_far _LancesRoomLanceRematchAfterBattleText
 	text_asm
 	SetEvent EVENT_BEAT_LANCE
 	jp TextScriptEnd

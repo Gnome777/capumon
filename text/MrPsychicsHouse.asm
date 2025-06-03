@@ -47,7 +47,7 @@ _DevGnomeBattleText1::
 _DevGnomeEndBattleText1::
 	text "You are truly"
 	line "a strong one!"
-	done
+	prompt
 
 _DevGnomeAfterBattleText1::
 	text "Thanks for a"

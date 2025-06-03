@@ -139,7 +139,7 @@ _SaffronCitySilphCoSignText::
 	done
 
 _SaffronCityMrPsychicsHouseSignText::
-	text "MR.PSYCHIC's"
+	text "DEVELOPER'S"
 	line "HOUSE"
 	done
 

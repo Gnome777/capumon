@@ -144,3 +144,37 @@ _ChampionsRoomOakComeWithMeText::
 	para "<PLAYER>!"
 	line "Come with me!"
 	done
+
+_ChampionsRoomRivalRematchIntroText::
+	text "<RIVAL>: Hey"
+	line "<PLAYER>!"
+	cont "Are you surprised"
+	cont "to see me again?"
+
+	para "You and I both"
+	line "know I am the"
+	cont "true CHAMPION!"
+
+	para "Prove to me"
+	line "you want to"
+	cont "keep my title!"
+	done
+
+_RivalRematchDefeatedText::
+	text "Not again..."
+	prompt
+
+_RivalRematchVictoryText::
+	text "I told you so!"
+	line "Thanks for keep-"
+	cont "ing my seat warm!"
+	prompt
+
+_ChampionsRoomRivalRematchAfterBattleText::
+	text "Looks like"
+	line "my journey is"
+	cont "not yet over."
+
+	para "See you around,"
+	line "<PLAYER>..."
+	done

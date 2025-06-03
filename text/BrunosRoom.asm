@@ -35,3 +35,30 @@ _BrunosRoomBrunoDontRunAwayText::
 	text "Someone's voice:"
 	line "Don't run away!"
 	done
+
+_BrunoRematchBeforeBattleText::
+	text "Welcome back,"
+	line "CHAMPION. You"
+	cont "wish to battle?"
+
+	para "After our last"
+	line "battle, I have"
+	cont "reached new"
+	cont "heights."
+
+	para "Hoo hah!"
+	done
+
+_BrunoRematchEndBattleText::
+	text "You are a"
+	line "worthy CHAMPION."
+	prompt
+
+_BrunoRematchAfterBattleText::
+	text "You too have"
+	line "trained strong."
+	
+	para "I have much to"
+	line "learn. Go on!"
+	cont "More awaits you."
+	done

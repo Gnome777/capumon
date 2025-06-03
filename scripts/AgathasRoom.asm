@@ -14,6 +14,9 @@ AgathaShowOrHideExitBlock:
 	bit BIT_CUR_MAP_LOADED_1, [hl]
 	res BIT_CUR_MAP_LOADED_1, [hl]
 	ret z
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
 	CheckEvent EVENT_BEAT_AGATHAS_ROOM_TRAINER_0
 	jr z, .blockExitToNextRoom
 	ld a, $e
@@ -24,6 +27,11 @@ AgathaShowOrHideExitBlock:
 	ld [wNewTileBlockID], a
 	lb bc, 0, 2
 	predef_jump ReplaceTileBlock
+.Rematch
+	CheckEvent EVENT_BEAT_AGATHAS_ROOM_TRAINER_1
+	jr z, .blockExitToNextRoom
+	ld a, $e
+	jr .setExitBlock
 
 ResetAgathaScript:
 	xor a ; SCRIPT_AGATHASROOM_DEFAULT
@@ -110,16 +118,24 @@ AgathasRoomAgathaEndBattleScript:
 	ld a, [wIsInBattle]
 	cp $ff
 	jp z, ResetAgathaScript
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .Rematch
 	ld a, TEXT_AGATHASROOM_AGATHA
+.continue
 	ldh [hTextID], a
 	call DisplayTextID
 	ld a, SCRIPT_CHAMPIONSROOM_PLAYER_ENTERS
 	ld [wChampionsRoomCurScript], a
 	ret
+.Rematch
+	ld a, TEXT_AGATHASROOM_AGATHA_REMATCH
+	jr .continue
 
 AgathasRoom_TextPointers:
 	def_text_pointers
 	dw_const AgathasRoomAgathaText,            TEXT_AGATHASROOM_AGATHA
+	dw_const AgathasRoomAgathaRematchText,     TEXT_AGATHASROOM_AGATHA_REMATCH
 	dw_const AgathasRoomAgathaDontRunAwayText, TEXT_AGATHASROOM_AGATHA_DONT_RUN_AWAY
 
 AgathasRoomTrainerHeaders:
@@ -127,6 +143,8 @@ AgathasRoomTrainerHeaders:
 AgathasRoomTrainerHeader0:
 	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_0, 0, AgathaBeforeBattleText, AgathaEndBattleText, AgathaAfterBattleText
 	db -1 ; end
+AgathasRoomTrainerHeader1:
+	trainer EVENT_BEAT_AGATHAS_ROOM_TRAINER_1, 0, AgathaRematchBeforeBattleText, AgathaRematchEndBattleText, AgathaRematchAfterBattleText
 
 AgathasRoomAgathaText:
 	text_asm
@@ -148,4 +166,22 @@ AgathaAfterBattleText:
 
 AgathasRoomAgathaDontRunAwayText:
 	text_far _AgathasRoomAgathaDontRunAwayText
+	text_end
+
+AgathasRoomAgathaRematchText:
+	text_asm
+	ld hl, AgathasRoomTrainerHeader1
+	call TalkToTrainer
+	jp TextScriptEnd
+
+AgathaRematchBeforeBattleText:
+	text_far _AgathaRematchBeforeBattleText
+	text_end
+
+AgathaRematchEndBattleText:
+	text_far _AgathaRematchEndBattleText
+	text_end
+
+AgathaRematchAfterBattleText:
+	text_far _AgathaRematchAfterBattleText
 	text_end

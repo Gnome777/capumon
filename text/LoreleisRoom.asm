@@ -40,3 +40,28 @@ _LoreleisRoomLoreleiDontRunAwayText::
 	text "Someone's voice:"
 	line "Don't run away!"
 	done
+
+_LoreleisRoomLoreleiRematchBeforeBattleText::
+	text "You wish to test"
+	line "our strength once"
+	cont "more? I accept!"
+
+	para "The ELITE FOUR"
+	line "has risen to meet"
+	cont "your challenge!"
+    done
+
+_LoreleisRoomLoreleiRematchEndBattleText::
+	text "No!"
+	line "Not again!"
+	prompt
+
+_LoreleisRoomLoreleiRematchAfterBattleText::
+	text "All that work and"
+	line "I still lost?"
+
+	para "..."
+
+	para "Go on! I am"
+	line "only the first."
+	done

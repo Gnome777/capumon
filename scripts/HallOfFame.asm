@@ -99,6 +99,27 @@ HallOfFameOakCongratulationsScript:
 	ld a, HS_CERULEAN_CAVE_GUY
 	ld [wMissableObjectIndex], a
 	predef HideObject
+	ld a, HS_CHAMPIONS_ROOM_OAK
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_LORELEISROOM_LORELEI
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_LORELEISROOM_LORELEI_REMATCH
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, HS_BRUNOSROOM_BRUNO
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_BRUNOSROOM_BRUNO_REMATCH
+	ld [wMissableObjectIndex], a
+	predef ShowObject
+	ld a, HS_AGATHASROOM_AGATHA
+	ld [wMissableObjectIndex], a
+	predef HideObject
+	ld a, HS_AGATHASROOM_AGATHA_REMATCH
+	ld [wMissableObjectIndex], a
+	predef ShowObject
 	ld a, SCRIPT_HALLOFFAME_RESET_EVENTS_AND_SAVE
 	ld [wHallOfFameCurScript], a
 	ret

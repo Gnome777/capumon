@@ -62,3 +62,35 @@ _LancesRoomLanceAfterBattleText::
 	line "CAPUMON LEAGUE"
 	cont "champion!@"
 	text_end
+
+_LancesRoomLanceRematchBeforeBattleText::
+	text "Welcome back,"
+	line "CHAMPION!"
+
+	para "As you can see,"
+	line "The ELITE FOUR"
+	cont "has been training"
+	cont "during your stay."
+
+	para "Show me that you"
+	line "are still on top"
+	cont "of the world!"
+	done
+
+
+_LancesRoomLanceRematchEndBattleText::
+	text "You are in a"
+	line "league of your"
+	cont "own!"
+	prompt
+
+
+_LancesRoomLanceRematchAfterBattleText::
+	text "You have shown"
+	line "me you deserve"
+	cont "your title..."
+
+	para "However, you must"
+	line "defend your title"
+	cont "from <RIVAL>!"
+	done
