@@ -110,8 +110,6 @@ PewterGymBrockText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
-	jr nz, .BrockRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
