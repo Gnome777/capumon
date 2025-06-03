@@ -142,8 +142,7 @@ CinnabarGymBlainePostBattleScript:
 	jp z, CinnabarGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, BlaineRematchPostBattle
 ; fallthrough
 CinnabarGymReceiveTM38:
@@ -225,8 +224,7 @@ CinnabarGymBlaineText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, .BlaineRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText

@@ -42,8 +42,7 @@ SaffronGymSabrinaPostBattle:
 	jp z, SaffronGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, SabrinaRematchPostBattle
 
 SaffronGymSabrinaReceiveTM46Script:
@@ -120,8 +119,7 @@ SaffronGymSabrinaText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, .SabrinaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText

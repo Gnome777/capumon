@@ -42,8 +42,7 @@ CeladonGymErikaPostBattleScript:
 	jp z, CeladonGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, ErikaRematchPostBattle
 
 CeladonGymReceiveTM21:
@@ -119,11 +118,8 @@ CeladonGymErikaText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, .ErikaRematch
-	ld hl, .PostBattleAdviceText
-	call PrintText
 	jr .done
 .beforeBeat
 	ld hl, .PreBattleText

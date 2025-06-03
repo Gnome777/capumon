@@ -61,8 +61,7 @@ VermilionGymLTSurgeAfterBattleScript:
 	jp z, VermilionGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, LtSurgeRematchPostBattle
 
 VermilionGymLTSurgeReceiveTM24Script:
@@ -127,8 +126,7 @@ VermilionGymLTSurgeText:
 	jr z, .before_beat
 	jr .got_tm24_already
 .got_tm24_already
-	ld a, [wGameStage]
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, .LtSurgeRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText

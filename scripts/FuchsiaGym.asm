@@ -44,8 +44,7 @@ FuchsiaGymKogaPostBattleScript:
 	jp z, FuchsiaGymResetScripts
 	ld a, D_RIGHT | D_LEFT | D_UP | D_DOWN
 	ld [wJoyIgnore], a
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, KogaRematchPostBattle
 ; fallthrough
 FuchsiaGymReceiveTM06:
@@ -119,8 +118,7 @@ FuchsiaGymKogaText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
-	ld a, [wGameStage] ; Check if player has beat the game
-	and a
+	CheckEvent EVENT_BEAT_CHAMPION_RIVAL
 	jr nz, .KogaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
