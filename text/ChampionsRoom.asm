@@ -178,3 +178,42 @@ _ChampionsRoomRivalRematchAfterBattleText::
 	para "See you around,"
 	line "<PLAYER>..."
 	done
+
+_ChampionsRoomRematchOakCongratulatesPlayerText::
+	text "OAK: Once again,"
+	line "You have proven"
+	cont "your strength!"
+
+	para "Congratulations"
+	line "once more,"
+	cont "<PLAYER>!"
+	done
+
+_ChampionsRoomRematchOakDisappointedWithRivalText::
+	text "OAK: ..."
+	line "<RIVAL>."
+	cont "..."
+
+	para "Have you not"
+	line "understood how"
+	cont "<PLAYER> made it"
+	cont "this far still?"
+
+	para "You need to have a"
+	line "good look at the"
+	cont "CHAMPION's skill."
+
+	para "You could stand to"
+	line "learn a thing or"
+	cont "two from them."
+	done
+
+_ChampionsRoomRematchOakComeWithMeText::
+	text "OAK: <PLAYER>!"
+	line "Enough about that!"
+	cont "Let us go again!"
+
+	para "The HALL OF FAME"
+	line "awaits the CHAMPION"
+	cont "once more!"
+	done

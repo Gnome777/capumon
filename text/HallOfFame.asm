@@ -26,3 +26,15 @@ _HallOfFameOakText::
 	cont "your CAPUMON are"
 	cont "HALL OF FAMERs!"
 	done
+
+_HallOfFameRematchOakText::
+	text "OAK: Er-hem!"
+	
+	para "Welcome back to the"
+	line "CAPUMON HALL OF"
+	cont "FAME!"
+
+	para "Let us record your"
+	line "title defense for"
+	cont "all to witness!"
+	done

@@ -180,12 +180,19 @@ ChampionsRoomOakCongratulatesPlayerScript:
 	xor a ; SPRITE_FACING_DOWN
 	ldh [hSpriteFacingDirection], a
 	call SetSpriteFacingDirectionAndDelay
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .ChampionRematchDefeated
 	ld a, TEXT_CHAMPIONSROOM_OAK_CONGRATULATES_PLAYER
+.continue
 	ldh [hTextID], a
 	call ChampionsRoom_DisplayTextID_AllowABSelectStart
 	ld a, SCRIPT_CHAMPIONSROOM_OAK_DISAPPOINTED_WITH_RIVAL
 	ld [wChampionsRoomCurScript], a
 	ret
+.ChampionRematchDefeated
+	ld a, TEXT_CHAMPIONSROOM_REMATCH_OAK_CONGRATULATES_PLAYER
+	jr .continue
 
 ChampionsRoomOakDisappointedWithRivalScript:
 	ld a, CHAMPIONSROOM_OAK
@@ -193,12 +200,19 @@ ChampionsRoomOakDisappointedWithRivalScript:
 	ld a, SPRITE_FACING_RIGHT
 	ldh [hSpriteFacingDirection], a
 	call SetSpriteFacingDirectionAndDelay
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .ChampionRematchDefeated
 	ld a, TEXT_CHAMPIONSROOM_OAK_DISAPPOINTED_WITH_RIVAL
+.continue
 	ldh [hTextID], a
 	call ChampionsRoom_DisplayTextID_AllowABSelectStart
 	ld a, SCRIPT_CHAMPIONSROOM_OAK_COME_WITH_ME
 	ld [wChampionsRoomCurScript], a
 	ret
+.ChampionRematchDefeated
+	ld a, TEXT_CHAMPIONSROOM_REMATCH_OAK_DISAPPOINTED_WITH_RIVAL
+	jr .continue
 
 ChampionsRoomOakComeWithMeScript:
 	ld a, CHAMPIONSROOM_OAK
@@ -206,7 +220,11 @@ ChampionsRoomOakComeWithMeScript:
 	xor a ; SPRITE_FACING_DOWN
 	ldh [hSpriteFacingDirection], a
 	call SetSpriteFacingDirectionAndDelay
+	ld a, [wGameStage] ; Check if player has beat the gameAdd commentMore actions
+	and a
+	jr nz, .ChampionRematchDefeated
 	ld a, TEXT_CHAMPIONSROOM_OAK_COME_WITH_ME
+.continue
 	ldh [hTextID], a
 	call ChampionsRoom_DisplayTextID_AllowABSelectStart
 	ld de, OakExitChampionsRoomMovement
@@ -216,6 +234,9 @@ ChampionsRoomOakComeWithMeScript:
 	ld a, SCRIPT_CHAMPIONSROOM_OAK_EXITS
 	ld [wChampionsRoomCurScript], a
 	ret
+.ChampionRematchDefeated
+	ld a, TEXT_CHAMPIONSROOM_REMATCH_OAK_COME_WITH_ME
+	jr .continue
 
 OakExitChampionsRoomMovement:
 	db NPC_MOVEMENT_UP
@@ -271,13 +292,16 @@ ChampionsRoom_DisplayTextID_AllowABSelectStart:
 
 ChampionsRoom_TextPointers:
 	def_text_pointers
-	dw_const ChampionsRoomRivalText,                    TEXT_CHAMPIONSROOM_RIVAL
-	dw_const ChampionsRoomOakText,                      TEXT_CHAMPIONSROOM_OAK
-	dw_const ChampionsRoomOakCongratulatesPlayerText,   TEXT_CHAMPIONSROOM_OAK_CONGRATULATES_PLAYER
-	dw_const ChampionsRoomOakDisappointedWithRivalText, TEXT_CHAMPIONSROOM_OAK_DISAPPOINTED_WITH_RIVAL
-	dw_const ChampionsRoomOakComeWithMeText,            TEXT_CHAMPIONSROOM_OAK_COME_WITH_ME
-	dw_const ChampionsRoomRivalRematchIntroText,		TEXT_CHAMPIONSROOM_RIVAL_REMATCH_INTRO
-	dw_const ChampionsRoomRivalRematchAfterBattleText,	TEXT_CHAMPIONSROOM_RIVAL_REMATCH_AFTER_BATTLE
+	dw_const ChampionsRoomRivalText,                           TEXT_CHAMPIONSROOM_RIVAL
+	dw_const ChampionsRoomOakText,                             TEXT_CHAMPIONSROOM_OAK
+	dw_const ChampionsRoomOakCongratulatesPlayerText,          TEXT_CHAMPIONSROOM_OAK_CONGRATULATES_PLAYER
+	dw_const ChampionsRoomOakDisappointedWithRivalText,        TEXT_CHAMPIONSROOM_OAK_DISAPPOINTED_WITH_RIVAL
+	dw_const ChampionsRoomOakComeWithMeText,                   TEXT_CHAMPIONSROOM_OAK_COME_WITH_ME
+	dw_const ChampionsRoomRivalRematchIntroText,		       TEXT_CHAMPIONSROOM_RIVAL_REMATCH_INTRO
+	dw_const ChampionsRoomRivalRematchAfterBattleText,	       TEXT_CHAMPIONSROOM_RIVAL_REMATCH_AFTER_BATTLE
+	dw_const ChampionsRoomRematchOakCongratulatesPlayerText,   TEXT_CHAMPIONSROOM_REMATCH_OAK_CONGRATULATES_PLAYER
+	dw_const ChampionsRoomRematchOakDisappointedWithRivalText, TEXT_CHAMPIONSROOM_REMATCH_OAK_DISAPPOINTED_WITH_RIVAL
+	dw_const ChampionsRoomRematchOakComeWithMeText,            TEXT_CHAMPIONSROOM_REMATCH_OAK_COME_WITH_ME
 
 ChampionsRoomRivalText:
 	text_asm
@@ -344,4 +368,16 @@ RivalRematchVictoryText:
 
 ChampionsRoomRivalRematchAfterBattleText:
 	text_far _ChampionsRoomRivalRematchAfterBattleText
+	text_end
+
+ChampionsRoomRematchOakCongratulatesPlayerText:
+	text_far _ChampionsRoomRematchOakCongratulatesPlayerText
+	text_end
+
+ChampionsRoomRematchOakDisappointedWithRivalText:
+	text_far _ChampionsRoomRematchOakDisappointedWithRivalText
+	text_end
+
+ChampionsRoomRematchOakComeWithMeText:
+	text_far _ChampionsRoomRematchOakComeWithMeText
 	text_end

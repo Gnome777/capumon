@@ -43,6 +43,8 @@ HallOfFameResetEventsAndSaveScript:
 	ld [wHallOfFameCurScript], a
 	; Elite 4 events
 	ResetEventRange INDIGO_PLATEAU_EVENTS_START, INDIGO_PLATEAU_EVENTS_END, 1
+	ld a, 1
+	ld [wGameStage], a
 	xor a
 	ld [wHallOfFameCurScript], a
 	ld a, PALLET_TOWN
@@ -91,7 +93,15 @@ HallOfFameOakCongratulationsScript:
 	ld [wJoyIgnore], a
 	inc a ; PLAYER_DIR_RIGHT
 	ld [wPlayerMovingDirection], a
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jp nz, .RematchText
+.OriginalText
 	ld a, TEXT_HALLOFFAME_OAK
+	jr .continue
+.RematchText
+	ld a, TEXT_HALLOFFAME_REMATCH_OAK
+.continue
 	ldh [hTextID], a
 	call DisplayTextID
 	ld a, A_BUTTON | B_BUTTON | SELECT | START | D_RIGHT | D_LEFT | D_UP | D_DOWN
@@ -127,7 +137,12 @@ HallOfFameOakCongratulationsScript:
 HallOfFame_TextPointers:
 	def_text_pointers
 	dw_const HallOfFameOakText, TEXT_HALLOFFAME_OAK
+	dw_const HallOfFameRematchOakText, TEXT_HALLOFFAME_REMATCH_OAK
 
 HallOfFameOakText:
 	text_far _HallOfFameOakText
+	text_end
+
+HallOfFameRematchOakText:
+	text_far _HallOfFameRematchOakText
 	text_end
