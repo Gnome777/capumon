@@ -111,6 +111,9 @@ PewterGymBrockText:
 	jr z, .beforeBeat
 	jr .afterBeat
 .afterBeat
+	ld a, [wGameStage] ; Check if player has beat the game
+	and a
+	jr nz, .BrockRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jr .done

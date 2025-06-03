@@ -21,7 +21,7 @@ _PewterGymRematchPreBattle1Text::
 	text "Since our last"
 	line "battle, my"
 	
-	para "#MON have"
+	para "CAPUMON have"
 	line "grown!"
 
 	para "ROCK-hard will"
@@ -68,7 +68,7 @@ _PewterGymRematchPostBattleText::
 	line "title, CHAMPION."
 
 	para "Continue to lead"
-	line "#MON with"
+	line "CAPUMON with"
 	cont "honor and"
 	cont "courage!"
 

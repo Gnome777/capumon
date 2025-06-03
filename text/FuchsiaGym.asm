@@ -63,7 +63,7 @@ _FuchsiaGymRematchVictoryText::
 	text "Fwahahaha!"
 	line "You could"
 	cont "not handle"
-	cont "my #MON!"
+	cont "my CAPUMON!"
 
 	para "I can't"
 	line "accept"
