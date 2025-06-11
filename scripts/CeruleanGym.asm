@@ -107,28 +107,54 @@ CeruleanGymMistyText:
 .afterBeat
 	ld a, [wGameStage] ; Check if player has beat the game
 	and a
-	jr nz, .MistyRematch
+	jp nz, .MistyRematch
 	ld hl, .TM11ExplanationText
 	call PrintText
-	jr .done
+	jp .done
 .beforeBeat
 	ld hl, .PreBattleText
 	call PrintText
+
+	; Count badges (excluding Earth Badge) → TrainerNo 1–7
+	ld a, [wObtainedBadges]
+	and %01111111 ; exclude Giovanni
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jp nz, .loop
+
+	; Cap at 7
+	ld a, b
+	cp 8
+	jp c, .setTrainerNo
+	ld a, 7
+.setTrainerNo
+	ld [wTrainerNo], a
+	ld a, OPP_MISTY
+	ld [wCurOpponent], a
+
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, CeruleanGymMistyReceivedCascadeBadgeText
 	ld de, CeruleanGymMistyReceivedCascadeBadgeText
 	call SaveEndBattleTextPointers
+
+	ld a, SCRIPT_CERULEANGYM_MISTY_POST_BATTLE
+	ld [wCeruleanGymCurScript], a
+	ld [wCurMapScript], a
+
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
-	call InitBattleEnemyParameters
-	ld a, $2
-	ld [wGymLeaderNo], a
-	xor a
-	ldh [hJoyHeld], a
-	jr .endBattle
+
+	jp .done
+
 .MistyRematch
 	ld hl, CeruleanPreBattleRematch1Text
 	call PrintText
@@ -147,7 +173,7 @@ CeruleanGymMistyText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_MISTY
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wCeruleanGymCurScript], a

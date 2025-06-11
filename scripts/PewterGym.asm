@@ -116,25 +116,52 @@ PewterGymBrockText:
 	jr nz, .BrockRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
-	jr .done
+	jp .done
 .beforeBeat
+	; Show Brock's intro text
 	ld hl, .PreBattleText
 	call PrintText
+
+	; Badge-based TrainerNo selector
+	ld a, [wObtainedBadges]
+	and %01111111 ; mask out Earth Badge
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jp nz, .loop
+
+	; cap b at 7
+	ld a, b
+	cp 7
+	jp c, .setTrainerNo
+	ld a, 7
+.setTrainerNo
+	ld [wTrainerNo], a
+	ld a, OPP_BROCK
+	ld [wCurOpponent], a
+
+	; standard battle setup
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, PewterGymBrockReceivedBoulderBadgeText
 	ld de, PewterGymBrockReceivedBoulderBadgeText
 	call SaveEndBattleTextPointers
+
+	ld a, SCRIPT_PEWTERGYM_BROCK_POST_BATTLE
+	ld [wPewterGymCurScript], a
+	ld [wCurMapScript], a
+
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
-	call InitBattleEnemyParameters
-	ld a, $1
-	ld [wGymLeaderNo], a
-	xor a
-	ldh [hJoyHeld], a
-	jr .endBattle
+
+	jp .done
 .BrockRematch
 	ld hl, PewterPreBattleRematch1Text
 	call PrintText
@@ -153,7 +180,7 @@ PewterGymBrockText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_BROCK
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wPewterGymCurScript], a

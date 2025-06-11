@@ -124,23 +124,50 @@ CeladonGymErikaText:
 	jr nz, .ErikaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
-	jr .done
+	jp .done
 .beforeBeat
 	ld hl, .PreBattleText
 	call PrintText
+
+	; Count badges (excluding Earth Badge) and map to TrainerNo = 1–7
+	ld a, [wObtainedBadges]
+	and %01111111 ; mask out Giovanni
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jr nz, .loop
+
+	; Cap at TrainerNo = 7
+	ld a, b
+	cp 8
+	jp c, .setTrainerNo
+	ld a, 7
+.setTrainerNo
+	ld [wTrainerNo], a
+	ld a, OPP_ERIKA
+	ld [wCurOpponent], a
+
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, .ReceivedRainbowBadgeText
 	ld de, .ReceivedRainbowBadgeText
 	call SaveEndBattleTextPointers
+
+	ld a, SCRIPT_CELADONGYM_ERIKA_POST_BATTLE
+	ld [wCeladonGymCurScript], a
+	ld [wCurMapScript], a
+
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
-	call InitBattleEnemyParameters
-	ld a, $4
-	ld [wGymLeaderNo], a
-	jr .endBattle
+
+	jp .done
 .ErikaRematch
 	ld hl, CeladonPreBattleRematch1Text
 	call PrintText
@@ -159,7 +186,7 @@ CeladonGymErikaText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_ERIKA
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wCeladonGymCurScript], a

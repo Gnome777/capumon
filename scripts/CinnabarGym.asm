@@ -227,19 +227,54 @@ CinnabarGymBlaineText:
 .afterBeat
 	ld a, [wGameStage] ; Check if player has beat the game
 	and a
-	jr nz, .BlaineRematch
+	jp nz, .BlaineRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
 	jp TextScriptEnd
 .beforeBeat
 	ld hl, .PreBattleText
 	call PrintText
+
+	; Badge count (excluding Giovanni) → TrainerNo 1–7
+	ld a, [wObtainedBadges]
+	and %01111111
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jp nz, .loop
+
+	; cap at TrainerNo 7
+	ld a, b
+	cp 8
+	jp c, .storeTrainer
+	ld a, 7
+.storeTrainer
+	ld [wTrainerNo], a
+	ld a, OPP_BLAINE
+	ld [wCurOpponent], a
+
+	ld hl, wStatusFlags3
+	set BIT_TALKED_TO_TRAINER, [hl]
+	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, .ReceivedVolcanoBadgeText
 	ld de, .ReceivedVolcanoBadgeText
 	call SaveEndBattleTextPointers
-	ld a, $7
-	ld [wGymLeaderNo], a
-	jp CinnabarGymStartBattleScript
+
+	ld a, SCRIPT_CINNABARGYM_BLAINE_POST_BATTLE
+	ld [wCinnabarGymCurScript], a
+	ld [wCurMapScript], a
+
+	ldh a, [hSpriteIndex]
+	ld [wSpriteIndex], a
+	call EngageMapTrainer
+
+	jp TextScriptEnd
+
 .BlaineRematch
 	ld hl, CinnabarPreBattleRematch1Text
 	call PrintText
@@ -258,7 +293,7 @@ CinnabarGymBlaineText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_BLAINE
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wCinnabarGymCurScript], a

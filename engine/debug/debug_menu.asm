@@ -96,7 +96,7 @@ TestBattle: ; unreferenced except in _DEBUG
 	dec a
 	ld [hl], a
 
-	; Give the player a level 20 Mewtwo.
+	; Give the player a level 100 Mewtwo.
 	ld a, MEWTWO
 	ld [wCurPartySpecies], a
 	ld a, 100
@@ -106,7 +106,7 @@ TestBattle: ; unreferenced except in _DEBUG
 	ld [wCurMap], a
 	call AddPartyMon
 
-	; Fight against a level 20 Mewtwo.
+	; Fight against a level 100 Mewtwo.
 	ld a, MEWTWO
 	ld [wCurOpponent], a
 

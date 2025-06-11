@@ -121,28 +121,54 @@ FuchsiaGymKogaText:
 .afterBeat
 	ld a, [wGameStage] ; Check if player has beat the game
 	and a
-	jr nz, .KogaRematch
+	jp nz, .KogaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
-	jr .done
+	jp .done
 .beforeBeat
 	ld hl, .BeforeBattleText
 	call PrintText
+
+	; Count badges (excluding Earth Badge) → TrainerNo 1–7
+	ld a, [wObtainedBadges]
+	and %01111111
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jp nz, .loop
+
+	; Cap TrainerNo at 7
+	ld a, b
+	cp 8
+	jp c, .storeTrainer
+	ld a, 7
+.storeTrainer
+	ld [wTrainerNo], a
+	ld a, OPP_KOGA
+	ld [wCurOpponent], a
+
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, .ReceivedSoulBadgeText
 	ld de, .ReceivedSoulBadgeText
 	call SaveEndBattleTextPointers
+
+	ld a, SCRIPT_FUCHSIAGYM_KOGA_POST_BATTLE
+	ld [wFuchsiaGymCurScript], a
+	ld [wCurMapScript], a
+
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
-	call InitBattleEnemyParameters
-	ld a, $5
-	ld [wGymLeaderNo], a
-	xor a
-	ldh [hJoyHeld], a
-	jr .endBattle
+
+	jp TextScriptEnd
+
 .KogaRematch
 	ld hl, FuchsiaPreBattleRematch1Text
 	call PrintText
@@ -161,7 +187,7 @@ FuchsiaGymKogaText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_KOGA
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wFuchsiaGymCurScript], a

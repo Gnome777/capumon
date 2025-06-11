@@ -57,14 +57,7 @@ _PewterGymBrockBoulderBadgeInfoText::
 	para "That's an official"
 	line "CAPUMON LEAGUE"
 	cont "BADGE!"
-
-	para "Its bearer's"
-	line "CAPUMON become"
-	cont "more powerful!"
-
-	para "The technique"
-	line "FLASH can now be"
-	cont "used any time!"
+	
 	prompt
 
 _PewterGymCooltrainerMBattleText::

@@ -1,7 +1,4 @@
-roms := \
-	pokered.gbc \
-	pokeblue.gbc \
-	pokeblue_debug.gbc
+roms := pokeblue_debug.gbc
 patches := \
 	pokered.patch \
 	pokeblue.patch
@@ -47,12 +44,7 @@ RGBLINK ?= $(RGBDS)rgblink
 .SECONDARY:
 .PHONY: all red blue blue_debug clean tidy compare tools
 
-all: $(roms)
-red:        pokered.gbc
-blue:       pokeblue.gbc
-blue_debug: pokeblue_debug.gbc
-red_vc:     pokered.patch
-blue_vc:    pokeblue.patch
+all: pokeblue_debug.gbc
 
 clean: tidy
 	find gfx \

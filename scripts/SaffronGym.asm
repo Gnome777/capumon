@@ -122,26 +122,53 @@ SaffronGymSabrinaText:
 .afterBeat
 	ld a, [wGameStage] ; Check if player has beat the game
 	and a
-	jr nz, .SabrinaRematch
+	jp nz, .SabrinaRematch
 	ld hl, .PostBattleAdviceText
 	call PrintText
-	jr .done
+	jp .done
 .beforeBeat
 	ld hl, .Text
 	call PrintText
+
+	ld a, [wObtainedBadges]
+	and %01111111
+	ld b, 1
+.loop
+	bit 0, a
+	jp z, .skip
+	inc b
+.skip
+	srl a
+	jp nz, .loop
+
+	; Cap at 7
+	ld a, b
+	cp 8
+	jp c, .storeTrainer
+	ld a, 7
+.storeTrainer
+	ld [wTrainerNo], a
+	ld a, OPP_SABRINA
+	ld [wCurOpponent], a
+
 	ld hl, wStatusFlags3
 	set BIT_TALKED_TO_TRAINER, [hl]
 	set BIT_PRINT_END_BATTLE_TEXT, [hl]
+
 	ld hl, .ReceivedMarshBadgeText
 	ld de, .ReceivedMarshBadgeText
 	call SaveEndBattleTextPointers
+
+	ld a, SCRIPT_SAFFRONGYM_SABRINA_POST_BATTLE
+	ld [wSaffronGymCurScript], a
+	ld [wCurMapScript], a
+
 	ldh a, [hSpriteIndex]
 	ld [wSpriteIndex], a
 	call EngageMapTrainer
-	call InitBattleEnemyParameters
-	ld a, $6
-	ld [wGymLeaderNo], a
-	jr .endBattle
+
+	jp TextScriptEnd
+
 .SabrinaRematch
 	ld hl, SaffronPreBattleRematch1Text
 	call PrintText
@@ -160,7 +187,7 @@ SaffronGymSabrinaText:
 	call SaveEndBattleTextPointers
 	ld a, OPP_SABRINA
 	ld [wCurOpponent], a
-	ld a, 2
+	ld a, 8
 	ld [wTrainerNo], a
 	ld a, $4 ; new script
 	ld [wSaffronGymCurScript], a
@@ -182,7 +209,7 @@ SaffronGymSabrinaText:
 
 .ReceivedMarshBadgeText:
 	text_far _SaffronGymSabrinaReceivedMarshBadgeText
-	sound_get_key_item ; actually plays the second channel of SFX_BALL_POOF due to the wrong music bank being loaded
+	sound_get_item_1
 	text_promptbutton
 	text_end
 
