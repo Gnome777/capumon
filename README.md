@@ -23,6 +23,7 @@ Capumon has a variety of new features that make it stand out, including but not 
 - Portable P.C.
 - Game Corner has been changed to allow for acquisition of otherwise difficult-to-obtain Pokémon. They can still be obtained through normal gameplay.
 - Boss trainer battles and Rival battles have been modified. Regular trainers have been left unmodified.
+- All Gym Leaders can be fought in any order except Giovanni (who must be battled last) with teams scaling off badge count. In addition, all Gym Leaders and Elite Four can be rematched after defeating the Elite Four and Champion.
 - Some but not all Pokémon have received a type change, based off their Pokédex entry and if I thought their typing made sense. The intent was to reduce duplicate type fatigue (Normal/Flying is a good example)
 - Pokémon stats have been rounded up to the nearest value ending in 0, i.e. 10, 20, 30, 40, 50, etc. This was to give every Pokémon a universal small buff.
 - All wild encounters have been changed to allow for a greater variety of Pokémon to be captured.
