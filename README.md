@@ -1,6 +1,6 @@
 # Capumon Generation One
 
-This is a ROMhack of Pokémon Red and Blue.
+This is a ROMhack of Pokémon Blue.
 
 ### Description
 
