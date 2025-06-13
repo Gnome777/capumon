@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc
 
 	db FIRE, FIRE ; type
-	db 75 ; catch rate
+	db 255 ; catch rate
 	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/charmander.pic", 0, 1 ; sprite dimensions

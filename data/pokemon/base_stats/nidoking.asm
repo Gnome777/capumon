@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc
 
 	db POISON, FIGHTING ; type
-	db 75 ; catch rate
+	db 128 ; catch rate
 	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/nidoking.pic", 0, 1 ; sprite dimensions

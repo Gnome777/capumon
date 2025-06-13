@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc
 
 	db FIRE, GHOST ; type
-	db 75 ; catch rate
+	db 100 ; catch rate
 	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/ninetales.pic", 0, 1 ; sprite dimensions

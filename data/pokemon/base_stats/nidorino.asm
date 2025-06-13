@@ -4,7 +4,7 @@
 	;   hp  atk  def  spd  spc
 
 	db POISON, FIGHTING ; type
-	db 125 ; catch rate
+	db 170 ; catch rate
 	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/nidorino.pic", 0, 1 ; sprite dimensions
