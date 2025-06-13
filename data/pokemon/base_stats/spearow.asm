@@ -5,7 +5,7 @@
 
 	db FLYING, FLYING ; type
 	db 255 ; catch rate
-	db100 ; base exp
+	db 58 ; base exp
 
 	INCBIN "gfx/pokemon/front/spearow.pic", 0, 1 ; sprite dimensions
 	dw SpearowPicFront, SpearowPicBack

@@ -5,7 +5,7 @@
 
 	db BUG, POISON ; type
 	db 190 ; catch rate
-	db100 ; base exp
+	db 75 ; base exp
 
 	INCBIN "gfx/pokemon/front/venonat.pic", 0, 1 ; sprite dimensions
 	dw VenonatPicFront, VenonatPicBack

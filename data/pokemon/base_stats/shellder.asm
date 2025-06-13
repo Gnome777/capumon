@@ -5,7 +5,7 @@
 
 	db WATER, ICE ; type
 	db 190 ; catch rate
-	db100 ; base exp
+	db 97 ; base exp
 
 	INCBIN "gfx/pokemon/front/shellder.pic", 0, 1 ; sprite dimensions
 	dw ShellderPicFront, ShellderPicBack

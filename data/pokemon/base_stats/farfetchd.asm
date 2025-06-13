@@ -5,7 +5,7 @@
 
 	db FIGHTING, FLYING ; type
 	db 45 ; catch rate
-	db100 ; base exp
+	db 94 ; base exp
 
 	INCBIN "gfx/pokemon/front/farfetchd.pic", 0, 1 ; sprite dimensions
 	dw FarfetchdPicFront, FarfetchdPicBack

@@ -5,7 +5,7 @@
 
 	db FIGHTING, FIGHTING ; type
 	db 180 ; catch rate
-	db100 ; base exp
+	db 88 ; base exp
 
 	INCBIN "gfx/pokemon/front/machop.pic", 0, 1 ; sprite dimensions
 	dw MachopPicFront, MachopPicBack

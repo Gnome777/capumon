@@ -5,7 +5,7 @@
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
-	db 100 ; base exp
+	db 142 ; base exp
 
 	INCBIN "gfx/pokemon/front/charmeleon.pic", 0, 1 ; sprite dimensions
 	dw CharmeleonPicFront, CharmeleonPicBack

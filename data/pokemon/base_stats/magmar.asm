@@ -5,7 +5,7 @@
 
 	db FIRE, FIRE ; type
 	db 45 ; catch rate
-	db 100 ; base exp
+	db 167 ; base exp
 
 	INCBIN "gfx/pokemon/front/magmar.pic", 0, 1 ; sprite dimensions
 	dw MagmarPicFront, MagmarPicBack

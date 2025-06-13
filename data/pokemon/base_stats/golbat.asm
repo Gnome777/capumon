@@ -5,7 +5,7 @@
 
 	db POISON, FLYING ; type
 	db 90 ; catch rate
-	db 100 ; base exp
+	db 171 ; base exp
 
 	INCBIN "gfx/pokemon/front/golbat.pic", 0, 1 ; sprite dimensions
 	dw GolbatPicFront, GolbatPicBack

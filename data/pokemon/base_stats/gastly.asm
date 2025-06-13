@@ -5,7 +5,7 @@
 
 	db GHOST, GHOST ; type
 	db 190 ; catch rate
-	db100 ; base exp
+	db 95 ; base exp
 
 	INCBIN "gfx/pokemon/front/gastly.pic", 0, 1 ; sprite dimensions
 	dw GastlyPicFront, GastlyPicBack

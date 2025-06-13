@@ -5,7 +5,7 @@
 
 	db ROCK, WATER ; type
 	db 45 ; catch rate
-	db 100 ; base exp
+	db 201 ; base exp
 
 	INCBIN "gfx/pokemon/front/kabutops.pic", 0, 1 ; sprite dimensions
 	dw KabutopsPicFront, KabutopsPicBack

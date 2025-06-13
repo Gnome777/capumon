@@ -5,7 +5,7 @@
 
 	db NORMAL, NORMAL ; type
 	db 150 ; catch rate
-	db100 ; base exp
+	db 68 ; base exp
 
 	INCBIN "gfx/pokemon/front/clefairy.pic", 0, 1 ; sprite dimensions
 	dw ClefairyPicFront, ClefairyPicBack
