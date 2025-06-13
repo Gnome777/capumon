@@ -5,7 +5,7 @@
 
 	db FLYING, FLYING ; type
 	db 45 ; catch rate
-	db 172 ; base exp
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/pidgeot.pic", 0, 1 ; sprite dimensions
 	dw PidgeotPicFront, PidgeotPicBack

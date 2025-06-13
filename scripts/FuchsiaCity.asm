@@ -130,10 +130,10 @@ FuchsiaCityLaprasSignText:
 
 FuchsiaCityFossilSignText:
 	text_asm
-	CheckEvent EVENT_GOT_DOME_FOSSIL
-	jr nz, .got_dome_fossil
-	CheckEventReuseA EVENT_GOT_HELIX_FOSSIL
-	jr nz, .got_helix_fossil
+	; CheckEvent EVENT_GOT_DOME_FOSSIL
+	; jr nz, .got_dome_fossil
+	; CheckEventReuseA EVENT_GOT_HELIX_FOSSIL
+	; jr nz, .got_helix_fossil
 	ld hl, .UndeterminedText
 	call PrintText
 	jr .done

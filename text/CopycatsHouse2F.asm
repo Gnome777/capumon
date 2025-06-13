@@ -21,9 +21,6 @@ _CopycatsHouse2FCopycatTM31PreReceiveText::
 
 	para "For me?"
 	line "Thank you!"
-
-	para "You can have"
-	line "this, then!"
 	prompt
 
 _CopycatsHouse2FCopycatReceivedTM31Text::
@@ -36,16 +33,13 @@ _CopycatsHouse2FCopycatReceivedTM31Text::
 _CopycatsHouse2FCopycatTM31Explanation1Text::
 	text_start
 
-	para "TM31 contains my"
-	line "favorite, MIMIC!"
-
-	para "Use it on a good"
-	line "CAPUMON!@"
+	para "<PLAYER>: You're"
+	line "welcome!@"
 	text_end
 
 _CopycatsHouse2FCopycatTM31Explanation2Text::
 	text "<PLAYER>: Hi!"
-	line "Thanks for TM31!"
+	line "How are you?"
 
 	para "<PLAYER>: Pardon?"
 

@@ -14,13 +14,9 @@ _Route12Gate2FBrunetteGirlReceivedTM39Text::
 	text_end
 
 _Route12Gate2FBrunetteGirlTM39ExplanationText::
-	text "TM39 is a move"
-	line "called SWIFT."
-
-	para "It's very accurate,"
-	line "so use it during"
-	cont "battles you can't"
-	cont "afford to lose."
+	text "My CAPUMON's"
+	line "ashes are stored"
+	cont "in CAPUMON TOWER."
 	done
 
 _Route12Gate2FBrunetteGirlTM39NoRoomText::

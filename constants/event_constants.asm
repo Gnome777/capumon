@@ -53,7 +53,9 @@
 ; Cerulean City events
 	const_next $98
 	const EVENT_BEAT_CERULEAN_RIVAL
-	const_skip 14
+	const skip
+	const EVENT_BEAT_DEV_GNOME
+	const_skip 12
 	const EVENT_BEAT_CERULEAN_ROCKET_THIEF
 	const_skip 18
 	const EVENT_BEAT_CERULEAN_GYM_TRAINER_0
@@ -194,8 +196,7 @@
 ; Saffron City events
 	const_next $340
 	const EVENT_GOT_TM31
-	const EVENT_BEAT_DEV_GNOME
-	const_skip 14
+	const_skip 15
 	const EVENT_DEFEATED_FIGHTING_DOJO
 	const EVENT_BEAT_KARATE_MASTER
 	const EVENT_BEAT_FIGHTING_DOJO_TRAINER_0

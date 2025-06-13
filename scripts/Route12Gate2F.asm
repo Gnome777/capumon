@@ -9,16 +9,16 @@ Route12Gate2F_TextPointers:
 
 Route12Gate2FBrunetteGirlText:
 	text_asm
+	SetEvent EVENT_GOT_TM39
 	CheckEvent EVENT_GOT_TM39, 1
 	jr c, .got_item
 	ld hl, .YouCanHaveThisText
 	call PrintText
-	lb bc, TM_SWIFT, 1
-	call GiveItem
-	jr nc, .bag_full
+	; lb bc, TM_SWIFT, 1
+	; call GiveItem
+	; jr nc, .bag_full
 	ld hl, .ReceivedTM39Text
 	call PrintText
-	SetEvent EVENT_GOT_TM39
 	jr .done
 .bag_full
 	ld hl, .TM39NoRoomText

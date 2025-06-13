@@ -11,16 +11,16 @@ CinnabarLabMetronomeRoom_TextPointers:
 
 CinnabarLabMetronomeRoomScientist1Text:
 	text_asm
+	SetEvent EVENT_GOT_TM35
 	CheckEvent EVENT_GOT_TM35
 	jr nz, .got_item
 	ld hl, .Text
 	call PrintText
-	lb bc, TM_METRONOME, 1
-	call GiveItem
-	jr nc, .bag_full
+	; lb bc, TM_METRONOME, 1
+	; call GiveItem
+	; jr nc, .bag_full
 	ld hl, .ReceivedTM35Text
 	call PrintText
-	SetEvent EVENT_GOT_TM35
 	jr .done
 .bag_full
 	ld hl, .TM35NoRoomText

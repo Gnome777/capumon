@@ -95,3 +95,33 @@ _CeruleanBadgeHouseEarthBadgeText::
 	text "All CAPUMON will"
 	line "obey you!"
 	prompt
+
+_DevGnomeIntroText::
+	text "DEV: Hey! I made"
+	line "this ROMhack!"
+	cont "Want to battle?"
+
+	para "Be warned though!"
+	line "I use very strong"
+	cont "water CAPUMON!"
+	done
+
+_DevGnomeRefusedText::
+	text "DEV: Aw, maybe"
+	line "next time."
+	done
+
+_DevGnomeBattleText1::
+	text "DEV: Alright!"
+	done
+
+_DevGnomeEndBattleText1::
+	text "You are truly"
+	line "a strong one!"
+	prompt
+
+_DevGnomeAfterBattleText1::
+	text "Thanks for a"
+	line "good battle!"
+	cont "Enjoy my hack."
+	done

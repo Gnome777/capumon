@@ -5,7 +5,7 @@
 
 	db DRAGON, WATER ; type
 	db 45 ; catch rate
-	db 218 ; base exp
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/dragonite.pic", 0, 1 ; sprite dimensions
 	dw DragonitePicFront, DragonitePicBack

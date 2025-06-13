@@ -5,7 +5,7 @@
 
 	db POISON, FIGHTING ; type
 	db 120 ; catch rate
-	db 118 ; base exp
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/nidorino.pic", 0, 1 ; sprite dimensions
 	dw NidorinoPicFront, NidorinoPicBack
