@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, PSYCHIC_TYPE ; type
-	db 190 ; catch rate
-	db 99 ; base exp
+	db 125 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/slowpoke.pic", 0, 1 ; sprite dimensions
 	dw SlowpokePicFront, SlowpokePicBack

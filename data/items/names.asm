@@ -1,8 +1,8 @@
 ItemNames::
 	list_start
 	li "MASTER BALL"
-	li "ULTRA BALL"
-	li "GREAT BALL"
+	li "ULTRACAPSULE"
+	li "GREATCAPSULE"
 	li "CAPSULE"
 	li "TOWN MAP"
 	li "BICYCLE"

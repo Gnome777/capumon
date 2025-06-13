@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db ICE, PSYCHIC_TYPE ; type
-	db 45 ; catch rate
-	db 137 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/jynx.pic", 0, 1 ; sprite dimensions
 	dw JynxPicFront, JynxPicBack

@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db NORMAL, FLYING ; type
-	db 190 ; catch rate
-	db 96 ; base exp
+	db 125 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/doduo.pic", 0, 1 ; sprite dimensions
 	dw DoduoPicFront, DoduoPicBack

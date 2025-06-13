@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
-	db 255 ; catch rate
-	db 20 ; base exp
+	db 125 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/magikarp.pic", 0, 1 ; sprite dimensions
 	dw MagikarpPicFront, MagikarpPicBack

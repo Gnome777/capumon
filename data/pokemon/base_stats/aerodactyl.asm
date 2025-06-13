@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db ROCK, FLYING ; type
-	db 45 ; catch rate
-	db 202 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/aerodactyl.pic", 0, 1 ; sprite dimensions
 	dw AerodactylPicFront, AerodactylPicBack

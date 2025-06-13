@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, ICE ; type
-	db 45 ; catch rate
-	db 219 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/lapras.pic", 0, 1 ; sprite dimensions
 	dw LaprasPicFront, LaprasPicBack

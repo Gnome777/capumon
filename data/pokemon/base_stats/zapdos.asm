@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db ELECTRIC, FLYING ; type
-	db 3 ; catch rate
-	db 216 ; base exp
+	db 5 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/zapdos.pic", 0, 1 ; sprite dimensions
 	dw ZapdosPicFront, ZapdosPicBack

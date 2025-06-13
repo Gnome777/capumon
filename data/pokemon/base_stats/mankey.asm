@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db FIGHTING, FIGHTING ; type
-	db 190 ; catch rate
-	db 74 ; base exp
+	db 125 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/mankey.pic", 0, 1 ; sprite dimensions
 	dw MankeyPicFront, MankeyPicBack

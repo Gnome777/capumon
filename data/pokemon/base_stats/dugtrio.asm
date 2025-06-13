@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db GROUND, GROUND ; type
-	db 50 ; catch rate
-	db 153 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/dugtrio.pic", 0, 1 ; sprite dimensions
 	dw DugtrioPicFront, DugtrioPicBack

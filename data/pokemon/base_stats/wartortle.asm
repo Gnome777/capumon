@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db WATER, WATER ; type
-	db 45 ; catch rate
-	db 143 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/wartortle.pic", 0, 1 ; sprite dimensions
 	dw WartortlePicFront, WartortlePicBack

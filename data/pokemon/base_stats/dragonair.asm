@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db DRAGON, WATER ; type
-	db 45 ; catch rate
-	db 144 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/dragonair.pic", 0, 1 ; sprite dimensions
 	dw DragonairPicFront, DragonairPicBack

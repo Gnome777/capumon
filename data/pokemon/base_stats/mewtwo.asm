@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db PSYCHIC_TYPE, PSYCHIC_TYPE ; type
-	db 3 ; catch rate
-	db 220 ; base exp
+	db 5 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/mewtwo.pic", 0, 1 ; sprite dimensions
 	dw MewtwoPicFront, MewtwoPicBack

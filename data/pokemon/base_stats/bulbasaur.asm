@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db GRASS, GRASS ; type
-	db 45 ; catch rate
-	db 64 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/bulbasaur.pic", 0, 1 ; sprite dimensions
 	dw BulbasaurPicFront, BulbasaurPicBack

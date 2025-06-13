@@ -4,8 +4,8 @@
 	;   hp  atk  def  spd  spc
 
 	db ROCK, ROCK ; type
-	db 60 ; catch rate
-	db 204 ; base exp
+	db 75 ; catch rate
+	db 100 ; base exp
 
 	INCBIN "gfx/pokemon/front/rhydon.pic", 0, 1 ; sprite dimensions
 	dw RhydonPicFront, RhydonPicBack
