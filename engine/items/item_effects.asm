@@ -830,7 +830,7 @@ ItemUseMedicine:
 	jp PrintText
 .emptyPartyText
 	text "You don't have"
-	line "any #MON!"
+	line "any CAPUMON!"
 	prompt
 .notUsingSoftboiled
 	call DisplayPartyMenu

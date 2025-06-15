@@ -21,7 +21,7 @@ StartMenuDescriptionTable:
 	dw .Exit
 
 .Pokedex:
-	db "#MON"
+	db "CAPUMON"
 	next "database@"
 
 .PortablePC:

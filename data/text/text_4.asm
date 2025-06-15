@@ -11,7 +11,7 @@ _PokemonFaintedText::
 
 _PlayerBlackedOutText::
 	text "<PLAYER> is out of"
-	line "useable #MON!"
+	line "useable CAPUMON!"
 
 	para "<PLAYER> blacked"
 	line "out!"
@@ -158,26 +158,26 @@ _HMCantDeleteText::
 
 _PokemonCenterWelcomeText::
 	text "Welcome to our"
-	line "#MON CENTER!"
+	line "CAPUMON CENTER!"
 
 	para "We heal your"
-	line "#MON back to"
+	line "CAPUMON back to"
 	cont "perfect health!"
 	prompt
 
 _ShallWeHealYourPokemonText::
 	text "Shall we heal your"
-	line "#MON?"
+	line "CAPUMON?"
 	done
 
 _NeedYourPokemonText::
 	text "OK. We'll need"
-	line "your #MON."
+	line "your CAPUMON."
 	done
 
 _PokemonFightingFitText::
 	text "Thank you!"
-	line "Your #MON are"
+	line "Your CAPUMON are"
 	cont "fighting fit!"
 	prompt
 
@@ -232,5 +232,5 @@ ENDC
 
 _TemPokemonOuNao::
 	text "You don't have"
-	line "any #MON!"
+	line "any CAPUMON!"
 	done

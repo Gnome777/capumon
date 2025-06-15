@@ -20,9 +20,9 @@ _OaksLabRivalMyPokemonLooksStrongerText::
 	done
 
 _OaksLabThoseArePokeBallsText::
-	text "Those are #"
-	line "BALLs. They"
-	cont "contain CAPUMON!"
+	text "Those are CAPSULEs."
+	line "They contain"
+	cont "CAPUMON!"
 	done
 
 _OaksLabYouWantCharmanderText::
@@ -135,9 +135,9 @@ _OaksLabGivePokeballsExplanationText::
 	line "CAPUMON appears,"
 	cont "it's fair game."
 
-	para "Just throw a #"
-	line "BALL at it and try"
-	cont "to catch it!"
+	para "Just throw a"
+	line "CAPSULE at it and"
+	cont "try to catch it!"
 
 	para "This won't always"
 	line "work, though."

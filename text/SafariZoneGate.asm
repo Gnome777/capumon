@@ -18,7 +18,7 @@ _SafariZoneGateSafariZoneWorker1ThatllBe500PleaseText::
 	line "please!"
 
 	para "We only use a"
-	line "special # BALL"
+	line "special CAPSULE"
 	cont "here."
 
 	para "<PLAYER> received"

@@ -43,7 +43,7 @@ _CeruleanCityRivalIWentToBillsText::
 
 	para "After all, BILL's"
 	line "world famous as a"
-	cont "#MANIAC!"
+	cont "MANIAC!"
 
 	para "He invented the"
 	line "CAPUMON Storage"

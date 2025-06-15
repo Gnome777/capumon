@@ -39,7 +39,7 @@ _MoveDeleterByeText::
 	done
 
 _MoveDeleterOneMoveText::
-	text "That #mon"
+	text "That CAPUMON"
 	line "has one move."
 	cont "Pick another?"
 	done
