@@ -14,9 +14,7 @@ CinnabarIsland_ScriptPointers:
 	dw_const CinnabarIslandPlayerMovingScript, SCRIPT_CINNABARISLAND_PLAYER_MOVING
 
 CinnabarIslandDefaultScript:
-	ld b, SECRET_KEY
-	call IsItemInBag
-	ret nz
+	ret
 	ld a, [wYCoord]
 	cp 4
 	ret nz

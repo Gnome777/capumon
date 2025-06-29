@@ -83,7 +83,7 @@ SaffronCityRockerText:
 	text_end
 
 SaffronCityRocket8Text:
-	text_far _SaffronCityRocket8Text
+	text_far _SaffronCityRocket9Text
 	text_end
 
 SaffronCityRocket9Text:

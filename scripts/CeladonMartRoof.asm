@@ -86,28 +86,28 @@ CeladonMartRoofScript_GiveDrinkToGirl:
 	cp SODA_POP
 	jr z, .gaveSodaPop
 ; gave Lemonade
+	SetEvent EVENT_GOT_TM49
 	CheckEvent EVENT_GOT_TM49
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofLittleGirlYayLemonadeText
 	call PrintText
 	call RemoveItemByIDBank12
-	; SetEvent EVENT_GOT_TM49
 	ret
 .gaveSodaPop
+	SetEvent EVENT_GOT_TM48
 	CheckEvent EVENT_GOT_TM48
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofLittleGirlYaySodaPopText
 	call PrintText
 	call RemoveItemByIDBank12
-	; SetEvent EVENT_GOT_TM48
 	ret
 .gaveFreshWater
+	SetEvent EVENT_GOT_TM13
 	CheckEvent EVENT_GOT_TM13
 	jr nz, .alreadyGaveDrink
 	ld hl, CeladonMartRoofLittleGirlYayFreshWaterText
 	call PrintText
 	call RemoveItemByIDBank12
-	; SetEvent EVENT_GOT_TM13
 	ret
 .bagFull
 	ld hl, CeladonMartRoofLittleGirlNoRoomText

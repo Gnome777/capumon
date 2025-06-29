@@ -103,6 +103,7 @@ DebugSetPokedexEntries:
 
 DebugNewGameItemsList:
 	db BICYCLE, 1
+	db MAX_REPEL, 99
 	db MAX_REVIVE, 99
 	db FULL_RESTORE, 99
 	db FULL_HEAL, 99

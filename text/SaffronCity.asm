@@ -9,8 +9,8 @@ _SaffronCityRocket2Text::
 	done
 
 _SaffronCityRocket3Text::
-	text "Get out of the"
-	line "way!"
+	text "What do you want?"
+	line "Get lost!"
 	done
 
 _SaffronCityRocket4Text::
