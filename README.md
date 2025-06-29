@@ -1,15 +1,16 @@
-# Capumon Generation One
+# Capsule Monsters
 
 This is a ROMhack of Pokémon Blue.
 
 ### Description
 
-Capumon Generation One is a reimagining of the first generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
+Capsule Monsters is a reimagining of the first generation by me, essentially answering the question "What if I was in charge of making the Pokémon games?"
 
 For detailed info on all changes, view the [wiki](https://github.com/Gnome777/capumonone/wiki)
 
-Capumon has a variety of new features that make it stand out, including but not limited to:
+Capsule Monsters has a variety of new features that make it stand out, including but not limited to:
 
+- A more open world, that allows the player to progress more easily
 - A modified story, that tries to answer some questions that the original games left unanswered
 - Bugfixes that attempt to remedy the oddities of Generation 1 battling
 - Unique party menu sprites for all Pokémon
